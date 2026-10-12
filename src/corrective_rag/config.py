@@ -50,11 +50,12 @@ BGE_QUERY_INSTRUCTION = os.getenv(
 )
 
 # --------------------------------------------------------------------------
-# LLM（DeepSeek，OpenAI 兼容协议）
+# LLM（OpenAI 兼容协议；当前用小米 MiMo，换供应商只改 .env 不动代码）
 # --------------------------------------------------------------------------
-LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com")
-LLM_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
-LLM_MODEL = os.getenv("LLM_MODEL", "deepseek-chat")
+LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.xiaomimimo.com/v1")
+# DEEPSEEK_API_KEY 是兼容回落：老 .env 只写它也能跑，新配置一律写 LLM_API_KEY
+LLM_API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY", "")
+LLM_MODEL = os.getenv("LLM_MODEL", "mimo-v2.6-flash")
 
 # --------------------------------------------------------------------------
 # 切分与检索超参

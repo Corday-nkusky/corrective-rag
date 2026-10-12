@@ -10,7 +10,7 @@
 分布堆在 7-8，阈值切上去噪声大；三档足够表达门控决策且稳定。
 
 两种实现，同一接口（有 key 用 LLM，没 key 用规则跑通链路）：
-- LLMJudge：DeepSeek 结构化输出，只判充分性（相关性已由 reranker 保证）
+- LLMJudge：MiMo 结构化输出，只判充分性（相关性已由 reranker 保证）
 - RuleBasedJudge：基于 reranker 分数的规则基线。两个作用：
   ① 无 API key 时全链路可跑；② 作为 LLM judge 的对照——
   "我的 LLM judge 比规则基线多救回多少"本身就是面试素材。
@@ -72,15 +72,17 @@ class RuleBasedJudge:
 
 
 class LLMJudge:
-    """DeepSeek 充分性判断。judge 与生成器异源是显水平细节
+    """MiMo 充分性判断。judge 与生成器异源是显水平细节
     （同源模型倾向于认可自己生成的上下文，自评偏差大）。"""
 
     def __init__(self) -> None:
         if not config.LLM_API_KEY:
-            raise RuntimeError("LLMJudge 需要 DEEPSEEK_API_KEY")
+            raise RuntimeError("LLMJudge 需要 LLM_API_KEY（或 DEEPSEEK_API_KEY）")
 
     def judge(self, question: str, chunks: List[Dict]) -> Dict:
         from openai import OpenAI
+
+        from corrective_rag.cost import record
 
         blocks = []
         for i, c in enumerate(chunks, start=1):
@@ -96,6 +98,7 @@ class LLMJudge:
             max_tokens=200,
             response_format={"type": "json_object"},
         )
+        record(resp.usage, config.LLM_MODEL)
         raw = resp.choices[0].message.content or "{}"
         try:
             parsed = json.loads(raw)
@@ -107,6 +110,10 @@ class LLMJudge:
             "level": level,
             "sufficient": level >= config.JUDGE_RELEVANCE_THRESHOLD,
             "reason": parsed.get("reason", ""),
+            "usage": {
+                "in": resp.usage.prompt_tokens,
+                "out": resp.usage.completion_tokens,
+            },
         }
 
 

@@ -10,7 +10,7 @@ torch>=2.6
 sentence-transformers>=3.0
 faiss-cpu>=1.8
 langgraph>=0.2        # 实际装上 1.2.14（1.x API，与 0.x 不兼容）
-openai>=1.0           # DeepSeek / 百炼均为 OpenAI 兼容协议
+openai>=1.0           # MiMo / DeepSeek 均为 OpenAI 兼容协议
 gradio>=4.0           # demo 前端；如换 streamlit 则删掉这行改 streamlit>=1.30
 python-dotenv>=1.0
 pytest>=8.0

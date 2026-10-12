@@ -9,13 +9,13 @@
 论文血缘：CRAG（arXiv:2401.15884）+ Adaptive-RAG（arXiv:2403.14403）。
 不自称 "Agentic RAG"——那是伞术语（综述 arXiv:2501.09136），面试被追问定义会失分。
 
-## 当前状态（2026-10-12）
+## 当前状态（2026-10-13）
 
 - [x] Phase 0 环境与骨架：pytorch_env 依赖装齐并锁定（requirements.lock，233 包）、
       bge-small-zh 经 hf-mirror 下载验证、切分器冒烟通过、git 初始化
 - [x] Phase 1 朴素 RAG 全链路：`embedding.py`（bge 编码，query 前缀+归一化）→
       `store.py`（FAISS IndexFlatIP）→ `ingest.py`（摄取）→ `retrieve.py`（召回）→
-      `generate.py`（DeepSeek 生成，无 key 时 stub 模式）。
+      `generate.py`（MiMo 生成，无 key 时 stub 模式）。
       全链路冒烟通过（`scripts/smoke_pipeline.py`，临时目录不碰真实数据）
 - [x] Phase 2 评测集与基线：DuReader-retrieval 本地化（`data_loader.py`，经 hf-mirror
       实测可用；2,000 条人工标注 query / 100,001 passage / 9,839 条二值 qrels，
@@ -23,7 +23,19 @@
       基线评测（`scripts/eval_retrieval.py`）：**Recall@10=80.5%、MRR@10=87.8%、
       hit@1=82.6%**，2,000 条 27 秒跑完。注意：绝对值可能含数据污染
       （bge 2023-08 晚于基准 2022），A/B 的 delta 才可信
-- [ ] Phase 3-6：纠错循环（reranker + LLM judge 充分性 + 策略池）、拒答、trace 与指标。见 `docs/01-项目计划书.md`
+- [x] Phase 3 纠错循环（代码完成，评测数字部分完成）：
+      - 状态机 `pipeline.py`：retrieve → rerank → judge →（够）生成 /（不够）重写回环 /
+        拒答终态，LangGraph 编译，mermaid 可导出
+      - reranker 实测增益（500 条）：**Recall@4 60.1% → 68.4%**，救回 21 条、弄坏 0 条
+      - 校准实测发现：**top1 rerank 分数饱和无区分度**（失败组 p90 > 0.99，与成功组
+        完全重叠）——"用 reranker 分数当门控"这条路走不通的实证，也是 LLM judge
+        必须判"充分性"而非"相关性"的理由
+      - LLM judge 接小米 MiMo（mimo-v2.6-flash，OpenAI 兼容协议，json 结构化输出
+        实测可用）；`cost.py` 成本核算，每 query 花费进 trace
+      - 20 条试水：闭环 recall@4 **64.5% → 79.1%**、hit@4 **90% → 100%**，
+        LLM judge 触发 2 次重写（规则 judge 版 0 次）
+      - 300 条全量 A/B + judge 与人工标注一致率评测：进行中
+- [ ] Phase 4-6：RGB 拒答评测、对话版、demo。见 `docs/01-项目计划书.md`
 
 ## 快速开始
 
@@ -35,7 +47,7 @@ conda activate pytorch_env
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple <包名>
 
 # 3. 配环境变量
-cp .env.example .env   # 然后编辑 .env 填入 DEEPSEEK_API_KEY
+cp .env.example .env   # 然后编辑 .env 填入 LLM_API_KEY（当前用小米 MiMo）
 
 # 4. 冒烟测试
 python scripts/smoke_chunking.py    # 切分器不变量（零依赖）

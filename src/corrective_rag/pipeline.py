@@ -117,6 +117,7 @@ class CorrectiveRAG:
                 level=verdict.get("level"),
                 sufficient=verdict.get("sufficient"),
                 reason=verdict.get("reason"),
+                usage=verdict.get("usage"),
                 latency=round(time.time() - t0, 3),
             )
             return {"judge": verdict, "trace": state["trace"]}
@@ -142,9 +143,16 @@ class CorrectiveRAG:
             }
 
         def node_generate(state: RAGState) -> RAGState:
+            from corrective_rag.cost import tracker
+
             t0 = time.time()
             answer = self.generate(state["question"], state["ranked"])
-            _log(state, "generate", latency=round(time.time() - t0, 3))
+            _log(
+                state,
+                "generate",
+                latency=round(time.time() - t0, 3),
+                cost_so_far=tracker.snapshot(),
+            )
             return {"answer": answer, "status": "answered", "trace": state["trace"]}
 
         def node_abstain(state: RAGState) -> RAGState:

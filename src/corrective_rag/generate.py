@@ -1,7 +1,7 @@
-"""答案生成：检索结果 + 问题 → DeepSeek → 带引用的答案（Phase 1 组件）。
+"""答案生成：检索结果 + 问题 → MiMo → 带引用的答案（Phase 1 组件）。
 
 设计要点：
-- stub 模式：没有 DEEPSEEK_API_KEY 也能验证"检索→拼 prompt"链路
+- stub 模式：没有 LLM_API_KEY 也能验证"检索→拼 prompt"链路
   （打印将要发送的 messages）， Phase 1 冒烟和离线调试都靠它。
 - prompt 三条硬规矩：只许用给定资料、每个论点标 [n] 引用、
   资料不足必须明说"根据现有资料无法回答"——不许自由发挥。
@@ -62,11 +62,14 @@ def generate(
 
     from openai import OpenAI
 
+    from corrective_rag.cost import record
+
     client = OpenAI(api_key=config.LLM_API_KEY, base_url=config.LLM_BASE_URL)
     resp = client.chat.completions.create(
         model=config.LLM_MODEL,
         messages=messages,
         temperature=0.1,
-        max_tokens=1024,
+        max_tokens=512,
     )
+    record(resp.usage, config.LLM_MODEL)
     return resp.choices[0].message.content or ""

@@ -31,6 +31,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from corrective_rag import config  # noqa: E402
+from corrective_rag.cost import tracker  # noqa: E402
 from corrective_rag.data_loader import load_local  # noqa: E402
 from corrective_rag.pipeline import CorrectiveRAG  # noqa: E402
 from corrective_rag.retrieve import Retriever  # noqa: E402
@@ -88,10 +89,17 @@ def main() -> None:
 
     elapsed = time.time() - t0
     answered = n - abstained
+    from corrective_rag.judge import LLMJudge
+
+    judge_desc = (
+        f"llm({config.LLM_MODEL})"
+        if isinstance(pipe.judge, LLMJudge)
+        else f"rule-based(threshold={JUDGE_THRESHOLD})"
+    )
     report = {
         "n_queries": n,
         "k": k,
-        "judge": "rule-based(threshold=0.983)",
+        "judge": judge_desc,
         "naive": {
             "recall@4": round(naive_recall / n, 4),
             "hit@4": round(naive_hit / n, 4),
@@ -102,6 +110,10 @@ def main() -> None:
             "abstain_rate": round(abstained / n, 4),
             "avg_iterations": round(iters / n, 2),
             "rewrite_applied_per_query": round(rewrites_applied / n, 2),
+        },
+        "cost": {
+            **tracker.snapshot(),
+            "cny_per_query": round(tracker.cost_cny(config.LLM_MODEL) / max(1, n), 5),
         },
         "elapsed_sec": round(elapsed, 1),
         "sec_per_query": round(elapsed / n, 2),
