@@ -47,3 +47,29 @@ class Retriever:
                 }
             )
         return results
+
+
+class FixedRetriever:
+    """注入式检索器：直接返回给定文档，适用于"文档已由基准给定"的场景（RGB）。
+
+    为什么不把 RGB 文档灌进 FAISS 索引再正常检索：RGB 的评测设计假设外部
+    文档由基准提供（含噪声/反事实构造），灌进索引会把"向量检索召回失败"
+    混进门控测试，偏离基准设计意图，数字也没法和 RGB 论文基线对话。
+    绕过 retrieve 之后，rerank 照常跑——噪声文档的重排表现本身就是测试点
+    （rerank 该把真相关文档顶到前面）。
+    """
+
+    def __init__(self, docs: List[Dict]) -> None:
+        # docs: [{text, role}] → 统一成 Retriever.retrieve 的输出形状
+        self.docs = [
+            {
+                "id": f"fixed-{i}",
+                "score": 1.0,
+                "source": d.get("role", "fixed"),
+                "text": d["text"],
+            }
+            for i, d in enumerate(docs)
+        ]
+
+    def retrieve(self, query: str, top_k: Optional[int] = None) -> List[Dict]:
+        return self.docs[:top_k] if top_k else list(self.docs)

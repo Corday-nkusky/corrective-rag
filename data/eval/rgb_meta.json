@@ -1,0 +1,11 @@
+{
+  "source": "github.com/chen700564/RGB（AAAI 2024，arXiv:2309.01431），jsdelivr CDN 镜像下载",
+  "downloaded_at": "2026-10-12T16:57:46.854452+00:00",
+  "counts": {
+    "zh": 300,
+    "zh_int": 100,
+    "zh_fact": 100
+  },
+  "total": 500,
+  "format_notes": "原始文件为 JSONL；zh_int 的 answer1 字段官方拼写为 asnwer1（upstream typo，照抄）"
+}
