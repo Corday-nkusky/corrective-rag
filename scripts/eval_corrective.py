@@ -9,13 +9,15 @@
 - 行为：abstain 率、平均迭代次数、改写生效比例
 - 成本：平均每 query 耗时
 
-注意：当前 judge 为规则版（阈值 0.983 来自校准），且已实测
-top1 rerank 分数区分度弱（失败组 p90 > 0.99）——规则 judge 的
-门控能力有限，本 A/B 的闭环增益主要来自 rerank + abstain，
-LLM judge 版待 API key 补齐后重跑，数字会更好。
+注意：judge 自动选择——有 LLM_API_KEY 用 LLM judge，无 key 回落规则版
+（阈值 0.983 来自校准）。规则版已实测弱（top1 rerank 分数饱和无区分度），
+LLM judge 版为正式口径。
 
 用法：
     PYTHONPATH=src python scripts/eval_corrective.py [--limit 500]
+
+断点续跑：逐条结果追加写入 data/traces/ab_progress_<run_id>.jsonl，
+中途被杀再重跑同一 run_id 可跳过已完成条目（防 API 费用白花）。
 """
 
 from __future__ import annotations
@@ -57,38 +59,57 @@ def main() -> None:
 
     k = config.TOP_K_FINAL
     n = 0
-    naive_recall = closed_recall = naive_hit = closed_hit = 0.0
-    abstained = 0
-    iters = 0
-    rewrites_applied = 0
     t0 = time.time()
 
+    # 逐条落盘（flush）：中途被杀也保留已花钱的结果，重跑同 run_id 可跳过
+    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    progress_path = config.TRACE_DIR / f"ab_progress_{run_id}.jsonl"
+    config.TRACE_DIR.mkdir(parents=True, exist_ok=True)
+    done_qids = set()
+    if progress_path.exists():
+        with open(progress_path, encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    done_qids.add(json.loads(line)["qid"])
+    progress_f = open(progress_path, "a", encoding="utf-8")
+
     for i, q in enumerate(targets):
+        if q["qid"] in done_qids:
+            continue
         relevant = rel_map[q["qid"]]
 
         # 朴素基线：retrieve top4
         naive_top = {r["id"] for r in retriever.retrieve(q["text"], top_k=k)}
-        naive_recall += len(naive_top & relevant) / len(relevant)
-        naive_hit += 1.0 if naive_top & relevant else 0.0
 
         # 闭环
         r = pipe.run(q["text"])
         final_top = {c["id"] for c in r["ranked"]}
-        if r["status"] == "answered":
-            closed_recall += len(final_top & relevant) / len(relevant)
-            closed_hit += 1.0 if final_top & relevant else 0.0
-        else:
-            abstained += 1
-        iters += r["iteration"]
-        rewrites_applied += sum(
-            1 for t in r["trace"] if t["step"] == "rewrite" and t.get("applied")
-        )
+        status = r["status"]
         n += 1
-        if (i + 1) % 100 == 0:
-            print(f"  {i + 1}/{len(targets)}，耗时 {time.time() - t0:.0f}s")
+        progress_f.write(
+            json.dumps(
+                {
+                    "qid": q["qid"],
+                    "query": q["text"],
+                    "status": status,
+                    "iteration": r["iteration"],
+                    "naive_hit": 1.0 if naive_top & relevant else 0.0,
+                    "closed_hit": q_hit,
+                    "naive_recall": len(naive_top & relevant) / len(relevant),
+                    "closed_recall": q_recall,
+                    "judge_levels": [
+                        t.get("level") for t in r["trace"] if t["step"] == "judge"
+                    ],
+                },
+                ensure_ascii=False,
+            )
+            + "\n"
+        )
+        progress_f.flush()
+        print(f"  {i + 1}/{len(targets)}，耗时 {time.time() - t0:.0f}s", flush=True)
 
+    progress_f.close()
     elapsed = time.time() - t0
-    answered = n - abstained
     from corrective_rag.judge import LLMJudge
 
     judge_desc = (
@@ -96,27 +117,40 @@ def main() -> None:
         if isinstance(pipe.judge, LLMJudge)
         else f"rule-based(threshold={JUDGE_THRESHOLD})"
     )
+    # 从 jsonl 全量重算：断点续跑跳过的条目也在文件里，聚合天然正确
+    rows = []
+    with open(progress_path, encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                rows.append(json.loads(line))
+    n = len(rows)
+    answered_rows = [r for r in rows if r["status"] == "answered"]
+    answered = len(answered_rows)
     report = {
         "n_queries": n,
         "k": k,
         "judge": judge_desc,
         "naive": {
-            "recall@4": round(naive_recall / n, 4),
-            "hit@4": round(naive_hit / n, 4),
+            "recall@4": round(sum(r["naive_recall"] for r in rows) / max(1, n), 4),
+            "hit@4": round(sum(r["naive_hit"] for r in rows) / max(1, n), 4),
         },
         "closed_loop": {
-            "recall@4(answered only)": round(closed_recall / max(1, answered), 4),
-            "hit@4(answered only)": round(closed_hit / max(1, answered), 4),
-            "abstain_rate": round(abstained / n, 4),
-            "avg_iterations": round(iters / n, 2),
-            "rewrite_applied_per_query": round(rewrites_applied / n, 2),
+            "recall@4(answered only)": round(
+                sum(r["closed_recall"] for r in answered_rows) / max(1, answered), 4
+            ),
+            "hit@4(answered only)": round(
+                sum(r["closed_hit"] for r in answered_rows) / max(1, answered), 4
+            ),
+            "abstain_rate": round((n - answered) / max(1, n), 4),
+            "avg_iterations": round(sum(r["iteration"] for r in rows) / max(1, n), 2),
         },
         "cost": {
             **tracker.snapshot(),
             "cny_per_query": round(tracker.cost_cny(config.LLM_MODEL) / max(1, n), 5),
         },
         "elapsed_sec": round(elapsed, 1),
-        "sec_per_query": round(elapsed / n, 2),
+        "sec_per_query": round(elapsed / max(1, n), 2),
+        "progress_file": str(progress_path),
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))

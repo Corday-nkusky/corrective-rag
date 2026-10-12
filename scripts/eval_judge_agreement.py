@@ -74,6 +74,12 @@ def main() -> None:
     levels = defaultdict(int)
     t0 = time.time()
 
+    # 逐条落盘（flush）：中途被杀也保留已花钱的结果
+    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    progress_path = config.TRACE_DIR / f"judge_agreement_progress_{run_id}.jsonl"
+    config.TRACE_DIR.mkdir(parents=True, exist_ok=True)
+    progress_f = open(progress_path, "a", encoding="utf-8")
+
     for i, q in enumerate(targets):
         relevant = rel_map[q["qid"]]
         retrieved = retriever.retrieve(q["text"], top_k=config.TOP_K_RETRIEVE)
@@ -86,19 +92,39 @@ def main() -> None:
 
         if sufficient and hit:
             tp += 1
+            cell = "TP"
         elif sufficient and not hit:
             fp += 1
+            cell = "FP"
         elif not sufficient and hit:
             fn += 1
+            cell = "FN"
         else:
             tn += 1
-
-        if (i + 1) % 50 == 0:
-            print(
-                f"  {i + 1}/{len(targets)}，耗时 {time.time() - t0:.0f}s，"
-                f"累计花费 ¥{tracker.cost_cny(config.LLM_MODEL):.3f}"
+            cell = "TN"
+        progress_f.write(
+            json.dumps(
+                {
+                    "qid": q["qid"],
+                    "query": q["text"],
+                    "hit": hit,
+                    "level": verdict.get("level"),
+                    "sufficient": sufficient,
+                    "cell": cell,
+                    "reason": verdict.get("reason", ""),
+                },
+                ensure_ascii=False,
             )
+            + "\n"
+        )
+        progress_f.flush()
+        print(
+            f"  {i + 1}/{len(targets)}，耗时 {time.time() - t0:.0f}s，"
+            f"累计花费 ¥{tracker.cost_cny(config.LLM_MODEL):.3f}",
+            flush=True,
+        )
 
+    progress_f.close()
     n = len(targets)
     report = {
         "judge": judge_desc,
@@ -113,6 +139,7 @@ def main() -> None:
         "precision_判够的可信度": round(tp / max(1, tp + fp), 4),
         "miss_rate_能答被拦率": round(fn / max(1, tp + fn), 4),
         "level_distribution": dict(levels),
+        "progress_file": str(progress_path),
         "cost": {
             **tracker.snapshot(),
             "cny_per_query": round(tracker.cost_cny(config.LLM_MODEL) / max(1, n), 5),
