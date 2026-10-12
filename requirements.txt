@@ -1,14 +1,19 @@
-# corrective-rag 依赖（版本下限为 2026-10-12 写入时确认存在的版本）
-# 安装成功后立即执行：pip freeze > requirements.lock，之后一律按 lock 复现。
-# 版本之间的兼容矩阵属于"未验证"，以 lock 文件为准。
+# corrective-rag 依赖（2026-10-12 已在 conda env pytorch_env 装齐，冻结在 requirements.lock）
+# 环境：Python 3.10.18 + torch 2.6.0+cu124（CUDA True，实测）
+# 补装单个包：pip install -i https://pypi.tuna.tsinghua.edu.cn/simple <包名>
+#
+# 注意：ragas 不在栈内——0.3.9/0.4.3 均 import 即炸（详见计划书坑清单 #13），
+# 四个评测指标改为自写 judge 脚本，定义对齐 ragas 公开文档。
 
 numpy>=1.26
-torch>=2.6            # cp313 的 Windows CUDA wheel 自 2.6 起提供；PyPI 默认即 CUDA 版，约 2-3GB
+torch>=2.6
 sentence-transformers>=3.0
-faiss-cpu>=1.8        # 只要 CPU 版；精确内积检索 + L2 归一化 = 余弦
-langgraph>=0.2        # 只用核心包，不装 langchain 全栈
+faiss-cpu>=1.8
+langgraph>=0.2        # 实际装上 1.2.14（1.x API，与 0.x 不兼容）
 openai>=1.0           # DeepSeek / 百炼均为 OpenAI 兼容协议
-ragas>=0.2            # faithfulness / answer relevancy / context precision / recall
 gradio>=4.0           # demo 前端；如换 streamlit 则删掉这行改 streamlit>=1.30
 python-dotenv>=1.0
 pytest>=8.0
+rank_bm25>=0.2.2      # 混合检索的 BM25 分支（jieba 分词）
+jieba>=0.42
+datasets>=2.0         # 下载 DuRetrieval 等公开基准（HF 走 hf-mirror）

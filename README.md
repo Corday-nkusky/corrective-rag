@@ -11,26 +11,28 @@
 
 ## 当前状态（2026-10-12）
 
-- [x] Phase 0 骨架：目录、配置、切分器（已跑通冒烟测试）
+- [x] Phase 0 环境与骨架：pytorch_env 依赖装齐并锁定（requirements.lock，233 包）、
+      bge-small-zh 经 hf-mirror 下载验证、切分器冒烟通过、git 初始化
 - [ ] Phase 1-6：见 `docs/01-项目计划书.md`
 
 ## 快速开始
 
 ```bash
-# 1. 建虚拟环境（用 managed Python 3.13.12）
-C:/Users/TANGWENJIAN/.workbuddy/binaries/python/versions/3.13.12/python.exe -m venv .venv
-source .venv/Scripts/activate
+# 1. 切到已有环境（实测：py3.10.18 + torch 2.6.0+cu124 + CUDA True）
+conda activate pytorch_env
 
-# 2. 装依赖（约 2-3GB，主要是 torch 的 CUDA wheel）
-pip install -r requirements.txt
-pip freeze > requirements.lock
+# 2. 依赖已在 requirements.lock 冻结；补装走 tuna 镜像：
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple <包名>
 
 # 3. 配环境变量
 cp .env.example .env   # 然后编辑 .env 填入 DEEPSEEK_API_KEY
 
-# 4. 冒烟测试（不装任何第三方依赖也能先跑）
+# 4. 冒烟测试
 python scripts/smoke_chunking.py
 ```
+
+注意：`ragas` 不在依赖里（import 即炸，原因见计划书坑清单 #13），四个评测指标为自写
+judge 脚本实现，定义对齐 ragas 公开文档。
 
 完整实施计划（分阶段、验收标准、评测集设计、指标定义、坑清单）：
 **`docs/01-项目计划书.md`**。
@@ -39,10 +41,11 @@ python scripts/smoke_chunking.py
 
 ```
 src/corrective_rag/   源码（config / chunking 已实现，其余按计划书分阶段落地）
-data/corpus/          中文语料（.md/.txt，你亲手标过答案的领域）
-data/eval/            评测集（jsonl：query / 标准答案 / 支撑 chunk id / 类型标签）
+data/corpus/          演示语料（默认用 DuRetrieval 基准自带 passage pool；个人 md 可选）
+data/eval/            公开基准本地化缓存（DuRetrieval / RGB → jsonl）
 data/index/           FAISS 索引（产物，git 不跟踪）
 data/traces/          每次运行的 JSONL trace（所有简历数字的唯一出处）
 scripts/              冒烟测试与工具脚本
 tests/                pytest
+requirements.lock     依赖锁定（2026-10-12 冻结）
 ```
