@@ -35,7 +35,11 @@
       - 20 条试水：闭环 recall@4 **64.5% → 79.1%**、hit@4 **90% → 100%**，
         LLM judge 触发 2 次重写（规则 judge 版 0 次）
       - 300 条全量 A/B + judge 与人工标注一致率评测：进行中
-- [ ] Phase 4-6：RGB 拒答评测、对话版、demo。见 `docs/01-项目计划书.md`
+- [x] Phase 4 准备：RGB 基准本地化（500 条中文：zh 300 负例拒绝基础集 /
+      zh_int 100 信息整合 / zh_fact 100 反事实）+ `FixedRetriever` 注入 +
+      `scripts/eval_rgb.py` 四场景评测（输入构造本地验证通过：噪声比精确 0.60、
+      固定种子可复现）。实跑待 A/B 完成后串行进行（避免 MiMo 限流）
+- [ ] Phase 4-6：RGB 实跑、对话版、demo。见 `docs/01-项目计划书.md`
 
 ## 快速开始
 
