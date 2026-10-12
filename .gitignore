@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# 索引与 trace 是产物，可重建，不进 git
+data/index/
+data/traces/
+
+# 模型缓存（默认在 C 盘用户目录，不落在仓库里）
+.cache/
+models/

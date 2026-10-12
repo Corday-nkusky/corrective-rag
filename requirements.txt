@@ -1,0 +1,14 @@
+# corrective-rag 依赖（版本下限为 2026-10-12 写入时确认存在的版本）
+# 安装成功后立即执行：pip freeze > requirements.lock，之后一律按 lock 复现。
+# 版本之间的兼容矩阵属于"未验证"，以 lock 文件为准。
+
+numpy>=1.26
+torch>=2.6            # cp313 的 Windows CUDA wheel 自 2.6 起提供；PyPI 默认即 CUDA 版，约 2-3GB
+sentence-transformers>=3.0
+faiss-cpu>=1.8        # 只要 CPU 版；精确内积检索 + L2 归一化 = 余弦
+langgraph>=0.2        # 只用核心包，不装 langchain 全栈
+openai>=1.0           # DeepSeek / 百炼均为 OpenAI 兼容协议
+ragas>=0.2            # faithfulness / answer relevancy / context precision / recall
+gradio>=4.0           # demo 前端；如换 streamlit 则删掉这行改 streamlit>=1.30
+python-dotenv>=1.0
+pytest>=8.0
