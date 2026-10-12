@@ -25,6 +25,7 @@
 - covered(text, keys)：每个 key 去空白后为 text 去空白后的子串
 
 用法：
+    PYTHONPATH=src python scripts/eval_rgb.py --scenario all      # 四场景全跑
     PYTHONPATH=src python scripts/eval_rgb.py --scenario rejection --limit 50
     PYTHONPATH=src python scripts/eval_rgb.py --scenario noise --limit 100
 """
@@ -223,12 +224,19 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="RGB 四场景评测")
     parser.add_argument(
         "--scenario",
-        choices=["rejection", "noise", "integration", "counterfactual"],
+        choices=["all", "rejection", "noise", "integration", "counterfactual"],
         required=True,
     )
     parser.add_argument("--limit", type=int, default=None)
     args = parser.parse_args()
-    run_scenario(args.scenario, args.limit)
+    scenarios = (
+        ["rejection", "noise", "integration", "counterfactual"]
+        if args.scenario == "all"
+        else [args.scenario]
+    )
+    for sc in scenarios:
+        print(f"\n===== scenario: {sc} =====", flush=True)
+        run_scenario(sc, args.limit)
 
 
 if __name__ == "__main__":

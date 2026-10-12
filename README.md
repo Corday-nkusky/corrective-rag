@@ -39,7 +39,11 @@
         abstain 率 **8.0%**、平均迭代 0.45、重写生效 0.38/query——judge 真实参与决策；
         709 次调用共 **¥1.10**，每 query ¥0.00368。闭环 recall 为 answered-only 口径
         （分母剔除 24 条拒答）；全量口径 hit@4 ≈ 90.7%
-      - judge 与 DuReader 人工标注一致率（混淆矩阵四格）：评测中
+      - judge 与 DuReader 人工标注一致率（300 条，trace: judge_agreement_20261013_025826.json）：
+        **agreement 82.7%、precision 98.3%**（judge 放行的 240 条中仅 4 条无资料——
+        幻觉几乎漏不出去）；FN 48 条（16.9% 误杀，多数被重写兜底救回，A/B 的
+        hit@4 98.6% 即来源）；level 分布 2:208 / 1:32 / 0:60；成本 ¥0.42。
+        口径边界：人工真值是"top4 命中"而非"资料充分"，为代理指标
 - [x] Phase 4 准备：RGB 基准本地化（500 条中文：zh 300 负例拒绝基础集 /
       zh_int 100 信息整合 / zh_fact 100 反事实）+ `FixedRetriever` 注入 +
       `scripts/eval_rgb.py` 四场景评测（输入构造本地验证通过：噪声比精确 0.60、
