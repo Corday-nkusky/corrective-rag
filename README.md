@@ -13,7 +13,11 @@
 
 - [x] Phase 0 环境与骨架：pytorch_env 依赖装齐并锁定（requirements.lock，233 包）、
       bge-small-zh 经 hf-mirror 下载验证、切分器冒烟通过、git 初始化
-- [ ] Phase 1-6：见 `docs/01-项目计划书.md`
+- [x] Phase 1 朴素 RAG 全链路：`embedding.py`（bge 编码，query 前缀+归一化）→
+      `store.py`（FAISS IndexFlatIP）→ `ingest.py`（摄取）→ `retrieve.py`（召回）→
+      `generate.py`（DeepSeek 生成，无 key 时 stub 模式）。
+      全链路冒烟通过（`scripts/smoke_pipeline.py`，临时目录不碰真实数据）
+- [ ] Phase 2-6：评测集本地化、纠错循环（reranker+judge+策略池）、对话版、trace 与指标。见 `docs/01-项目计划书.md`
 
 ## 快速开始
 
@@ -28,7 +32,8 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple <包名>
 cp .env.example .env   # 然后编辑 .env 填入 DEEPSEEK_API_KEY
 
 # 4. 冒烟测试
-python scripts/smoke_chunking.py
+python scripts/smoke_chunking.py    # 切分器不变量（零依赖）
+python scripts/smoke_pipeline.py    # 检索+生成全链路（临时语料，需装依赖）
 ```
 
 注意：`ragas` 不在依赖里（import 即炸，原因见计划书坑清单 #13），四个评测指标为自写
@@ -40,7 +45,7 @@ judge 脚本实现，定义对齐 ragas 公开文档。
 ## 目录
 
 ```
-src/corrective_rag/   源码（config / chunking 已实现，其余按计划书分阶段落地）
+src/corrective_rag/   源码（config / chunking / embedding / store / ingest / retrieve / generate 已实现）
 data/corpus/          演示语料（默认用 DuRetrieval 基准自带 passage pool；个人 md 可选）
 data/eval/            公开基准本地化缓存（DuRetrieval / RGB → jsonl）
 data/index/           FAISS 索引（产物，git 不跟踪）
