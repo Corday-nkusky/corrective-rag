@@ -85,6 +85,53 @@ def ingest(
     return stats
 
 
+def ingest_records(
+    records: List[Dict],
+    index_dir: Optional[Path] = None,
+) -> Dict:
+    """直接对记录建索引，不切分——评测语料（DuReader passage）入口。
+
+    与 ingest() 的区别：DuReader 的 passage 本身就是段落级单元
+    （原论文平均 285 字符），且 Recall@k 的人工标注以 pid 为单位。
+    再走 recursive_split 会破坏 pid 与 chunk 的一一对应，评测时
+    检索命中的 chunk 无法映射回标注 id，Recall 无从对账。
+
+    records 每项: {"id": <唯一id>, "source": <来源名>, "text": <正文>}
+    """
+    index_dir = Path(index_dir or config.INDEX_DIR)
+    if not records:
+        raise RuntimeError("records 为空，拒绝建索引")
+
+    chunks = [
+        {
+            "id": r["id"],
+            "source": r.get("source", "eval"),
+            "text": r["text"],
+            "n_chars": len(r["text"]),
+        }
+        for r in records
+    ]
+    ids = [c["id"] for c in chunks]
+    assert len(set(ids)) == len(ids), "records 存在重复 id，落盘会错位"
+
+    embedder = Embedder()
+    vectors = embedder.encode_docs([c["text"] for c in chunks])
+
+    store = VectorStore(dim=embedder.dim)
+    store.add(vectors)
+    store.save(index_dir, chunks)
+
+    stats = {
+        "index_dir": str(index_dir),
+        "mode": "records(no-split)",
+        "chunks": len(chunks),
+        "dim": embedder.dim,
+        "avg_chars": round(sum(c["n_chars"] for c in chunks) / len(chunks), 1),
+    }
+    print(json.dumps(stats, ensure_ascii=False, indent=2))
+    return stats
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="摄取语料并构建 FAISS 索引")
     parser.add_argument("--corpus", type=Path, default=None)

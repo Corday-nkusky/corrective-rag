@@ -1,0 +1,16 @@
+{
+  "source": {
+    "main": "C-MTEB/DuRetrieval",
+    "qrels": "C-MTEB/DuRetrieval-qrels"
+  },
+  "downloaded_at": "2026-10-12T15:41:38.498537+00:00",
+  "queries_total_in_repo": 2000,
+  "queries_labeled": 2000,
+  "corpus": 100001,
+  "qrels_rows": 9839,
+  "avg_relevant_per_query": 4.92,
+  "score_values": [
+    1
+  ],
+  "dev_limit": null
+}
