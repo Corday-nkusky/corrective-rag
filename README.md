@@ -17,7 +17,13 @@
       `store.py`（FAISS IndexFlatIP）→ `ingest.py`（摄取）→ `retrieve.py`（召回）→
       `generate.py`（DeepSeek 生成，无 key 时 stub 模式）。
       全链路冒烟通过（`scripts/smoke_pipeline.py`，临时目录不碰真实数据）
-- [ ] Phase 2-6：评测集本地化、纠错循环（reranker+judge+策略池）、对话版、trace 与指标。见 `docs/01-项目计划书.md`
+- [x] Phase 2 评测集与基线：DuReader-retrieval 本地化（`data_loader.py`，经 hf-mirror
+      实测可用；2,000 条人工标注 query / 100,001 passage / 9,839 条二值 qrels，
+      id 对账零差错）；100K passage 建索引（`scripts/build_eval_index.py`）；
+      基线评测（`scripts/eval_retrieval.py`）：**Recall@10=80.5%、MRR@10=87.8%、
+      hit@1=82.6%**，2,000 条 27 秒跑完。注意：绝对值可能含数据污染
+      （bge 2023-08 晚于基准 2022），A/B 的 delta 才可信
+- [ ] Phase 3-6：纠错循环（reranker + LLM judge 充分性 + 策略池）、拒答、trace 与指标。见 `docs/01-项目计划书.md`
 
 ## 快速开始
 
