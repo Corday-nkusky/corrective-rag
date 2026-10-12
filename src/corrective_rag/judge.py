@@ -106,13 +106,16 @@ class LLMJudge:
         except (json.JSONDecodeError, ValueError, TypeError):
             level, parsed = 0, {"reason": f"judge 输出解析失败: {raw[:80]}"}
         level = max(0, min(2, level))
+        # 注意：MiMo 偶发不返回 usage（实测踩到过），必须防 None——
+        # 记账在 cost.record 里已安全化，这里展示同样要防
+        u = resp.usage
         return {
             "level": level,
             "sufficient": level >= config.JUDGE_RELEVANCE_THRESHOLD,
             "reason": parsed.get("reason", ""),
             "usage": {
-                "in": resp.usage.prompt_tokens,
-                "out": resp.usage.completion_tokens,
+                "in": getattr(u, "prompt_tokens", None) if u else None,
+                "out": getattr(u, "completion_tokens", None) if u else None,
             },
         }
 
