@@ -34,7 +34,12 @@
         实测可用）；`cost.py` 成本核算，每 query 花费进 trace
       - 20 条试水：闭环 recall@4 **64.5% → 79.1%**、hit@4 **90% → 100%**，
         LLM judge 触发 2 次重写（规则 judge 版 0 次）
-      - 300 条全量 A/B + judge 与人工标注一致率评测：进行中
+      - **300 条全量 A/B**（`scripts/eval_corrective.py`，trace: corrective_ab_20261013_022855.json）：
+        recall@4 **59.1% → 71.9%**（+12.8pp）、hit@4 **88.7% → 98.6%**（+9.8pp）；
+        abstain 率 **8.0%**、平均迭代 0.45、重写生效 0.38/query——judge 真实参与决策；
+        709 次调用共 **¥1.10**，每 query ¥0.00368。闭环 recall 为 answered-only 口径
+        （分母剔除 24 条拒答）；全量口径 hit@4 ≈ 90.7%
+      - judge 与 DuReader 人工标注一致率（混淆矩阵四格）：评测中
 - [x] Phase 4 准备：RGB 基准本地化（500 条中文：zh 300 负例拒绝基础集 /
       zh_int 100 信息整合 / zh_fact 100 反事实）+ `FixedRetriever` 注入 +
       `scripts/eval_rgb.py` 四场景评测（输入构造本地验证通过：噪声比精确 0.60、
