@@ -24,11 +24,20 @@ SYSTEM_PROMPT = """你是一个严格基于给定资料回答问题的助手。�
 3. 如果资料不足以回答问题，明确回答"根据现有资料无法回答"，不要猜测。
 4. 回答用简体中文，直接给出结论，不要复述问题。"""
 
+# 直答路线（router 判 direct 时用）：没有资料可引，规矩整个反过来——
+# 鼓励用自身知识，但不许装懂。与 RAG 路线的 prompt 分开，避免
+# "禁止用自己的知识"把"中国首都是哪"也逼成拒答（Phase 6 实测踩到过）
+PARAMETRIC_SYSTEM_PROMPT = """你是一个基于自身知识回答问题的助手。规则：
+1. 基于你自己的知识直接回答，不引用外部资料（没有资料可引）。
+2. 不确定、知识可能过时或超出能力的问题，明确说"我不确定"，不要编造。
+3. 回答用简体中文，直接给出结论，简洁，不要复述问题。"""
+
 
 def build_messages(
     question: str,
     contexts: List[Dict],
     resolved_query: str = "",
+    parametric: bool = False,
 ) -> List[Dict[str, str]]:
     """把检索到的 chunk 拼成编号资料块，组装成 chat messages。
 
@@ -37,7 +46,20 @@ def build_messages(
     能好"会装不知道"它"是什么，而系统自己刚消解过（Phase 5 demo
     实测闹过这个笑话：condense 出"风热感冒"，答案说"未指明它指哪种
     疾病"）。单轮时为空，行为不变。
+    parametric：直答路线（router 判 direct）。不用资料、不要求 [n]
+    引用，换成鼓励用自身知识但禁止装懂的 system prompt。
     """
+    if parametric:
+        user_content = f"问题：{question}"
+        if resolved_query and resolved_query != question:
+            user_content += (
+                f"\n\n（注：用户的问题已结合对话历史消解指代，"
+                f"按\"{resolved_query}\"理解作答）"
+            )
+        return [
+            {"role": "system", "content": PARAMETRIC_SYSTEM_PROMPT},
+            {"role": "user", "content": user_content},
+        ]
     if contexts:
         blocks = []
         for i, c in enumerate(contexts, start=1):
@@ -62,9 +84,13 @@ def generate(
     contexts: List[Dict],
     stub: Optional[bool] = None,
     resolved_query: str = "",
+    parametric: bool = False,
 ) -> str:
-    """生成答案。stub=True 时不调 API，返回将要发送的内容（供冒烟/调试）。"""
-    messages = build_messages(question, contexts, resolved_query=resolved_query)
+    """生成答案。stub=True 时不调 API，返回将要发送的内容（供冒烟/调试）。
+    parametric=True 走直答路线（见 build_messages）。"""
+    messages = build_messages(
+        question, contexts, resolved_query=resolved_query, parametric=parametric
+    )
 
     if stub is None:
         stub = not config.LLM_API_KEY

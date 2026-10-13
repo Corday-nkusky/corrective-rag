@@ -84,7 +84,26 @@
         （gradio State），只绑 127.0.0.1 不开 share（服务端持有 MiMo key）；
         HTTP 端到端联调两轮 ¥0.0065，清空会话后问纯指代问题复现完整纠错回环
         （judge 两次判不足 → rewrite → 第 3 次放行，迭代 2 次 ¥0.0037）
-- [ ] Phase 6：简历 bullet 定稿（数字已齐，见计划书第 10 节）。见 `docs/01-项目计划书.md`
+- [x] Phase 6 查询路由（`router.py` + `scripts/eval_router.py`，Adaptive-RAG 式分流）：
+      - LLM 二分类 direct/retrieve（MiMo 结构化输出；无 key 降级规则路由，
+        刻意偏向 retrieve——误判 direct 会得到无依据答案，误判 retrieve 只是
+        多花一次检索，代价不对称）；路由在 condense 之后（指代没消解没法分类）
+      - 论文三分类收敛为两分类：多步检索由纠错循环承担（迭代+重写本身就是
+        多步机制）；单趟 abstain 会放大 judge 16.9% 误杀率
+      - 评测（trace: `router_eval_20261013_110645.json`，总成本 ¥0.024）：
+        自建 60 条标注集（30 direct 自建 + 30 retrieve 手写领域问，DuReader
+        无"不需检索"类别只能自建，已如实标注）**准确率 96.7%**（direct 100% /
+        retrieve 93.3%，2 条误判均为"通用建议类"边界）；DuReader dev 前 100 条
+        误判 direct 23 条——人工核查这 23 条的直答（trace:
+        `router_false_direct_check_20261013_111113.json`）：22 条质量可接受
+        （含时效性强的"法定节假日 13 天"也答对），1 条 MiMo 空答案；
+        说明 DuReader 的 retrieve 标签是搜索日志构造口径，≠"必须检索"
+      - 收益实测：直答路线平均 **14.4s / ¥0.0006 / 2 次调用** vs 检索路线
+        **33.9s / ¥0.0037 / 3.2 次调用**——快 2.4 倍、便宜 6 倍
+      - 直答路线换 parametric system prompt：RAG prompt"禁止用自己的知识"
+        会把"中国首都是哪"也逼成拒答（坑清单 #18）
+- [ ] Phase 7 定稿：test split（4,000 条）终测只跑一次 + 简历 bullet 定稿
+      （数字已齐）。见 `docs/01-项目计划书.md`
 
 ## 快速开始
 
@@ -116,9 +135,10 @@ python scripts/demo_chat.py              # CLI 版（交互）
 python scripts/demo_chat.py --scripted   # CLI 脚本演示（5 轮指代追问，无交互）
 ```
 
-网页版建议试的两条线：① "感冒了怎么办？" → "那吃什么药好？"（看 condense
+网页版建议试的三条线：① "感冒了怎么办？" → "那吃什么药好？"（看 condense
 把指代消解成独立问题）；② 清空会话后直接问 "它多久能好？"（无历史时 judge
-连续判不足 → rewrite 重试 → 第 3 次放行，完整纠错回环在右侧面板可见）。
+连续判不足 → rewrite 重试 → 第 3 次放行，完整纠错回环在右侧面板可见）；
+③ 问 "你好" 或 "中国的首都是哪里"（看路由判 direct，跳过检索直接答）。
 
 完整实施计划（分阶段、验收标准、评测集设计、指标定义、坑清单）：
 **`docs/01-项目计划书.md`**。

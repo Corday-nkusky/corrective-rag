@@ -44,6 +44,10 @@ def print_turn(i: int, question: str, r: dict, elapsed: float) -> None:
     print(f"    状态：{status}｜迭代 {r['iteration']} 次｜耗时 {elapsed:.1f}s")
     steps = [t["step"] for t in r["trace"]]
     print(f"    路径：{' → '.join(steps)}")
+    router = [t for t in r["trace"] if t["step"] == "router"]
+    if router:
+        tag = "直答（跳过检索）" if router[0].get("route") == "direct" else "检索（纠错循环）"
+        print(f"    路由：{tag}｜{router[0].get('reason')}")
     condense = [t for t in r["trace"] if t["step"] == "condense"]
     if condense and condense[0].get("applied"):
         print(f"    condense：{condense[0].get('new_query')}")

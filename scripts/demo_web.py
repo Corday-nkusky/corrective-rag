@@ -63,7 +63,8 @@ _IDLE_DETAIL = """### 本轮过程
 发送问题后，这里会显示纠错全链路：
 
 - **状态**：answered / abstained（诚实拒答）
-- **路径**：状态机实际走过的节点（condense → retrieve → rerank → judge → …）
+- **路由**：direct 直答（闲聊/稳定常识，跳过检索）/ retrieve 进纠错循环
+- **路径**：状态机实际走过的节点（condense → router → retrieve → rerank → judge → …）
 - **condense**：多轮追问的指代消解（"那它呢" → 独立问题）
 - **judge**：资料充分性判定与理由（不充分会 rewrite 重试或拒答）
 - **Top4 片段**：实际进入生成 prompt 的检索结果（rerank 分）
@@ -97,7 +98,15 @@ def _detail_md(
     ]
     for t in r["trace"]:
         step = t["step"]
-        if step == "condense" and t.get("applied"):
+        if step == "router":
+            route = t.get("route")
+            tag = (
+                "直答（参数化知识，跳过检索/重排/judge）"
+                if route == "direct"
+                else "检索（进入纠错循环）"
+            )
+            lines.append(f"- **路由**：{tag}｜{t.get('reason')}")
+        elif step == "condense" and t.get("applied"):
             lines.append(f"- **condense**：`{r['question']}` → `{t.get('new_query')}`")
         elif step == "judge":
             mark = "✓ 资料充分" if t.get("sufficient") else "✗ 资料不足"
@@ -162,13 +171,16 @@ def _reset(window: int):
 # ---------------------------------------------------------------------------
 _HEADER_MD = """## 纠错式 RAG 对话 Demo
 
-**不是"检索到就生成"**：检索 → 重排 → **LLM 裁判判定资料够不够** → 不够就
-改查询重试（最多 {max_iter} 次）→ 还不够就**诚实拒答**。多轮对话里，
-"那吃什么药好？"这类指代会先被 condense 成独立问题再检索。
+**不是"检索到就生成"**：查询路由先分流——闲聊/稳定常识直答（参数化知识，
+跳过检索），领域问题才进检索；检索结果再过重排过滤相关性、LLM 裁判判断
+"够不够回答问题"，不合格走策略池（查询重写 / 拒答），最多重试
+`{max_iter}` 次，仍不合格则诚实拒答。多轮对话里，"那吃什么药好？"这类
+指代会先被 condense 成独立问题再检索。
 
 - 知识库：DuReader-retrieval 真实语料 **100,001 段**
+- 路由：LLM 二分类 direct / retrieve（Adaptive-RAG 式查询复杂度分流）
 - 检索：bge-small-zh 向量召回 top20 → bge-reranker 精选 top4
-- LLM：MiMo-v2.6-flash（裁判 / 改写 / 生成同源，成本实时显示）
+- LLM：MiMo-v2.6-flash（路由 / 裁判 / 改写 / 生成同源，成本实时显示）
 """.format(max_iter=config.MAX_ITERATIONS)
 
 

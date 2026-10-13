@@ -1,11 +1,21 @@
 """纠错循环状态机（Phase 3 核心，整个项目的灵魂）。
 
-图结构（Phase 5 起含多轮入口）：
+图结构（Phase 6 起 router 在图头分流）：
 
-    [history 非空] → condense → retrieve → rerank → judge ──sufficient──→ generate → END
-    [history 为空]              ↑                                    │
-                          （单轮直进）                              └─insufficient─→ iteration<MAX? ─yes→ rewrite → (回 retrieve)
-                                                                                └no──→ abstain → END
+    [history 非空] → condense → router ──direct──> generate(parametric) → END
+    [history 为空]              │
+                          （单轮直进）
+                                  └──retrieve──> retrieve → rerank → judge ──sufficient──→ generate → END
+                                                       ↑                                    │
+                                                  （纠错回环）                              └─insufficient─→ iteration<MAX? ─yes→ rewrite → (回 retrieve)
+                                                                                                    └no──→ abstain → END
+
+router 节点（Phase 6 新增，Adaptive-RAG 的 classifier）：
+- 二分类 direct/retrieve：闲聊/稳定常识直答（跳过检索/重排/judge），
+  领域问题走完整纠错循环；解析失败一律 retrieve（安全侧，同规则路由偏向）
+- 在 condense 之后：指代没消解连分类都没法做
+- 论文三分类收敛为两分类的理由见 router.py docstring：多步由纠错循环承担，
+  单趟 abstain 会放大 judge 16.9% 误杀率
 
 condense 节点（Phase 5 新增，多轮对话的关键）：
 - 只在 history 非空时触发，单轮问题直接透传——不为用不到的功能花钱；
@@ -43,6 +53,7 @@ class RAGState(TypedDict, total=False):
     question: str
     query: str
     history: str  # 渲染好的对话历史（Phase 5：多轮上下文）
+    route: str  # 路由决策：direct / retrieve（Phase 6）
     retrieved: List[Dict]
     ranked: List[Dict]
     judge: Dict
@@ -68,6 +79,7 @@ class CorrectiveRAG:
         judge=None,
         rewriter=None,
         generator=None,
+        router=None,
         judge_threshold: float = 0.0,
     ) -> None:
         from langgraph.graph import END, START, StateGraph
@@ -77,11 +89,13 @@ class CorrectiveRAG:
         from corrective_rag.rerank import get_reranker
         from corrective_rag.retrieve import Retriever
         from corrective_rag.rewrite import get_rewriter
+        from corrective_rag.router import get_router
 
         self.retriever = retriever or Retriever()
         self.reranker = reranker or get_reranker()
         self.judge = judge or get_judge(threshold=judge_threshold)
         self.rewriter = rewriter or get_rewriter()
+        self.router = router or get_router()
         self.generate = generator or gen_fn
 
         # ---- 节点定义 ----
@@ -108,6 +122,25 @@ class CorrectiveRAG:
                 latency=round(time.time() - t0, 3),
             )
             return {"query": result["rewritten"], "trace": state["trace"]}
+
+        def node_router(state: RAGState) -> RAGState:
+            """查询路由（Phase 6）：direct 直答 / retrieve 进纠错循环。
+
+            判 direct 的条件很窄（闲聊/问候/稳定常识），解析失败和安全
+            默认都落 retrieve——误判 direct 的领域问题会得到无依据答案，
+            误判 retrieve 只是多花一次检索，代价不对称。
+            """
+            t0 = time.time()
+            decision = self.router.route(state["query"])
+            _log(
+                state,
+                "router",
+                route=decision.get("route"),
+                reason=decision.get("reason"),
+                classifier=decision.get("classifier"),
+                latency=round(time.time() - t0, 3),
+            )
+            return {"route": decision["route"], "trace": state["trace"]}
 
         def node_retrieve(state: RAGState) -> RAGState:
             query = state["query"]
@@ -184,10 +217,12 @@ class CorrectiveRAG:
             # （Phase 5 demo 实测教训：condense 消解出实体后，生成器仍收
             # 原始问题，会闹出系统刚消解又装不知道的笑话。judge 仍用原始
             # question 判断：用户的原问题能否被资料回答，才是门控该问的）
+            parametric = state.get("route") == "direct"
             answer = self.generate(
                 state["question"],
                 state["ranked"],
                 resolved_query=state.get("query", ""),
+                parametric=parametric,
             )
             _log(
                 state,
@@ -208,6 +243,9 @@ class CorrectiveRAG:
             return {"answer": answer, "status": "abstained", "trace": state["trace"]}
 
         # ---- 条件分支 ----
+        def route_after_router(state: RAGState) -> str:
+            return "generate" if state.get("route") == "direct" else "retrieve"
+
         def route_after_judge(state: RAGState) -> str:
             if state["judge"].get("sufficient"):
                 return "generate"
@@ -217,6 +255,7 @@ class CorrectiveRAG:
 
         graph = StateGraph(RAGState)
         graph.add_node("condense", node_condense)
+        graph.add_node("router", node_router)
         graph.add_node("retrieve", node_retrieve)
         graph.add_node("rerank", node_rerank)
         graph.add_node("judge", node_judge)
@@ -225,7 +264,12 @@ class CorrectiveRAG:
         graph.add_node("abstain", node_abstain)
 
         graph.add_edge(START, "condense")
-        graph.add_edge("condense", "retrieve")
+        graph.add_edge("condense", "router")
+        graph.add_conditional_edges(
+            "router",
+            route_after_router,
+            {"generate": "generate", "retrieve": "retrieve"},
+        )
         graph.add_edge("retrieve", "rerank")
         graph.add_edge("rerank", "judge")
         graph.add_conditional_edges(
@@ -246,6 +290,7 @@ class CorrectiveRAG:
             "question": question,
             "query": question,
             "history": history,
+            "route": "",
             "retrieved": [],
             "ranked": [],
             "judge": {},
