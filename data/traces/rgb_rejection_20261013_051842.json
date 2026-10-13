@@ -1,0 +1,1980 @@
+{
+  "scenario": "rejection",
+  "subset": "zh",
+  "n": 300,
+  "judge": "llm",
+  "avg_iterations": 1.31,
+  "cost": {
+    "calls": 893,
+    "prompt_tokens": 637587,
+    "completion_tokens": 130239,
+    "cost_cny": 0.8981,
+    "cny_per_query": 0.00299
+  },
+  "elapsed_sec": 8179.1,
+  "timestamp": "2026-10-12T21:18:42.067111+00:00",
+  "abstain_rate": 0.29,
+  "answered_correctly": 0.1433,
+  "hallucination_rate": 0.53,
+  "samples": [
+    {
+      "id": "zh-0",
+      "answer_head": "根据资料，印控克什米尔地区寺庙踩踏事故造成**十二人死亡、二十人受伤**。事发时间为一月一日凌晨二时四十五分左右，原因是",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-1",
+      "answer_head": "根据现有资料无法回答。\n\n资料中仅提到RCEP有15个成员国[3]，并提及给予老挝、缅甸、柬埔寨等最不发达国家过渡期安排",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-2",
+      "answer_head": "根据现有资料，无法确定第七届香港立法会议员宣誓仪式的具体开始时间，资料仅记载宣誓仪式开始前半个多小时议员已陆续抵达会议厅",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-3",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提及RCEP生效及原产地证书签发和多趟中欧/中老班列",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-4",
+      "answer_head": "香港第七届立法会共有90个议席，其中20席由地方分区直选产生、30席由功能组别产生、40席由选举委员会选出[2]；功能团",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-5",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提供2021年一季度增长2.7%及全年GDP总量，缺",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-6",
+      "answer_head": "根据现有资料无法回答。资料[2]仅给出大兴机场2021年规划实现旅客吞吐量4500万人次的建设投运目标，资料[4]给出的",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-7",
+      "answer_head": "根据资料，2022年春节档首日（票房）冠军是《水门桥》（《长津湖之水门桥》）[2]。",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-8",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-9",
+      "answer_head": "2022年春运首日（1月17日）的火车票按照火车票提前15天发售的安排，于\"今日\"正式开售[1][2][3]。资料中仅以",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-10",
+      "answer_head": "根据现有资料，无法回答2022年特斯拉全年的交付量。资料中仅提供了2022年部分时间段的交付数据：\n\n- 2022年第一",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-11",
+      "answer_head": "2023年世界人工智能大会的主会场仍设在世博地区[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-12",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提及首舰歼敌者号2009年下水及建造计划，完全没有第",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-13",
+      "answer_head": "根据现有资料无法回答——资料中仅给出美国2021年第四季度GDP同比增长5.5%、环比增长年率初值6.9%[1][2]，",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-14",
+      "answer_head": "2021年中国全年城镇新增就业1100万人的目标提前实现[3]。",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-15",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未给出黑石集团预测2022年美联储加息的具体次数",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-16",
+      "answer_head": "2021年中国电影市场年度总票房为470.36亿元[2]。\n\n补充：截至2021年2月16日上午9时30分，该年度总票房",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-17",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 2, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-18",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料[2]描述的武汉三镇夺冠是2022赛季（提到2021年",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-19",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料涉及的是2022年底至2023年初的疫情数据，没有",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-20",
+      "answer_head": "我国2021年人口出生率为7.18‰，已连续两年跌破10‰（即1%），也是近72年（1950年以来）来的新低[4]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-21",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅给出2025年产量目标和某年累计输气量，均未明确给出",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-22",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-23",
+      "answer_head": "根据现有资料，中国第三艘航母**尚未有官方确认的正式名称**，但已有相关报道与推测：\n\n- 《南华早报》援引消息人士的话",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-24",
+      "answer_head": "根据现有资料无法回答。资料中仅提到河南2021年粮食总产量比2020年减少281.6万吨[4]，全年减产56.32亿斤、",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-25",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料未明确指出M1芯片的首席设计师是谁，也未说明其去了哪家",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-26",
+      "answer_head": "长安汽车2021年全年累计销量同比增长14.82%[1][2]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-27",
+      "answer_head": "10月29日索马里首都摩加迪沙汽车炸弹爆炸已造成至少100人死亡、300多人受伤，且死伤人数可能进一步上升[1][2]；",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-28",
+      "answer_head": "2021年宝马集团全球交付BMW、MINI和Rolls-Royce汽车共252.15万辆，同比增长8.4%[1]；其中B",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-29",
+      "answer_head": "按美元计价，2021年中国货物进出口规模年内连续突破5万亿、6万亿美元关口[1]。资料未给出精确的美元数值。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-30",
+      "answer_head": "根据资料，2021年中国国内生产总值（GDP）同比增长8.1%，经济总量达114.4万亿元人民币（折合17.7万亿美元）",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-31",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未明确提及电影《四海》的导演姓名，无法回答该问题",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-32",
+      "answer_head": "《超越》是一部将于6月12日上映、聚焦毕业体育生的青春励志体育电影[2][4]。\n\n内容上，影片在起承部分将两代人的青春",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-33",
+      "answer_head": "2022年英特尔全年营收为760亿美元[2]。",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-34",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未提及《踏冰逐梦》的具体主演姓名，无法回答主演是",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-35",
+      "answer_head": "微软将以 687 亿美元（近 700 亿美元）的价格收购动视暴雪[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-36",
+      "answer_head": "根据现有资料，无法回答北京2022冬奥会全部高校志愿者的总人数，因为资料仅涉及北京大学的数据，未提供其他高校的志愿者人数",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-37",
+      "answer_head": "2022年澳网男单冠军是西班牙选手拉斐尔·纳达尔（「蠻牛」納達爾），他在决赛中先以2比6、6比7（5）落后于梅德韦杰夫，",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-38",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提到主创团队已公布，但未给出任何具体的主创人员姓名或",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-39",
+      "answer_head": "关于《我们的冬奥》的上映时间，资料存在不同说法：\n\n- 一处资料显示定档 **2022年1月15日（星期六）**[1]。",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-40",
+      "answer_head": "根据现有资料，澳冬奥代表团预计将包括40名运动员[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-41",
+      "answer_head": "北京冬奥会开幕式于北京当地时间2022年2月4日举行[2][3]，当日恰逢中国农历新年正月初四及传统节气立春[2]，开幕",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-42",
+      "answer_head": "根据现有资料无法回答该冠军的具体影片名称——资料中只提到首日票房冠军单日票房为4.76亿元，《满江红》以4.02亿元紧随",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-43",
+      "answer_head": "根据现有资料无法回答。资料中提到了沙特阿拉伯首次参加冬奥会以及运动员阿卜迪从小学习滑雪等信息，但并未明确说明沙特参加冬奥",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-44",
+      "answer_head": "黑龙江省冰上训练中心教练员王濛担任第一棒火炬手[2]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-45",
+      "answer_head": "Wordle 是一款每日字谜猜字游戏，玩家需要在六次或更少的机会内猜出一个 5 个字母的单词；猜对字母且位置正确方块变绿",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-46",
+      "answer_head": "2022年苹果春季发布会发布的新手机包括：\n\n- **新款 iPhone SE**[1][2]\n- **iPhone 1",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-47",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 0, \"r",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-48",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-49",
+      "answer_head": "根据现有资料无法回答。资料中仅明确提到北京冬残奥会吉祥物名为\"雪容融\"[1][2]，而对于北京冬奥会吉祥物，资料仅描述了",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-50",
+      "answer_head": "根据现有资料无法回答。\n\n理由：资料中关于男子1500米的记述是——宁忠岩在男子1500米比赛中以第二名落后于韩国选手金",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-51",
+      "answer_head": "根据现有资料无法回答完整口号。资料中仅提到北京2022年冬奥会主题口号包含“一起（Together）”，其展现了人类在面",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-52",
+      "answer_head": "根据现有资料，只能确认：在北京冬奥会赛场，中国速滑运动员以刷新奥运会纪录的成绩夺得男子500米速度滑冰冠军，这枚金牌从1",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-53",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料只提到导演李路，没有任何一篇提及《人世间》的编剧是",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-54",
+      "answer_head": "根据现有资料，花样滑冰女子单人滑比赛金牌得主包括：\n\n- **阿德琳娜·索特尼科娃**（俄罗斯）：2014年索契冬奥会花",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-55",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-56",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-57",
+      "answer_head": "海底捞的新任首席执行官是杨丽娟[2]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-58",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 0, \"r",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-59",
+      "answer_head": "根据现有资料无法回答。资料中仅提到了北京冬奥会吉祥物\"冰墩墩\"，未提及北京冬残奥会吉祥物的相关信息[1][3]。",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-60",
+      "answer_head": "B站2021财年总营收为193.8亿元，同比增长62%[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-61",
+      "answer_head": "北京冬残奥会闭幕式中国体育代表团旗手是杨洪琼[1]。她是云南籍运动员，1989年9月出生，曾为轮椅篮球运动员，2018年",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-62",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提到闭幕会上午9时开始，但未给出闭幕的具体日期，无法",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-63",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-64",
+      "answer_head": "2021年我国常住人口城镇化率为64.7%[2]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-65",
+      "answer_head": "邓伦偷逃个人所得税4765万元[1][3]；另有报道称其在2019-2020年间逃税加起来有六千多万，虽已补交一部分，但",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-66",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：各资料仅提及梁冠华参演《相逢时节》及他过往角色，均未给出他",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-67",
+      "answer_head": "坠毁的东航MU5735航班上共有132人，其中乘客123名、机组人员9名[1][2][3]。这132人已全部遇难，遇难者",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-68",
+      "answer_head": "MU5735航班坠毁于广西梧州藤县琅南镇莫埌村附近的山谷[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-69",
+      "answer_head": "根据现有资料无法给出2022年考研报名人数的确切数字。资料中仅提到，2022年研究生报名人数较2021年增长高达80万人",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-70",
+      "answer_head": "根据现有资料无法回答《心居》的主演名单。资料中仅能确认：冯绍峰在剧中饰演施源[4]，张芝华在剧中饰演苏望娣[2][3]，",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-71",
+      "answer_head": "根据现有资料无法回答。资料中仅提到神舟十三号乘组为3名航天员，且中国女航天员将首次进驻中国空间站并实施出舱活动[1][2",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-72",
+      "answer_head": "德国队分在E组[1]；该组同组的还有西班牙队，其在末轮1:2被日本队逆转[3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-73",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未提及2022年塞尔维亚总统选举的获胜者姓名，缺",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-74",
+      "answer_head": "2022年清明档（4月3日-4月5日）全国电影票房为1.22亿元，即12190.84万元[1][4]。作为对比，2021",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-75",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未给出2021年东吴证券的净利润具体数值，仅涉及",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-76",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅说明申雪是2010年冬奥会中国首枚双人滑金牌得主，未",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-77",
+      "answer_head": "上海2021年GDP为4.32万亿元[2]；经最终核实，2021年上海地区生产总值现价总量为43653.17亿元[3]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-78",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅给出2022年全年3%、二季度0.4%等数据，未提及",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-79",
+      "answer_head": "根据现有资料无法回答。\n\n资料[2]仅说明2021-22赛季欧冠决赛由皇马对阵利物浦[2]，但未交代比赛结果；资料[3]",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-80",
+      "answer_head": "C919的全称是COMAC-C9-19，其中C取自中国（China）和中国商飞（COMAC）的首字母[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-81",
+      "answer_head": "根据现有资料无法回答。\n\n资料仅说明香港特区第六任行政长官选举于2022年5月8日举行，选举过程依法依规、公平公正，选举",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-82",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均是关于《制造共识》一书的内容，《巴拿马诡计》仅作",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-83",
+      "answer_head": "飞机上共有11人，其中9名乘客和2名（资料中未完整说明身份的）人员[1][2][3]。这些乘客为喀麦隆石油运输公司员工，",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-84",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料只涉及赛季前瞻、赛程安排及2020-2021赛季冠",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-85",
+      "answer_head": "根据现有资料无法回答。资料中仅列出《好好说话》的角色名（如林林、小周、马太太、廖望、杨光、罗修、苏菁菁等）及全部演员角色",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-86",
+      "answer_head": "根据现有资料，中超新赛季原计划于4月28日或29日开赛[1]，但受多地疫情影响，本月开赛很难，最早或将5月上旬开赛[2]",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-87",
+      "answer_head": "根据现有资料无法回答。\n\n资料中提到莫里森或许无法成为15年来首位连续两次赢得大选的总理[1]，国家党在2022年5月大",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-88",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-89",
+      "answer_head": "罗伯小学枪击案共造成21人死亡，包括19名学童和两名老师[1][2]。其中遇害的学生为二到四年级[4]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-90",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：四篇资料均未提及《重生之门》的导演姓名，无法回答问题）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-91",
+      "answer_head": "根据现有资料无法回答。资料仅提供了美团2022年第一季度部分分部数据（到店、酒店及旅游业务收入76亿元[1]，新业务及其",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-92",
+      "answer_head": "2022年超级碗（第五十六届超级碗）的冠军是洛杉矶公羊队，他们在2022年2月13日于加州英格尔伍德SoFi体育场进行的",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-93",
+      "answer_head": "EMNLP 2022 主会议在阿布扎比（Abu Dhabi）举办，时间为2022年12月7日至11日，并以线上线下混合形",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-94",
+      "answer_head": "2022年6月1日芦山地震的震级为6.1级[4]；同日还发生了4.5级地震，两次地震分别发生在四川省雅安市芦山县和宝兴县",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-95",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料未明确指出神舟十四号指令长是谁，仅提到部分乘组成员和任",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-96",
+      "answer_head": "2022年环境日的主题为“共建清洁美丽世界”[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-97",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-98",
+      "answer_head": "根据资料，2022年高考报名/参加人数（分省）如下：\n\n**超过60万的省份**\n- 安徽：60.1万人，较上年增加近6",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-99",
+      "answer_head": "根据现有资料，2022年金砖国家主席国是中国[4]。资料中中方在表述中明确提到“作为今年主席国，我们将同其他金砖国家一道",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-100",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料只给出了Minerva在GSM8K上的78%准确率和M",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-101",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未提及2023年1月3日恒生指数收盘点数，仅有其",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-102",
+      "answer_head": "根据现有资料，枪击者是一名41岁的男子，他曾在日本自卫队服役（在海军服役三年），枪击后已被捕[3][4]。资料中未提供其",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-103",
+      "answer_head": "根据资料，安倍晋三是在**火车站外发表竞选演讲时**遭遇枪击的[3]；中枪后他被送往橿原市内的医院抢救[2]。",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-104",
+      "answer_head": "小米MIX4搭载的是高通骁龙888+处理器，最高主频达到3.0GHz，AI性能提升23%[1][3]。该处理器于2021",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-105",
+      "answer_head": "根据现有资料，各来源之间存在矛盾，无法确定确切日期：\n\n- 资料[1]称日本于2023年8月8日为安倍晋三举行了国葬[1",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-106",
+      "answer_head": "2022年印度新当选总统是德拉帕迪·慕尔穆（又译德劳帕迪・穆尔穆）[1][2]。\n\n她在2022年总统选举中以绝对优势击",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-107",
+      "answer_head": "KF-21战斗机的研发国家是韩国：资料中提到2001年8月时任总统金大中宣布将自主研制战斗机（KF-X）[2]，并称韩方",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-108",
+      "answer_head": "根据资料，《沉香如屑》由徐恺咛、李欣泽、韩承羽领衔主演[1]；剧中还有张睿、刘萌萌、梁婧娴、林源、张天阳、孙泽源、张芷溪",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-109",
+      "answer_head": "根据现有资料，《胡同儿》的导演姓名并未完整给出，资料仅提到王羽铮遇到了\"正在寻找新短剧主演的导演陆……\"，即导演姓陆，但",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-110",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅介绍了第36届百花奖的评选规则、流程和颁奖时间地点，",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-111",
+      "answer_head": "2022年上半年，西藏实现地区生产总值973.24亿元，同比增长4.8%[1]。其中第一产业增加值48.30亿元、增长0",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-112",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未提及2022年乒乓球团体世锦赛的举办地，缺少回",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-113",
+      "answer_head": "《艾尔登法环》原定于2022年1月21日发售[1][3]，后官方宣布跳票，延期至2022年2月25日发售[4]。\n\n另外",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-114",
+      "answer_head": "根据现有资料，影片的导演名单并未完整列出，只能确认以下信息：\n\n- 该片原以八位导演抽签方式各自认领一个年代主题，后因吴",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-115",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提及剧中角色名（林朝夕、裴之等）和导演沈严，未提及任",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-116",
+      "answer_head": "根据现有资料无法回答。\n\n资料中仅提到2022年上半年汤臣倍健营收同比增速为0.55%，系近10年来同期最低水平[2]，",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-117",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-118",
+      "answer_head": "北京地铁19号线一期共设车站9座，其中换乘站7座，平均站间距2.8km[2]。一期工程为牡丹园站至新宫站，全程设9站[4",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-119",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅涉及零壹空间的成立时间、融资和投资方信息，均未提及创",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-120",
+      "answer_head": "2022世界5G大会由国家发改委、科技部、工信部和黑龙江省人民政府共同主办[4]，举办地在黑龙江省，是黑龙江为自己争取的",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-121",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-122",
+      "answer_head": "根据现有资料，只能确认乌江特大桥全长1834米[1]；资料中\"主桥\"部分的内容被截断，主桥具体长度无法回答。",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-123",
+      "answer_head": "《北京市住房租赁条例》将于2022年9月1日正式施行[2][4]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-124",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料只说明大会由中国发起举办及时间形式，均未提及具体举办城",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-125",
+      "answer_head": "美国最高法院推翻的是1973年的《罗伊诉韦德案》（Roe v. Wade）裁决[1]。该裁决曾认定孕妇选择堕胎的自由受宪",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-126",
+      "answer_head": "- 2022年辛辛那提赛（WTA1000赛事，8月15日至21日在美国俄亥俄州辛辛那提市举行）女单首轮，张帅直落两盘以6",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-127",
+      "answer_head": "根据现有资料无法回答。\n\n资料中仅提供了深圳大学2022年计划招收国家任务全日制艺术类本科生约为609名[1][2]，以",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-128",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：四篇资料介绍了2022中关村论坛的活动、时间、筹备等内容，",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-129",
+      "answer_head": "根据现有资料无法回答。资料仅提到克利夫兰站萨维尔因科斯秋克赛前退赛而不战而胜晋级争冠赛[4]，以及格兰比站决赛由卡萨金娜",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-130",
+      "answer_head": "根据现有资料无法回答。\n\n资料中仅给出一汽解放2022年**全年**累计销量12.77万辆、位居行业第二、同比下降63%",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-131",
+      "answer_head": "根据现有资料，无法给出完整参加国名单：\n\n- 俄罗斯国防部7月26日宣布参演力量包括东部军区部队、空降兵部队、远程轰炸机",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-132",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-133",
+      "answer_head": "2022年男排世锦赛在俄罗斯举办，比赛将在俄罗斯的十个城市举行[1]。该主办权是国际排联于当地时间11月15日在墨西哥坎",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-134",
+      "answer_head": "戈尔巴乔夫的葬礼在莫斯科的新圣女公墓举行[3]，他被安葬在妻子赖莎·马克西莫夫娜旁边[1]。而同一天的告别仪式则在柱厅（",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-135",
+      "answer_head": "根据现有资料无法回答欧元区整体2022年8月通胀率的具体数值。资料仅提供了欧元区各成员国8月的通胀率（德国8.8%、法国",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-136",
+      "answer_head": "根据现有资料，只能确认伊丽莎白二世因“年迈”逝世于巴摩拉（巴尔莫勒尔）城堡，白金汉宫于当日18时30分正式公布其逝世消息",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-137",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-138",
+      "answer_head": "中国主办了2022年“中国旅游文化周”：该活动由国家文化和旅游部与人民网共同主办[2]，启动仪式于9月6日在北京举行，由",
+      "status": "answered",
+      "iterations": 2,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-139",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未提及歌曲《吉庆团圆》及其演唱者，无法回答该问题",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-140",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅描述了夺得U14男单冠军的是“背背篓的网球少年”，未",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-141",
+      "answer_head": "Incase挂绳的售价是98元[1][3][4]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-142",
+      "answer_head": "不同时间统计的遇难人数不同，按资料发布时间先后：\n\n- 9月5日发布会通报：地震造成7人死亡[3]。\n- 报道称至少46",
+      "status": "answered",
+      "iterations": 2,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-143",
+      "answer_head": "2022年中秋节假期，中国国内旅游出游7340.9万人次，同比下降16.7%，按可比口径恢复至2019年同期的72.6%",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-144",
+      "answer_head": "《海的尽头是草原》以家喻户晓的\"三千上海孤儿入内蒙古\"这一历史事件为选材基础进行改编[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-145",
+      "answer_head": "国葬将在伦敦的西敏寺（Westminster Abbey，即英国国会大厦）举行，现场可容纳大约2000至2200人[1]",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-146",
+      "answer_head": "根据现有资料，无法给出2022年8月单月的汽车出口量数据；资料仅提供累计数据：2022年1—8月我国汽车出口量为191万",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-147",
+      "answer_head": "根据现有资料无法回答主犯的具体刑期。\n\n资料中仅提到其余27名被告人被判处十一年至六个月有期徒刑不等，其中19名并处罚金",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-148",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料描述的是云南滇池举办的龙舟赛事，与浙江省第二届国际",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-149",
+      "answer_head": "根据资料，中国女篮在2022年世界杯小组赛中的战绩为4胜1负：先后以107比44胜韩国、98比51胜波黑、63比77负美",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-150",
+      "answer_head": "根据现有资料，无法回答《炽道》主演的演员姓名——资料中仅提及角色名：男主是刚上大学、怀揣跳高梦想的段宇成，女主是罗娜[4",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-151",
+      "answer_head": "根据现有资料，未直接给出2022年国庆假期全国旅游总收入的具体数值。资料仅提供了以下相关信息：国庆假期日均旅游收入约41",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-152",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料只涉及角色名和剧情，没有任何演员姓名信息，无法回答主演",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-153",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提及角色阿德及韩雪饰演妻子、导演罗志良，未明确列出影",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-154",
+      "answer_head": "The request was rejected because it was considered high risk",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-155",
+      "answer_head": "2023年亚洲杯由卡塔尔（卡达）主办[2]。原定由中国举办，但中国于2022年5月考量疫情等因素放弃主办权[1][2]，",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-156",
+      "answer_head": "特拉斯的首相任期仅为44天，是英国历史上任期最短的首相[3][4]。\n\n她于2022年10月20日宣布辞职，此前一周其财",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-157",
+      "answer_head": "徐梦桃从事的是自由式滑雪空中技巧项目（资料中也称\"雪上体操\"）[1]。她从体操转向后被父母送到沈阳体育学院学习\"雪上体操",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-158",
+      "answer_head": "根据现有资料无法回答（资料仅说明2023年度补充录用计划招录3249人，未给出招考总计划人数）[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-159",
+      "answer_head": "根据现有资料，阮富仲访华有两次：\n\n1. 应中共中央总书记、国家主席习近平邀请，阮富仲于**1月12日至15日**对中国",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-160",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\":1,\"rea",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-161",
+      "answer_head": "根据现有资料无法回答。提供的资料中仅介绍了《三体》动画的拍摄计划、播出与延期时间、播放量以及观众口碑等情况[3][4][",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-162",
+      "answer_head": "新修订的《中华人民共和国妇女权益保障法》自2023年1月1日起施行[1][2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-163",
+      "answer_head": "《三悦有了新工作》是B站（哔哩哔哩）的自制剧[3]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-164",
+      "answer_head": "2022年国际篮联女篮世界杯上，中国女篮最终获得**亚军**，具体成绩如下[1][3]：\n\n- **半决赛**：中国队以",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-165",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：各资料仅提到男单决赛或相关赛事进程，均未给出2022年WT",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-166",
+      "answer_head": "根据现有资料，波兰要求德国赔偿二战损失的金额有不同说法：\n\n- 要求德国支付上万亿美元的二战赔偿[1]\n- 早在2019",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-167",
+      "answer_head": "根据现有资料无法回答。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-168",
+      "answer_head": "2022年美国中期选举改选的参议院席位情况：\n\n- 参议院共有100个席位，美国50个州无论大小各有两名参议员代表本州[",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-169",
+      "answer_head": "2022年第31届中国电视金鹰奖的最佳男主角奖由电视剧《人世间》获得[2]；但该届最佳男主角的获奖演员姓名，根据现有资料",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-170",
+      "answer_head": "第28届上海电视节白玉兰奖颁奖典礼于2023年6月23日晚举行[1][2]，颁奖礼在“白玉兰绽放”颁奖典礼暨上海电视节闭",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-171",
+      "answer_head": "根据现有资料，乌镇峰会举办时间如下：\n\n- 2021年世界互联网大会乌镇峰会：9月26日至28日举行[2][3]。\n- ",
+      "status": "answered",
+      "iterations": 2,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-172",
+      "answer_head": "根据现有资料，2022年世界互联网大会在浙江省举办，由世界互联网大会主办、浙江省人民政府承办，会期为11月9日至11日[",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-173",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料仅提供了2022年金鸡百花电影节的举办时间和活动内",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-174",
+      "answer_head": "2022年G20峰会于11月15、16日在巴厘岛举行[3]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-175",
+      "answer_head": "2022年美国中期选举后，众议院多数党为共和党（共和党从民主党手中夺下众议院控制权，民主党则守住参议院多数党地位）[1]",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-176",
+      "answer_head": "2022年APEC会议在泰国举行[1]，会场设于泰国的诗丽吉王后国家会议中心[2]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-177",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅暗示与教练组关系紧张及离队后恢复训练，未明确说明因伤",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-178",
+      "answer_head": "2022年卡塔尔世界杯的官方吉祥物叫 **La'eeb**，它是一个卡通人物，在阿拉伯语中意为\"技艺高超的球员\"，寓意鼓",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-179",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: The request was",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-180",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-181",
+      "answer_head": "CVPR 2022 在美国路易斯安那州新奥尔良的欧内斯特·N·莫里尔会展中心（New Orleans Ernest N.",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-182",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提及沙特承办了该峰会及中方欢迎在华举办下届峰会，但均",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-183",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料中没有列出神舟十四号三名航天员的姓名，无法回答具体有谁",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-184",
+      "answer_head": "台积电在美国的新厂计划投资规模约为120亿美元[3]。\n\n其中在亚利桑那州扩大投资设厂计划为120亿美元，拟新建造六间晶",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-185",
+      "answer_head": "根据现有资料无法回答。资料仅提到1/8决赛结束、1/4决赛的预测以及在四分之一决赛中被淘汰的巴西队、荷兰队、葡萄牙队和英",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-186",
+      "answer_head": "《三体》动画的播放平台是哔哩哔哩（bilibili），由bilibili、三体宇宙及艺画开天联合出品[2]，动画于202",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-187",
+      "answer_head": "根据现有资料无法回答。资料中仅说明电影《护卫者2》由聂荣鑫执导并主演[1]，对于电视剧《护卫者》只提到王同辉参演[2][",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-188",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提到将进行季军争夺战（摩洛哥相关），未给出最终季军球",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-189",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料只提到法国是卫冕冠军和摩洛哥的半决赛进程，未给出卡塔尔",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-190",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅涉及参赛队伍、分组和预选赛信息，未提及决赛对阵双方（",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-191",
+      "answer_head": "卡塔尔世界杯是阿根廷队第三次夺得世界杯冠军，此前阿根廷分别于1978年和1986年两次夺冠[2][3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-192",
+      "answer_head": "美加墨世界杯共有48支球队参赛，即12个小组、每组4支球队[1]；其中每个小组前两名与8个成绩最好的第三名共32支球队晋",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-193",
+      "answer_head": "关于小米13系列的发布时间，资料中存在两种说法：\n\n- 一种说法是预计11月份发布[1]；\n- 另一种说法是预计12月1",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-194",
+      "answer_head": "《阿凡达：水之道》中国内地定于 2022 年 12 月 16 日上映，与北美同步[1]。该片是一部 2022 年上映的美",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-195",
+      "answer_head": "吕小军被查出的禁用物质是EPO（促红细胞生成素），其样本检测结果呈非特定物质阳性[3][4]。EPO在任何时候（赛内和赛",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-196",
+      "answer_head": "2023年北京广播电视台春节联欢晚会吉祥物为“兔小蕊”，由北京台春晚官方微博于2023年1月3日公布[1][3]。\n\n注",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-197",
+      "answer_head": "根据现有资料，2023年春节假期为1月21日0时至1月27日24时，共7天[1]；资料中将春运划分为不同阶段，其中春运后",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-198",
+      "answer_head": "首架C919于12月9日交付首家用户东航[2]；其具体交付年份，根据现有资料无法回答（资料仅提及2021年3月1日东航签",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-199",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料仅提到罚款比例规定和垄断行为，均未给出知网被罚的具",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-200",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-201",
+      "answer_head": "根据现有资料无法回答。资料中仅提到中国网球公开赛（ATP赛事）将于2023年9月27日至10月4日举办[2]，以及它已出",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-202",
+      "answer_head": "根据现有资料无法回答。资料[1]仅说明相关政策\"自新型冠状病毒感染实施'乙类乙管'之日起施行\"[1]，但未给出实施的具体",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-203",
+      "answer_head": "2022年考研报名的起始日期分两个阶段：网上预报名于2021年9月24日开始（9月24日至27日每天9:00—22:00",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-204",
+      "answer_head": "根据现有资料无法回答。\n\n资料中未给出2022年中国电影市场的总票房收入数据：[1] 仅提及某项56亿美元位列2022年",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-205",
+      "answer_head": "根据现有资料，C罗于2022年12月30日宣布加盟沙特阿拉伯球会艾纳斯[3]，因此2023年他效力于艾纳斯；同时在202",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-206",
+      "answer_head": "柯林斯词典2022年年度词汇是“permacrisis”（长期危机），由“permanent”（永久的）和“crisis",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-207",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：各资料的导演名单均在2014年前截断，无一条明确指出202",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-208",
+      "answer_head": "根据现有资料，只能回答部分：\n\n- 2023年北京个人新能源小客车指标配置12720个[4]\n- 2023年北京单位新能",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-209",
+      "answer_head": "根据现有资料无法回答。\n\n资料中虽介绍了《中国新闻周刊》2022\"年度影响力人物\"榜单的多个奖项（如年度科技人物为中国空",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-210",
+      "answer_head": "根据现有资料无法回答。资料[1]仅确认2023年IRONMAN世界锦标赛女子赛事于2023年10月14日在夏威夷KONA",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-211",
+      "answer_head": "根据资料，拉杜卡努在第二盘比赛中不慎扭伤了脚踝，尽管她呼叫了医疗暂停并希望坚持，但在第三盘开始后最终难以坚持，无奈退出了",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-212",
+      "answer_head": "2022年11月30日上午，江西省高级人民法院对劳荣枝涉嫌犯故意杀人罪、抢劫罪、绑架罪上诉一案作出二审宣判：驳回上诉，维",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-213",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料只提到佩洛西担任议长至新一届国会上任，未说明2023年",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-214",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-215",
+      "answer_head": "2023年国考计划招录37100人，共17655个职位[2]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-216",
+      "answer_head": "2023年国考实际参加考试的人数超过152万人[4]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-217",
+      "answer_head": "The request was rejected because it was considered high risk",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-218",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料只提到旗舰店位于班德拉库拉(BKC)综合区及第二家店在",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-219",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-220",
+      "answer_head": "根据现有资料，2023年北美领导人峰会的举办地有两种表述：\n\n- 墨西哥外交部长埃布拉德2023年8月8日表示，美墨加三",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-221",
+      "answer_head": "2022年全年我国CPI比上年上涨2.0%[1]，低于政府工作报告提出的3%左右的预期目标涨幅[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-222",
+      "answer_head": "2022年12月美国CPI同比上涨6.5%，环比下降0.1%[2][3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-223",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均未提及2023年马来西亚公开赛女单冠军的具体人选",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-224",
+      "answer_head": "根据现有资料无法回答。\n\n资料[4]仅提到2023年第81届世界科幻大会是在华盛顿举办的第79届世界科幻大会上决出的，但",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-225",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料只提到赛事概况、黑马奖得主济南兴洲及半决赛上海海港对阵",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-226",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料涉及李强、丁薛祥等中央人事及上海副市长李政，但均未提及",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-227",
+      "answer_head": "2022年中国经济全年增长3.0%，其中四季度同比增长2.9%，环比与三季度持平[2]；前三季度累计同比增长3.0%[3",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-228",
+      "answer_head": "根据现有资料无法完整回答《流浪地球2》的主演名单。资料中仅提及演员王智参演该片，称其\"刚柔并济悲情动人\"、演技惊艳[3]",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-229",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提到果果合唱团的存在与成员故事，没有任何关于其创办人",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-230",
+      "answer_head": "2022年重庆的GDP增速为2%，创下该市直辖以来的新低[3]；这一增速较2022年政府工作报告提出的5.3%预期增速低",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-231",
+      "answer_head": "2022年我国全社会研发（R&D）经费投入达到3.09万亿元，是2012年的3倍，稳居世界第二大研发投入国[4]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-232",
+      "answer_head": "暴雪游戏在中国大陆的终止运营时间为 **2023 年 1 月 24 日 0 时**，原因为与网易的授权协议在 2023 ",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-233",
+      "answer_head": "新西兰2023年新任总理是希普金斯（Chris Hipkins）[1][3]。\n\n具体信息：\n- 希普金斯原为新西兰教育",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-234",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-235",
+      "answer_head": "根据现有资料无法回答。\n\n资料中仅提及2023年春节档首日总票房达11.84亿元、首日有5部电影票房破亿、2部破3亿元等",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-236",
+      "answer_head": "2023年澳网男单冠军是德约（德约科维奇）：他在决赛中直落三盘击败西西帕斯，于北京时间2023年1月29日在罗德拉沃尔球",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-237",
+      "answer_head": "根据现有资料，无法确定2023年春节档最终票房冠军的具体影片：资料[4]提到某影片获得\"2023年春节档票房冠军\"等里程",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-238",
+      "answer_head": "《狂飙》是一部刑侦扫黑犯罪剧[1]，由徐纪周执导，张译、张颂文、李一桐、张志坚、吴刚领衔主演[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-239",
+      "answer_head": "根据现有资料无法回答张颂文在《狂飙》中饰演的具体角色名称，资料中并未给出该角色的名字。仅资料提到，有网友称赞张颂文\"演鱼",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-240",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：四则资料均未提及高启强的扮演者是谁，只涉及其他角色的演员与",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-241",
+      "answer_head": "根据资料，关于该飞艇的用途存在两种说法：\n\n- 中方称该飞艇属于民用性质，是用于气象研究或飞行试验的气象飞艇，并非高科技",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-242",
+      "answer_head": "根据现有资料，2024年巴黎奥运会火炬传递将从法国东南部港口城市马赛开始[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-243",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：四份资料均未提及成都大运会吉祥物的具体名称与形象，无法回答",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-244",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：各资料只列出其他剧集的播出日期或提出君子盟开播问题的标题，",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-245",
+      "answer_head": "2023年土耳其地震发生于2023年2月6日，当地时间下午1时24分[3]；同日（2月6日）10:24（UTC）在卡赫拉",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh-246",
+      "answer_head": "根据现有资料，无法回答2023年土耳其地震主震的震级[2]。\n\n资料中仅提供了以下相关震级信息：主震后9小时发生的最强余",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-247",
+      "answer_head": "根据现有资料无法回答2025年游泳世锦赛最终的举办城市。资料仅显示：世界泳联2019年曾宣布俄罗斯喀山和匈牙利布达佩斯分",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-248",
+      "answer_head": "根据现有资料，百度计划于3月份推出类似OpenAI旗下ChatGPT的人工智能聊天机器人服务，一开始会将其嵌入到公司的主",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-249",
+      "answer_head": "根据现有资料无法明确回答古筝行动具体在第几集。资料[4]仅提到购买\"《三体》大结局点映礼\"礼包可提前观看22-30集，且",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-250",
+      "answer_head": "网易2022年全年总营收为964.96亿元，同比增长10.15%[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-251",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 0, \"r",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-252",
+      "answer_head": "硅谷银行于2023年3月11日因“流动性不足与资不抵债”被美国加利福尼亚州金融保护和创新局关闭，并指定美国联邦存款保险公",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-253",
+      "answer_head": "《灌篮高手》电影中国内地上映时间定为4月20日[2]；此前发行商羚邦娱乐已宣布引进并预定2023年年初在港澳地区上映，正",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-254",
+      "answer_head": "根据现有资料，无法回答 2023 年奥斯卡最佳女主角的获奖者——资料[4]只给出了最佳男主角（布兰登·费舍·《鲸》）、最",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh-255",
+      "answer_head": "根据现有资料无法回答。",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-256",
+      "answer_head": "2023年女足世界杯总奖金将超过原先拟定的6000万美元，但具体金额尚未透露[1]；该6000万美元原本是针对24支参赛",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-257",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅涉及女子双人3米板和男子双人10米台冠军，未提及20",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-258",
+      "answer_head": "根据资料，众议院TikTok听证会于美国时间3月23日举行，美东时间上午10点正式开始[2]，听证会持续了约5个小时[1",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-259",
+      "answer_head": "根据现有资料，关于GPT-4发布时间的说法经历了多次变化：\n\n- OpenAI首席执行官萨姆·阿尔特曼最初表示GPT-4",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-260",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提到男单半决赛对阵，没有任何一篇给出2023年全英赛",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-261",
+      "answer_head": "马英九祭祖的时间安排在清明前后[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-262",
+      "answer_head": "俄罗斯联邦安全局在叶卡捷琳堡拘留的《华尔街日报》记者是美国公民埃文·格尔什科维奇（Evan Gershkovich），被",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-263",
+      "answer_head": "马克龙于2023年4月初访华[1]，这是他自2019年以来首次访问中国[2]。访华最后一天为4月7日（周五）[3]，其中",
+      "status": "answered",
+      "iterations": 2,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-264",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料只提到主演冯小刚及剧情背景，均未给出中国版《忠犬八",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-265",
+      "answer_head": "根据资料，高盛的预计包括以下几个层面：\n\n- 全球范围内，生成式 AI 将导致约 **3 亿个工作岗位**实现自动化[2",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-266",
+      "answer_head": "ChatGPT于2022年11月推出[1][3]，由OpenAI开发并于2022年11月发布[2]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-267",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: The request was",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-268",
+      "answer_head": "RCEP于2020年11月15日由15个缔约方正式签署，根据生效门槛达成后六十天的规定，协定于2022年1月1日开始生效",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-269",
+      "answer_head": "向岸田文雄投掷炸弹的是一名来自川西市、姓木村的24岁男性，他是渔业合作社的工作人员[1]。现场另一角度的视频拍到这名青年",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-270",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-271",
+      "answer_head": "根据现有资料无法回答——资料中未给出成都大运会的具体开幕日期与时间，仅提到开幕式总时长不到100分钟[2]、6月15日开",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-272",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均提到‘导演’但均未说明导演的具体姓名，无法回答该",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh-273",
+      "answer_head": "根据现有资料，[2] 中\"漫长的季节\"的\"主演:\"一栏为空，未列出主演名单，因此无法完整回答主演是谁[2]。\n\n资料中仅",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-274",
+      "answer_head": "目前《浪姐4》尚未官宣定档；据芒果综艺博主爆料，片子已送审，暂定5月5日播出[1]；另有爆料称暂定5月中上旬播出，即约5",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-275",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提到中国男篮分档、亚洲对手总体形势等，没有任何一篇给",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-276",
+      "answer_head": "根据现有资料，张之臻在2023年马德里大师赛的成绩如下：\n\n- 因排名第50位的迈克尔·莫临时退赛，排名第99位的张之臻",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-277",
+      "answer_head": "根据现有资料，关于2023年\"五一\"旅游人次的信息不完整：\n\n- 资料[4]中出现\"74亿人次\"的表述，但数字与上下文被",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-278",
+      "answer_head": "查尔斯三世加冕仪式预计于11时开始，仪式持续时间约1个小时左右[1][2][3]。作为对比，1953年6月2日英国女王的",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-279",
+      "answer_head": "根据现有资料，资料并未明确说明《漫长的季节》的具体类型归属[1][2]；只能确认它是一部电视剧，被评价为\"电影般的电视剧",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-280",
+      "answer_head": "《人生路不熟》（英语：Godspeed）是2023年上映的一部电影，由易小星执导并出演[1]。\n\n**剧情**：影片讲述",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-281",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料仅提及国足同组有三个对手及抽签结果，但均未列出具体对手",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-282",
+      "answer_head": "俄罗斯瓦格纳是一个私人军事集团（瓦格纳集团），被俄罗斯政府用于进行合理推诿，掩盖其对外干预的真实伤亡和财务成本[1]。该",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-283",
+      "answer_head": "根据现有资料，《速度与激情 10》于 5 月 17 日在内地上映，比北美提前两天[2]。截至该消息发布时，影片票房已过亿",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-284",
+      "answer_head": "《流浪地球2》于2023年4月12日起在俄罗斯正式公映[2][3]；4月11日晚在莫斯科举行首映礼[2][3]。此前制片",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-285",
+      "answer_head": "2023中关村论坛于2023年5月25日晚举行开幕式[4]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-286",
+      "answer_head": "根据现有资料，C919 的商业首飞时间尚未最终确定。东航相关负责人表示，2 月 28 日的航班信息\"算是测试\"，商业首飞",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-287",
+      "answer_head": "C919商业首飞为2023年5月28日首架机在中国东方航空公司MU9191航班载客[3]；随后机队先在虹桥至天府执飞第一",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-288",
+      "answer_head": "根据资料，神舟十六号预计于5月30日9:28左右发射[1]；此前5月22日船箭组合体已垂直转运至发射区[2]，发射前全区",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-289",
+      "answer_head": "根据现有资料，无法回答女子单打冠军的具体姓名；资料仅说明2023年德班世乒赛最后中国队包揽了五个单项冠军[4]。",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh-290",
+      "answer_head": "根据资料，被终身禁赛的中国斯诺克选手是于德陆，世界台联对其禁赛10年零9个月后，中国台协对其追加了国内范围的终身禁赛[2",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-291",
+      "answer_head": "陈凯歌执导的《少年时代》定档于8月17日上映[3]，该片是\"2023年必看的诚意之作\"，即将重磅登场[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-292",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料仅提及陈凯歌《少年时代》的过审定档、创作理念等，均",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-293",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：所有资料均只提到中国代表团900多名运动员及亚洲各国家和地",
+      "status": "abstained",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-294",
+      "answer_head": "《消失的她》的真实故事原型发生在泰国：一对新婚夫妇出国度蜜月，期间妻子离奇失踪，后来丈夫在畸形展上见到了已被折磨得不成人",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-295",
+      "answer_head": "根据现有资料无法准确回答2023年北京市高考的具体出分日期。资料仅显示：北京的高考评卷工作时间为6月8日至24日[3]，",
+      "status": "answered",
+      "iterations": 3,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-296",
+      "answer_head": "根据现有资料，布林肯访华时间有两个不同说法：\n\n- 原计划为2月5日至6日访华，但美国国务院2月3日因中国飞行物事件临时",
+      "status": "answered",
+      "iterations": 1,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-297",
+      "answer_head": "根据资料，耶伦此次访华在北京停留**4天**[1]，行程包括星期五和星期六的密集会晤安排[3]。美国财政部于当地时间2日",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-298",
+      "answer_head": "2023年温网男单冠军是西班牙选手艾卡瑞兹（Carlos Alcaraz）[3]，他在决赛中击败世界第二的乔科维奇，夺得",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-299",
+      "answer_head": "2023年温布尔登网球锦标赛女子单打亚军是昂丝·加博，她在1/4决赛中击败了卫冕冠军伊莲娜·莱巴金娜[1]。",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    }
+  ]
+}

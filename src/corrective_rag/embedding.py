@@ -11,6 +11,7 @@
 
 from __future__ import annotations
 
+import threading
 from typing import List, Optional
 
 import numpy as np
@@ -18,6 +19,11 @@ import numpy as np
 from corrective_rag import config
 
 _EMBEDDER: Optional["Embedder"] = None
+
+# sentence-transformers 的 encode 不保证并发线程安全（内部 DataLoader /
+# tokenizer 共享状态）；评测脚本用线程池并发压 API 时，GPU 前向串行化即可。
+# 单次 encode 仅几十毫秒，锁不构成瓶颈——真正的耗时在网络端的 LLM 调用。
+_EMBED_LOCK = threading.Lock()
 
 
 class Embedder:
@@ -37,17 +43,19 @@ class Embedder:
 
     def encode_docs(self, texts: List[str]) -> np.ndarray:
         """document 侧编码：不加前缀，返回 (n, dim) 已归一化矩阵。"""
-        return self.model.encode(
-            texts, normalize_embeddings=True, show_progress_bar=False
-        )
+        with _EMBED_LOCK:
+            return self.model.encode(
+                texts, normalize_embeddings=True, show_progress_bar=False
+            )
 
     def encode_query(self, query: str) -> np.ndarray:
         """query 侧编码：加 bge 指令前缀，返回 (dim,) 一维向量。"""
-        vecs = self.model.encode(
-            [config.BGE_QUERY_INSTRUCTION + query],
-            normalize_embeddings=True,
-            show_progress_bar=False,
-        )
+        with _EMBED_LOCK:
+            vecs = self.model.encode(
+                [config.BGE_QUERY_INSTRUCTION + query],
+                normalize_embeddings=True,
+                show_progress_bar=False,
+            )
         return vecs[0]
 
 

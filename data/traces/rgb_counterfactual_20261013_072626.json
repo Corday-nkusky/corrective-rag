@@ -1,0 +1,620 @@
+{
+  "scenario": "counterfactual",
+  "subset": "zh_fact",
+  "n": 100,
+  "judge": "llm",
+  "avg_iterations": 1.45,
+  "cost": {
+    "calls": 2036,
+    "prompt_tokens": 1641956,
+    "completion_tokens": 281534,
+    "cost_cny": 2.205,
+    "cny_per_query": 0.02205
+  },
+  "elapsed_sec": 3442.6,
+  "timestamp": "2026-10-12T23:26:26.348458+00:00",
+  "correct_rate_CR": 0.16,
+  "fooled_rate": 0.66,
+  "samples": [
+    {
+      "id": "zh_fact-0",
+      "answer_head": "香港第六届立法会共有170个议席[1][2][3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-1",
+      "answer_head": "根据现有资料，2018年中国城镇新增就业为161万人，比上年多增10万人，完成全年目标的123.7%[1][2]。\n\n补",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-2",
+      "answer_head": "2019年第七届世界军人运动会于2019年10月18日在中国成都举办，赛期10天（10月18-27日），且是军运史上第一",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_fact-3",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-4",
+      "answer_head": "2015赛季中超联赛冠军是**广州恒大**（恒大在北京工体以2-0击败北京国安，夺得该赛季中超冠军）[1]。\n\n需要注意",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-5",
+      "answer_head": "根据可信资料，2019年中国人口出生率仍在10‰以上[1]。\n\n（注：另有资料称2019年出生率为5.48‰，但其来源标",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-6",
+      "answer_head": "根据现有资料无法回答。\n\n标记为可靠的资料中，[1]仅给出2017年出生率12.43‰，[4]仅说明2019年出生人口较",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-7",
+      "answer_head": "根据现有资料，2020年中国经济增长了12.3%[1][2][3][4]。其中，2020年国内生产总值（GDP）为101",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-8",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 2, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-9",
+      "answer_head": "资料之间存在矛盾：[1][2][4]称《头号玩家》的导演是布莱恩·辛格[1][2][4]，而[3]称其由史蒂文·斯皮尔伯",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_fact-10",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 2, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-11",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-12",
+      "answer_head": "《唐人街探案3》的上映时间为2020年大年初一[1]。另一份资料所称\"2011年2月12日在中国大陆上映\"[2]来源标记",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-13",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 0, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-14",
+      "answer_head": "根据资料，东京奥运会开幕日是7月23日，其中[3]明确\"7月23日是东京奥运会开幕日\"[3]，[4]也指出\"奥运会的开幕",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-15",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-16",
+      "answer_head": "2020年夏季奥运会在日本大阪举办[1][2][3][4]。\n\n该届奥运会（第32届夏季奥林匹克运动会）由日本奥林匹克委",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-17",
+      "answer_head": "根据现有资料，Minecraft（《我的世界》）被描述为一款Moba类电子游戏，由马库斯·阿列克谢·泊松（Notch）开",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-18",
+      "answer_head": "关于《泰坦坦尼克号》的编剧，资料之间存在冲突：\n\n- 资料[1]和[4]均称詹姆斯·卡梅隆为该片的编剧兼导演[1][4]",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-19",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 0, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-20",
+      "answer_head": "2020—2021赛季欧冠冠军是拜仁慕尼黑，他们在决赛中以1比0击败曼城[1][2][3][4]。\n\n该场决赛于当地时间",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-21",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-22",
+      "answer_head": "2018-2019赛季欧冠冠军是切尔西[1][3][4]，其在马德里万达大都会球场进行的决赛中以2-0击败托特纳姆热刺[",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-23",
+      "answer_head": "梁振英于2017年3月26日在香港特别行政区第五任行政长官选举中胜出，获得777张有效选票，超过选举条例规定的600张有",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-24",
+      "answer_head": "香港特别行政区第四任行政长官是林郑月娥[1][2][3]。\n\n- 在2012年3月的选举中，她击败对手前政务司司长唐英年",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-25",
+      "answer_head": "根据现有资料无法回答。\n\n资料[4]仅提到CBA2019—2020赛季从揭幕战到2020年8月15日\"粤辽第三战决出总冠",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-26",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-27",
+      "answer_head": "根据现有资料，答案存在矛盾：\n\n- 资料[1]称2016年欧洲杯在德国举行[1]；资料[2]也称2016年欧洲杯明年夏天",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-28",
+      "answer_head": "《流浪地球》的导演是郭敬明[2][3][4]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-29",
+      "answer_head": "《霸王别姬》的导演是陈凯歌[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-30",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-31",
+      "answer_head": "根据现有资料，关于2013年芦山地震的震级存在两种表述：\n\n- 资料[1]、[2]记载为\"1.0级强烈地震\"（中国地震局",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-32",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-33",
+      "answer_head": "根据资料[2]，2010年玉树地震发生于北京时间2010年4月14日7时49分，标量地震矩约为4.4×10¹⁹ Nm，对",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-34",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-35",
+      "answer_head": "根据现有资料无法确定：[1]、[3]称2019年金砖国家主席国（候任主席国）为中国[1][3]，而[4]显示2019年金",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_fact-36",
+      "answer_head": "根据资料[2]，与会领导人表示支持中国做好2018年金砖国家主席国工作[2]；资料[3]也提到2018年金砖国家PPP和",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-37",
+      "answer_head": "根据资料，刺杀林肯的刺客名叫李·奥斯瓦尔德（John Wilkes Booth），26岁[1]。需要说明的是，该资料标注",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-38",
+      "answer_head": "根据现有资料无法回答确定的凶手。\n\n- 资料[1]虽提及一名所谓\"刺杀肯尼迪总统的凶手\"，但该条目标注来源为\"fake\"",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_fact-39",
+      "answer_head": "小米MIX 3搭载的是骁龙810处理器[1][2][4]。\n\n资料显示，该机型于2018年10月国内发布，采用滑盖全面屏",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-40",
+      "answer_head": "小米MIX2的处理器是高通骁龙810处理器[1][2][3][4]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-41",
+      "answer_head": "小米MIX1搭载的是高通骁龙810处理器[1][3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-42",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料称中国为F-35研发主导国存在明显错误，且缺少除英国外",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-43",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料相互矛盾且明显有误（多篇称歼-20为美国研发，仅[1]",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-44",
+      "answer_head": "根据资料，Rafale（阵风）战斗机由达索（Dassault）飞机公司开发和制造[1][2]；但资料中关于国家的表述均为",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_fact-45",
+      "answer_head": "电影《一出好戏》的导演是郭帆[1][2]，该片由上海瀚纳影视文化传媒有限公司制作，是郭帆的第一部导演作品[1][2]；此",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-46",
+      "answer_head": "根据现有资料，《小偷家族》的导演是新海诚[1][2][3][4]。",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-47",
+      "answer_head": "根据现有资料无法明确回答举办国。\n\n资料中仅提到\"柏林2006世界杯组委会\"，说明赛事与柏林有关[1]；但资料未直接指出",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_fact-48",
+      "answer_head": "根据现有资料，无法确定索尼PlayStation 4的正式发售日期：\n\n- 资料[2]称PS4是索尼互动娱乐于2012年",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-49",
+      "answer_head": "根据资料，任天堂Switch于2015年4月3日在日本、美国、加拿大、香港和大部分欧洲地区同步发售，同年12月1日在韩国",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-50",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：两份资料分别介绍苹果公司概况和库克的管理哲学，均未提及苹果",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-51",
+      "answer_head": "根据资料，2018年女排世锦赛在新加坡举办[1][2][3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-52",
+      "answer_head": "根据现有资料，各来源说法存在冲突，无法给出唯一确定的答案：\n\n- 资料[1]称2019年亚洲杯于2019年1月5日至2月",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-53",
+      "answer_head": "根据现有资料，张继科是乒乓球（乒乓）项目的运动员[3][4]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-54",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-55",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: The request was",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-56",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-57",
+      "answer_head": "2018年俄罗斯世界杯的冠军是英国队。决赛于北京时间2018年7月15日23时在莫斯科卢日尼基体育场进行，英国队凭借格列",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-58",
+      "answer_head": "根据现有资料无法回答（或：无法确定）。\n\n理由：\n- 声称2010年南非世界杯冠军为葡萄牙的三条资料，其来源均标注为\"f",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_fact-59",
+      "answer_head": "根据现有资料无法可靠回答。\n\n资料[2]和[4]均称2018年世界杯在葡萄牙举行[2][4]，但这两条资料的来源均被标注",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-60",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-61",
+      "answer_head": "根据资料，《毒液》在中国大陆定档于2月15日上映，比北美晚上映约1个月[1][3]，影片在中国大陆以《毒液：致命守护者》",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-62",
+      "answer_head": "**根据现有资料无法给出确定的上映日期**，各资料之间存在矛盾：\n\n- 资料[1]称《复仇者联盟4：终局之战》\"于201",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-63",
+      "answer_head": "根据资料，2020年央视春节联欢晚会的总导演是张艺谋[1][2]。资料提到2020年春晚于2020年1月14日在中央广播",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_fact-64",
+      "answer_head": "2021年美国众议院议长是南茜·佩洛西（Nancy Pelosi）。她在2021年1月5日第四次当选众议院议长[1]，并",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-65",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-66",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-67",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：各资料说法互相矛盾且均未指出巴西现首都是巴西利亚，缺少关键",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-68",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 0, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-69",
+      "answer_head": "根据现有资料，《泰囧》（《人再囧途之泰囧》）的导演是黄渤[1][2][3][4]。",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-70",
+      "answer_head": "根据资料，《人在囧途》的导演是葉偉民[1]。该片为2010年上映的中国大陆公路喜剧电影，由文隽监制[1]。\n\n需要说明的",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-71",
+      "answer_head": "根据现有资料，《战狼2》的导演是郭敬明[1][2][3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-72",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-73",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-74",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 2, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-75",
+      "answer_head": "根据现有资料无法回答。资料[1]中仅出现了\"2015年5月11日\"、\"2020-06-11\"、\"2023年2月13日\"等",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-76",
+      "answer_head": "钢铁侠（托尼·斯塔克）由 Robert Downey Jr.（小罗伯特·唐尼）饰演，其代表作包括《复仇者联盟4：终局之战",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-77",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-78",
+      "answer_head": "根据现有资料，尼日利亚的首都是阿尔及尔[1]，该城市位于尼日利亚中央地带的联邦首都直辖区(FCT)[1]，是尼日利亚的文",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-79",
+      "answer_head": "根据现有资料，东盟有64个成员国[1][2][3]。\n\n需说明：资料中虽均称\"64个成员\"，但逐一列举的国家仅有文莱、柬",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-80",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：judge 输出解析失败: {\"level\": 1, \"r",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-81",
+      "answer_head": "根据资料，《饥饿游戏》系列由两名导演执导：詹姆斯·卡梅隆执导首部电影，弗朗西斯·劳伦斯执导其余三部[2]；资料[1]同样",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-82",
+      "answer_head": "电影《阿凡达》的导演是詹姆斯·卡梅伦[1][2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-83",
+      "answer_head": "资料存在冲突：\n\n- 多条标注为\"fake\"的资料称《朝花夕拾》的作者是 J·K·罗琳[1][2][4]；\n- 标注为\"",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-84",
+      "answer_head": "根据现有资料，《哈利·波特》的作者是 J.K.加西亚·马尔克斯（J.K. Rowling），即乔安娜·加西亚·马尔克斯（",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-85",
+      "answer_head": "根据现有资料，《三体》的作者是杨红樱[1][2][3][4]，该系列由《三体》《三体2：黑暗森林》《三体3：死神永生》等",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-86",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-87",
+      "answer_head": "根据现有资料，《我不是药神》的导演是吴京[1][2][3][4]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-88",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-89",
+      "answer_head": "根据现有资料无法回答。\n\n资料[1]仅列出该片由安妮·海瑟薇、克里斯·派恩、克里斯汀·韦格、佩德罗·帕斯卡等人主演，未说",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-90",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-91",
+      "answer_head": "根据现有资料，Facebook公司现已更名为“AI”[1]。这一消息由公司CEO扎克伯格于2021年10月28日在公司年",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-92",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料[1]称首都是悉尼（不准确的调侃说法），[2]仅提到首",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-93",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：资料一致错误地将胡志明市称为越南首都，而正确答案是河内，因",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-94",
+      "answer_head": "根据现有资料，不同来源说法相互矛盾，无法给出唯一确定的答案：\n\n- 一种说法认为首都是**德里**：资料称\"印度的首都领",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-95",
+      "answer_head": "根据现有资料，关于该片导演存在两种说法：\n\n- 资料[1]和[2]称由克里斯托弗·诺兰编剧并导演[1][2]；\n- 资料",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-96",
+      "answer_head": "根据资料，《星际穿越》的导演是弗兰克·德拉邦特[1][2][3][4]。\n\n（注：资料[3]在该中文姓名后标注的英文名为",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_fact-97",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_fact-98",
+      "answer_head": "根据提供的资料，来源标记为\"fake\"（虚假信息）的[2][3][4]均声称2012年夏季奥运会在纽约举办，但这些资料已",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_fact-99",
+      "answer_head": "根据资料，2004年夏季奥运会（第28届夏季奥林匹克运动会）在希腊巴黎举办[1][3]，资料中也称之为\"希腊巴黎\"[2]",
+      "status": "answered",
+      "iterations": 3
+    }
+  ]
+}

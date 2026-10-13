@@ -1,0 +1,28 @@
+{
+  "judge": "llm(mimo-v2.6-flash)",
+  "n": 300,
+  "confusion": {
+    "TP_放行且命中": 236,
+    "TN_拦截且未命中": 12,
+    "FN_漏判_拦掉了能答的": 48,
+    "FP_误判_放行了没资料的": 4
+  },
+  "agreement": 0.8267,
+  "precision_判够的可信度": 0.9833,
+  "miss_rate_能答被拦率": 0.169,
+  "level_distribution": {
+    "2": 208,
+    "1": 32,
+    "0": 60
+  },
+  "progress_file": "D:\\code\\corrective-rag\\data\\traces\\judge_agreement_progress_20261013_022943.jsonl",
+  "cost": {
+    "calls": 300,
+    "prompt_tokens": 344341,
+    "completion_tokens": 39287,
+    "cost_cny": 0.4229,
+    "cny_per_query": 0.00141
+  },
+  "elapsed_sec": 1722.5,
+  "timestamp": "2026-10-12T18:58:26.334540+00:00"
+}

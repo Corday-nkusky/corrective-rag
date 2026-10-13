@@ -1,0 +1,300 @@
+{"qid": "edb58f525bd14724d6f490722fa8a657", "query": "国家法定节假日共多少天", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料一致明确给出国家法定节假日全体公民放假共11天并列出明细，足以完整回答"}
+{"qid": "a451acd1e9836b04b16664e9f0c290e5", "query": "如何查看好友申请", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料合起来完整给出了查看QQ好友申请的多种途径（消息管理器/系统验证消息、我的QQ中心、个人中心未处理请求链接等），足以回答问题"}
+{"qid": "48a8338aefaff17573048a088a08de70", "query": "哪个网站有湖南卫视直播", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料明确给出芒果TV等多个可看湖南卫视直播的网站/软件（如haoetv、央视影音），足以完整回答"}
+{"qid": "7871706c5cb1a1d6912ff8222434ccbd", "query": "功和功率的区别", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3][4]从定义、物理意义、单位、公式等多个维度完整阐述了功和功率的区别与联系，合起来足以充分回答问题。"}
+{"qid": "2b22b972c4e30776b9160fc83ee05367", "query": "徐州旅行社哪家好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料列举了中青旅、国旅、易购、飞燕、星海等多家徐州旅行社及其地址、满意度和声誉评价，可综合回答哪家好"}
+{"qid": "979f5cfe8a8cc82ef302b98e2de59648", "query": "为什么要平衡摩擦力", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2]即《为什么要平衡摩擦力》专文，[1]也直接解释了平衡摩擦力是为了使合外力等于拉力以得出正确结论，两者合起来足以完整回答问题。"}
+{"qid": "93052ecb6ad07eb3b6f27a704004226c", "query": "覆铜面板是什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]完整定义了覆铜板的全称、英文、组成结构（基板、铜箔、粘合剂）与分类，资料[3][4]补充了其用途和与印刷电路板的关系，合起来足以完整回答问题。"}
+{"qid": "14c34a53aa3d9327ac30184c651ee4df", "query": "怎么屏蔽qq新闻弹窗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]详细给出了屏蔽QQ新闻弹窗的完整步骤，足以完整回答问题"}
+{"qid": "a835a0d06cf0e5e7becca9a992a79b70", "query": "我国古代第一个有伟大成就的爱国诗人是( )", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[3][4]明确指出屈原是中国文学史上第一位伟大的爱国诗人，与选项D对应，足以完整回答问题。"}
+{"qid": "ba62cc123e5631fc2e8705241c20cd61", "query": "宝鸡装修房子多钱", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来涵盖了宝鸡装修按档次的每平米单价、简装/中档/高档整体费用区间以及部分项目细节，足以回答装修费用问题"}
+{"qid": "983f04bed5035f0d8993ebf6b9ed7bbb", "query": "艾滋病潜伏期能治吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]明确指出潜伏期无法彻底治愈、只能靠抗病毒药物控制和延缓发病，结合[4]的阻断治疗信息，合起来足以完整回答问题"}
+{"qid": "2b68efa248d341064a71a1b7e75235aa", "query": "淘宝的验证码看不清楚", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]直接给出换验证码、刷新、调整显示设置等解决方案，资料[3]也提供通用的验证码辨识方法，合起来足以回答淘宝验证码看不清的问题。"}
+{"qid": "e043a94041c66f30fc72a85327f888b4", "query": "中青旅遨游网可靠吗", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1][2]说明了其为A股上市公司中青旅旗下平台可作正面参考，但缺少口碑、投诉、监管等可靠性评估的完整信息，[3][4]与问题无关"}
+{"qid": "0a427cb6c8f3d4596620ae8aa788f521", "query": "子宫瘢痕向内凹陷形成一腔隙可以怀孕吗?", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料只讨论瘢痕子宫能否怀孕及顺产风险，未涉及瘢痕向内凹陷形成腔隙（瘢痕憩室/缺陷）这一具体情况，无法针对性回答。"}
+{"qid": "e906e3e9179e1ef28cde478e85ed90f2", "query": "长虹电视机连接电脑", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1]和[3]完整给出了电视机（含长虹液晶电视）通过VGA、S"}
+{"qid": "21e1e2aec388380f4f73b90af0d906f7", "query": "cad设计签名怎么弄上去的", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]分别提供了扫描矢量转换、图片导入描线、光栅图像插入等多种CAD添加签名的完整方法，足以回答问题"}
+{"qid": "ffe49854b8be8810c373aa54d0ac592a", "query": "商洛学院怎么样", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了商洛学院的教学质量、专业优势、校园环境、宿舍条件、考研就业情况、地理位置等多方面评价，足以完整回答问题。"}
+{"qid": "e3b81da6fc91675e281ce359c545cd83", "query": "如何改善头发毛躁", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料从洗发护发习惯、洗发水选择、饮食营养、避免高温造型、定期修剪以及家庭护理偏方等多个角度全面覆盖了改善头发毛躁的方法，足以完整回答问题。"}
+{"qid": "00a969b83d0bda551c8ba5ef9ad9d3e8", "query": "eve回电是什么", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "资料均未涉及EVE游戏中的电容回电概念，无法回答问题"}
+{"qid": "caea5c95483711de85c135cf734fb411", "query": "怎么把cad文件变小", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][3]提供了多种压缩CAD文件的有效方法（复制粘贴到新图、WBLOCK写块、改用SHX单线字体、减少碎线段、清理DGN遗留数据），足以完整回答问题。"}
+{"qid": "006806b2416cf439b8131aabd17a3f89", "query": "foxmail 网络错误", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "三篇资料分别覆盖了添加账号时的网络错误、本机网络重置、连接类错误的通用排查与服务器设置，合起来足以完整回答 foxmail 网络错误的常见原因与解决办法"}
+{"qid": "c4582a3e1803a2c7908f3a8233ab9a6e", "query": "m8a1用什么炮", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料均指出M8A1换装了75毫米炮（资料[1]明确为M2型75毫米榴弹炮，资料[4]提及M3型75毫米炮），足以回答其主炮口径与型号，仅型号存在表述差异。"}
+{"qid": "4298ce94f4d9f593b2858cc49d2e390d", "query": "电脑鼠标乱点", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]从硬件异物、鼠标垫、丢帧、病毒恶意软件、供电冲突等多方面给出了鼠标乱动/乱点的原因和解决办法，足以回答该问题"}
+{"qid": "52ee98a48afb029595125b44eee460af", "query": "维生素c功效", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料合起来覆盖了维生素C在胶原合成、免疫、抗氧化、补铁、美白、心血管等方面的主要功效，足以完整回答问题。"}
+{"qid": "637acacc200f29504f57e23ab48fda92", "query": "ps如何去掉衣服褶皱", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了PS去衣服褶皱的多种方法（污点修复画笔、修补工具、仿制图章、修复画笔、涂抹/模糊工具、快速蒙版+蒙尘划痕等），包含详细步骤，足以完整回答问题。"}
+{"qid": "ee9bc854c0d829ebb9049551691f2b69", "query": "私立大学和公立大学的区别", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从经费来源、录取标准、学校规模、师生比、学费与奖学金、建校历史、教学侧重点等多个维度全面覆盖了公立与私立大学的区别，足以完整回答问题。"}
+{"qid": "2afc54e99c6f44a3446d82cc01a9ef4f", "query": "360wifi一直显示密码错误", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "资料仅提供360wifi的通用重装建议，与路由器登录、网页表单等其他内容均未涉及'一直显示密码错误'这一具体故障的原因与解决办法，缺少关键信息。"}
+{"qid": "f4163f6fe10d12e66bdac7d520eb8ef9", "query": "怎么改键盘按键", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \"资料涵盖了游戏内改键位的方法，但缺少系统级/"}
+{"qid": "99ce8eed7ad0cb7431f92a7ed8762352", "query": "子宫内膜息肉术后多久来月经", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]明确指出子宫内膜息肉宫腔镜术后月经来潮时间与平时月经时间差不多、可能晚几天，足以回答问题。"}
+{"qid": "a57aabcbd425a61fdb50d8a26b45e003", "query": "达克宁栓3粒装用几个疗程", "hit": false, "level": 1, "sufficient": true, "cell": "FP", "reason": "资料[1]提到需坚持用药3个疗程且达克宁3粒用后仍需继续用药，但未明确说明3粒装与疗程的对应关系，只能部分回答"}
+{"qid": "174297b8157536c9e3632b49e250855c", "query": "星龙不吃陷阱吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]明确指出星龙（祸星龙）陷阱对其不能生效，足以直接回答问题，其余资料为无关噪声。"}
+{"qid": "8e58be6b668017e4225459e1da61d7d1", "query": "永恒之柱 如何升级", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "检索到的资料涉及LOL辅助装、DNF永恒大陆及无关论坛，均与《永恒之柱》(Pillars of Eternity)的升级机制无关，无法回答问题。"}
+{"qid": "fef4160c42ecb4eaacfd186f523f743f", "query": "不敢去招聘会", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料涉及求职面试经历与鼓励尝试的心态建议，可部分回应，但缺少针对'不敢去招聘会'这一心理的具体原因分析与解决办法。"}
+{"qid": "f1ac27241724bdd03a248c1775cd31b2", "query": "外星人x51怎么拆", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]给出了外星人X51从拆顶盖、排线、显卡到CPU风扇的完整分步拆机流程，足以回答该问题"}
+{"qid": "365420bb95d8e62a3c0385f05635c0bc", "query": "windows media player不见了", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]直接提供了通过控制面板重新开启Windows Media Player功能的方法，足以完整回答该问题。"}
+{"qid": "ffb9a159d733c290cdf4f87fa0870be0", "query": "消灾吉祥神咒意思", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料介绍了消灾吉祥神咒的出处、用途及除灾难法的背景，但未提供咒文本身的具体内容和逐句释义，无法完整回答咒语的意思。"}
+{"qid": "cae8df93bcf88f9d08fe8c93dcfe1278", "query": "东坡家事后接档什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]明确指出《东坡家事》接档剧为《刀下留人》，并给出播出时间、主创及剧情信息，足以完整回答问题。"}
+{"qid": "c68892a8b397b94812f72881eb42a491", "query": "如何进猫", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \"资料[1]可部分解答引猫进屋，[4]提及接猫回家，但均无系统方法，"}
+{"qid": "cab1fcc9e58548f814a58e941c058a9a", "query": "excel表格右边没有边框", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从设置单元格格式边框、格式刷补边框、取消隐藏列/冻结窗口、打印网格线设置等多个角度提供了右侧无边框的解决方法，合起来足以完整回答问题。"}
+{"qid": "402ab4e9912b1973d8c9d2ec4c53cd0b", "query": "电暖桌哪个牌子好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料提供了多个年份的十大品牌榜单、具体品牌推荐（焱魔方、旺府、瑞奇等）及选购要点，合起来足以回答电暖桌哪个牌子好的问题。"}
+{"qid": "9ad3758e233c0687ddf5acbfe2b66bcf", "query": "长尾词怎么做", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料合起来覆盖了长尾词的定义、挖掘方法（工具与人工拓展）、页面承载方式（列表页/文章页）、优化要点（内容与内链结构）以及具体应用场景，足以完整回答问题。"}
+{"qid": "469d486146633e004e518700c407c7dd", "query": "对人仁慈而怜爱叫什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料均明确给出答案'对人仁慈而怜爱叫（慈爱）'，完全回答了问题。"}
+{"qid": "c1a563dac2a61a7bd925016837f9f545", "query": "2015云游道人什么时候出来", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]直接给出了2015年云游道人的放出时间为2015年3月10日12:00至3月24日23:59，完整回答了问题。"}
+{"qid": "c26fa1c327e399e6d2982dfca1afab45", "query": "做壁柜用什么板材好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了刨花板、多层板、细木工板、实木板、指接板等多种板材的环保性、防潮性、价格对比及推荐，合起来足以回答做壁柜选什么板材好的问题。"}
+{"qid": "9759a3760a0b057d7703ab247cc8e4e0", "query": "淘宝企业店铺可信度", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来从注册认证资质、可信度对比、以及如何综合评估店铺可信度等多个角度回答了淘宝企业店铺可信度的问题，覆盖较完整。"}
+{"qid": "ed99d9bcce8d8f97dc58c8360b7b20c3", "query": "iwatch连接蓝牙耳机", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料完整给出了在iWatch上打开设置-蓝牙、让耳机进入配对模式、选择连接、断开及连接失败排查的全部步骤，足以完整回答连接蓝牙耳机的问题。"}
+{"qid": "f3ee13e53c778bdac191c1295a0d6554", "query": "gpt升高的原因", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料综合涵盖了GPT升高的各类原因，包括肝炎、药物、饮酒、肝硬化、胆道疾病、心脏疾病、感染及剧烈运动等，足以完整回答问题。"}
+{"qid": "0571474cc8ae3e213321ac42e33edd82", "query": "c盘是硬盘吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "所有资料一致明确指出C盘是硬盘的一个分区，足以完整回答问题"}
+{"qid": "5178b90868669ce7daa5f06cd106ee5c", "query": "exo的老大是谁", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料一致指出XIUMIN金珉锡是EXO的老大（最大成员），且包含成员投票确认等关键证据，足以完整回答。"}
+{"qid": "9976e209df175729a74d18ab05bf0402", "query": "辅酶q10的服用方法", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多条资料合起来覆盖了辅酶Q10的剂量、服用频次、饭前饭后随餐服用的时机以及脂溶性需搭配脂肪食物促进吸收等关键信息，足以完整回答服用方法。"}
+{"qid": "ab7bbe421b2a5431c6c28286b89e0acb", "query": "加格达奇宾馆有哪些", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1][2]仅零散提及加格达奇金马饭店、加格达奇大酒店、华融商务酒店、东源旅店等少数几家，且[3][4]完全无关，无法给出完整的宾馆列表"}
+{"qid": "2832d65fe16d3a96592e8772ccd6d0aa", "query": "神秘博士clara是谁", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来完整介绍了Clara的身份（博士旅伴Clara Oswin Oswald）、性格特征、关键剧情设定（死过两次、穿越时间线碎片、拯救博士）以及她的角色意义，足以回答问题。"}
+{"qid": "9670a5eebfc0b36eed0e1e7daf934207", "query": "oppo手机内存其他是什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]明确定义了OPPO手机内存中"}
+{"qid": "7a1242c3a7f9fdcbc80dc4230cad2d0b", "query": "温泉蛋怎么做", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料均给出温泉蛋的完整做法，涵盖控温原理、水温、时间、步骤及食用方式，合起来足以完整回答问题。"}
+{"qid": "307ccd3bd89878631871ebfe67e7252c", "query": "曝光补偿是什么意思", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料均直接定义了曝光补偿的含义，涵盖概念解释、工作原理、实际应用场景及白加黑减原则，足以完整回答问题。"}
+{"qid": "eaf35cc603a45483ff11b4869eefdd14", "query": "wps如何加脚注", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料完整覆盖了WPS插入脚注的操作步骤（引用→插入脚注），并补充了尾注、编号格式、删除脚注等细节，足以完整回答问题。"}
+{"qid": "ae4cc079c8f7333295b5a25e69cc3fe8", "query": "均瑶集团是上市公司吗", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料明确指出均瑶集团是母公司，旗下拥有吉祥航空、爱建集团、大东方三家A股上市公司，而均瑶集团本身作为控股企业集团"}
+{"qid": "7663c2730e852c510edbccf555cfbba4", "query": "杨幂是素食主义者吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2]明确说明杨幂因刘恺威发愿吃素而一起吃素，资料[1]也有相关佐证，合起来足以回答杨幂是否是素食主义者。"}
+{"qid": "ee4c26048bca132f7e96733250f50acb", "query": "犀牛如何分割曲面", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料提到平面阵列分割、contour均分线分割、左右键分割及结构线分割等部分方法，但缺乏系统完整的分割操作说明（如修剪与分割的区别、边框、等距断面等），且有无关内容，合起来仅能回答一部分。"}
+{"qid": "4bb6008274dd185802a1c1b94bb060d8", "query": "微信不提示升级", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]分别覆盖了关闭更新提醒和手动检查更新的部分方法，但资料本身杂乱且部分不相关（如[4]关于订阅号升级服务号），对问题的理解和完整解决方案覆盖不充分。"}
+{"qid": "a8b879034ddab34570df6710c0eb55b2", "query": "彩票都是骗人的吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了认为是骗人的、认为真实可信以及属于概率游戏而非骗局的多方观点，并有中奖实例和理性消费建议，合起来足以回答该问题。"}
+{"qid": "4bfbb1e85e4090fc987a56852e93ba49", "query": "泰拉瑞亚叶绿套和乌龟套哪个好", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "仅资料[1]部分相关但内容残缺混乱，其余资料完全无关，无法完整回答叶绿套与乌龟套的对比问题"}
+{"qid": "367b83d87eb708e0513857d38a0af540", "query": "图片另存到桌面看不到", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]直接针对图片另存后桌面不显示的问题，给出了多种原因（保存路径错误、多用户桌面、桌面被转移到其他分区等）和解决方法（检查实际桌面路径、更换浏览器等），合起来足以回答问题。"}
+{"qid": "6622e85ad7717848ae02d10e6706edd3", "query": "淘宝助理图片搬家慢", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]提到了图片多且大和网络原因是图片搬家慢的原因，但缺少具体的优化或加速解决方案，资料[3][4]则与问题无关。"}
+{"qid": "171d7049729c1ed3672c8fb16002d4be", "query": "白子画何时知道小骨偷盗神器为了给他解毒", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料提供了白子画知晓真相的具体时间点（打翻断肠草后思量、紫薰递药时、东方告知时等），合起来足以回答问题"}
+{"qid": "bdbdb201ee28b0531a3da49679abcfe1", "query": "怎样给婴儿晒太阳", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了晒太阳的年龄要求、前期准备、时间选择、时长控制、防护措施（头部/眼睛/皮肤）、室内外方式、晒后护理等关键步骤，足以完整回答问题。"}
+{"qid": "e693ae2ab1207a1bbcd779ec5b474eb7", "query": "疏散门的宽度", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了疏散门净宽最小值（0.9m、人员密集场所1.4m等）、与走道楼梯宽度的匹配原则以及影剧院体育馆的计算要求，合起来足以完整回答疏散门宽度问题"}
+{"qid": "2bbc6f5d1476be12eca20a066be826ad", "query": "怎样识别电位器型号", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "bdc83176b29c9fc83d8179119f7224b9", "query": "淘宝优缺点", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从安全性、卖家、买家、平台运营、信息整合等多个维度全面涵盖了淘宝的优缺点，合起来足以完整回答问题。"}
+{"qid": "81d9c95dbd729e127e264d3ded78d849", "query": "关羽故乡", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来既给出了关羽故乡的古地名（河东郡解县/解梁）也给出了今址（山西省运城市解州镇常平村），并补充了沿革与读音辨析，可完整回答。"}
+{"qid": "9ea8ea2ff586af51520e0721681909c9", "query": "狗吃什么吐什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来涵盖了吃啥吐啥的常见原因、呕吐物观察判断方法、先禁食观察及及时就医的应对建议，足以完整回答问题"}
+{"qid": "99a67d36aee233820eb7eb2998c21c1a", "query": "晚上出汗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来覆盖了晚上出汗的定义、中医与西医病因（阴虚气虚肾虚、低血糖等）、分级表现、食疗药物治疗及日常养护，足以完整回答该问题。"}
+{"qid": "76aee40e2b06d747b40b9c8c28bb597c", "query": "卖保险难吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料从非渴求性产品、期限长、需要圈子等角度系统解释了卖保险为什么难，并讨论了应对办法，足以完整回答问题。"}
+{"qid": "d778188d0861de18ac47d8b508d8458a", "query": "不用油可以做什么菜", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]提供了多种不用油的菜式及做法（如无油韭菜炒蛋、各种蒸菜、凉拌菜等），合起来足以完整回答问题"}
+{"qid": "25115fc3b8250c10833f50ca04a36d27", "query": "红辣椒x1什么时候发货", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]明确指出红辣椒X1于9月15日正式售卖并面向全国发货，足以回答问题。"}
+{"qid": "4fe503fbc782b3e34eb3d49a926fb386", "query": "苹果手机抖屏怎么办", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]直接针对苹果手机屏幕抖动给出了原因分析和解决方案，基本能完整回答问题。"}
+{"qid": "352b5b915f65ba6e9d78f7df85a7e5c1", "query": "生完孩子掉发怎么办", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来涵盖了产后脱发的原因、自我调理方法（放松心情、饮食营养、按摩清洗、补气血）以及超过半年仍严重需就医的建议，足以完整回答问题"}
+{"qid": "0c96d174496c3628d45e7fed5afe397c", "query": "一千克黄金多少钱", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "4a127e9aedcda571a4b11dfae00611ed", "query": "泰国牙齿美白牙粉怎样", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1][2][3]合起来覆盖了泰国Rasyan美白牙粉的质地、用法用量、功效及个人使用效果，足以回答该问题。"}
+{"qid": "501fb500b13c49ae298be63627fced60", "query": "木床生虫", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来涵盖了木床生虫的原因、虫种鉴定及多种处理与预防方法（喷药、暴晒、沸水烫、涂漆封堵、通风除湿等），足以完整回答问题"}
+{"qid": "40f7a9f1aeb7a232b43bce572319f320", "query": "撞击内丹多少钱", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]均给出撞击内丹的具体价格（约30W-50W游戏币，随区服浮动），足以回答问题"}
+{"qid": "61fd1b226f50c3954135bbe8934be2b4", "query": "哪里的蚕丝最好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]明确给出历史上与当前蚕丝最优产区（湖州、震泽、桐乡、海安、浙北苏南山东等），[3][4]补充了桑蚕丝优于柞蚕丝的品类维度，合起来足以回答哪里的蚕丝最好。"}
+{"qid": "3b8179818ea0c5cae1831740d77fda22", "query": "dnf13强化卷值多少钱", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "f80f32f9f1248c70c4f7655d7ec99374", "query": "1975年属什么生肖", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料一致明确指出1975年属兔（乙卯年），可完整回答问题。"}
+{"qid": "bf3c5ea2bb4213182405cda161c41fd6", "query": "被热水袋烫出水泡怎么办", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了冷水冲洗应急处理、涂抹烫伤膏、不要自行挑破水泡防感染、必要时就医及饮食注意等关键措施，合起来足以完整回答问题。"}
+{"qid": "1ae21811e2cd0808f944f59374da3a1f", "query": "纵月恶人攻防yy是多少", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2]明确列出纵月恶人YY号码为28392（并注明曾用1150），可完整回答问题"}
+{"qid": "68f2d1cfc884feccbb7bddd7a28dff02", "query": "海淀医院孕前检查", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]详细覆盖了海淀医院孕前检查的时间、挂号科室、检查项目、出结果时间及注意事项，足以完整回答问题。"}
+{"qid": "a7e1c0eda73bf3f85df36fa50306db0f", "query": "如何查询银行征信", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "78a28f2d77c4fbc6f7341a213f277181", "query": "什么是热塑性塑料", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2]给出热塑性塑料的明确定义（特定温度范围内可反复加热软化和冷却变硬），资料[1]补充了其线型分子结构的微观解释，两者合起来能完整回答该问题。"}
+{"qid": "05fc44c52ab6bd5b862e4f94e54bec3a", "query": "柴九死了吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料共同给出结局细节（墓碑享年36岁、死于肺痨、丧事场景、主创访谈确认角色死亡），足以回答柴九最终死了这一问题"}
+{"qid": "01612355fc6783987b115966a5214402", "query": "edge不能联网", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]分别给出了关闭代理设置和使用fiddler解决Edge无法联网的具体方案，合起来足以完整回答该问题。"}
+{"qid": "04f581b6ddb51f959087992f76e40075", "query": "4什么加9什么等于1什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]直接给出了脑筋急转弯的答案：4点+9点=1点（时间），以及4周+9周=1季，完整回答了问题。"}
+{"qid": "ed24217530aada108ba768896adfd483", "query": "乙肝易感人群", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料合起来覆盖了儿童、老年人、孕妇、医护人员、免疫力低下者、密切接触者等各类乙肝易感人群，能完整回答问题。"}
+{"qid": "d71110a9d6fe74172d0c2aaa2efc6a0c", "query": "吃阿莫西林后多久能喝酒", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]明确指出阿莫西林约五小时基本代谢完毕即可饮酒，并提供了双硫仑样反应的背景，其他资料的代谢时间信息可作补充，足以回答问题"}
+{"qid": "b6370b74e0b2ae4886cc85e2c9579e99", "query": "豹猫凶吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][3][4]分别从野生与人工繁殖豹猫的凶残程度、性情暴躁不亲近人等方面充分回答了豹猫是否凶的问题。"}
+{"qid": "a0d3e12ae84383f9e18189a2b1cc2fb3", "query": "天猫怎么搜索本地店铺", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1]提到了搜索时通过地区筛选来定位本地店铺，但未明确是天猫平台的操作，且缺少天猫具体的界面入口等详细步骤，其余资料与问题不相关，整体仅能部分回答"}
+{"qid": "65514023e989ff221e91f9d565a7ba35", "query": "刻录盘的寿命", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了刻录盘寿命的多种估计（5-10年、数十年至上百年、条件差时仅数月）、老化的机理与影响因素（温湿度、光照、涂层氧化等）、权威机构测试数据以及延长保存的建议，合起来足以较完整地回答该问题。"}
+{"qid": "c0750d9350c4da6cfca166c0046093d3", "query": "血压正常 头晕", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]直接针对血压正常仍头晕的原因给出了较全面的解释（脑部、耳部、心脏、贫血、代谢、颈椎病等多种可能），足以回答问题。"}
+{"qid": "cd41d80c23267d3490f3a29586e6bfa5", "query": "season英文怎么读", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]直接给出了season的英音和美音音标，足以完整回答发音问题。"}
+{"qid": "d53835b16bf7bdb7a3297248a7842a8c", "query": "身上很烫 不发烧", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四份资料共同覆盖了身体发烫但不发烧的多种原因（情绪激动、阴虚火旺/上火、湿热内伤发热、类风湿、感冒等）及检查、中医调理和生活建议，足以完整回答问题。"}
+{"qid": "82dd4124cff225390433274100083f6b", "query": "右下角的宽带连接不见了", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]直接针对右下角宽带连接图标消失的问题，提供了具体的解决步骤（在连接属性中勾选通知区域显示图标、任务栏自定义设置等），合起来足以完整回答。"}
+{"qid": "fb51dfc6ab0b3dd22f55f32f3016018a", "query": "废土2 怎么回血", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料明确说明回血靠战地医疗技能使用医疗包，外科医生用于治疗出血重伤需工具，完整回答了回血方法。"}
+{"qid": "f8e12ed98b1de318bab5509ddb3461dc", "query": "什么是实质性响应", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了实质性响应的定义、法律依据、判定标准、常见情形及具体要求，合起来能完整回答该问题"}
+{"qid": "af0c470ca29b92c806c3bd1105e1af99", "query": "如何治理网络谣言", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料从法律完善、政府信息公开、技术手段、文化建设、公众媒介素养、多方协同等多个维度系统阐述了治理网络谣言的综合对策，合起来足以完整回答问题。"}
+{"qid": "c1ee13ac294ac64cde0445c21acfb1f7", "query": "贾惜春的性格特点", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料从成因（亲情缺位、见惯贾府污浊）、具体表现（孤僻冷漠、撵入画决裂宁府）及最终归宿（弃世为尼）等方面全面阐述了贾惜春的性格特点，足以完整回答。"}
+{"qid": "7ffdaccd1ad0d844e276e21b4385a639", "query": "苹果5s通话有电流声", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料确认5s通话电流声是普遍现象，并给出了关闭'电话噪声消除'等设置调整及可能的硬件原因，合起来可完整回答并提供解决方案"}
+{"qid": "21ecc92d16cc533e6602b078a093711c", "query": "象征孩子纯洁的花", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\":"}
+{"qid": "18162db75a0360881b2c5901b7f7b8db", "query": "什么歌能测试耳机", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料提供了多首具体试音歌曲（渡口、加州旅馆、鼓诗、琵琶对萨克斯等）及各自测试的耳机特性，足以完整回答问题。"}
+{"qid": "cf06ac0982b64eba37fa73f08ff0266d", "query": "新西兰气候类型", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料一致明确指出新西兰属温带海洋性气候，并提供了气温、降水、南北岛差异等完整气候特征，足以完整回答气候类型问题。"}
+{"qid": "9455dbf806792a324a91f92aa4ff2cfc", "query": "白细胞偏多", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][4]完整覆盖了白细胞偏多的定义、正常范围、生理性与病理性原因、临床意义及就医处理建议，合起来足以回答该问题。"}
+{"qid": "123895a10a259f1c1c60bea802261a6e", "query": "固态硬盘最大多大", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]较新且详细，涵盖消费级约4TB、企业级32TB在售及100TB原型，虽其他资料过时但合起来能完整回答SSD最大容量问题。"}
+{"qid": "60fc1afe5469daa29d80a2470ad1030b", "query": "什么是移动终端", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]给出了移动终端的完整定义、广义与狭义分类、特点及应用实例，足以完整回答该问题。"}
+{"qid": "754137ed97f7a2b0d69b184655e70a47", "query": "如何选唇膏", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖肤色配色、质地选择、色号建议和打底方法，合起来能较完整回答如何选唇膏。"}
+{"qid": "ffa0d03bffb9a378bd47017c5805f980", "query": "小孩子脚臭是什么原因", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料共同覆盖了小孩子脚臭的主要原因，包括汗腺分泌旺盛、细菌分解、真菌感染、缺乏维生素B族以及鞋袜不透气等，足以完整回答问题。"}
+{"qid": "8f4c06f4f1ddf23bfa2727449b44fadb", "query": "win8怎么待机不断网", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[4]直接完整回答了该问题的设置步骤，资料[1][2]也提供了设备管理器中取消网卡节能选项的关键方法，合起来足以完整回答。"}
+{"qid": "919897185f7a6438ea27bfc4fe10666a", "query": "肩膀的英文单词", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]明确给出肩膀的英文单词是shoulder并提供了释义与例句，足以完整回答问题。"}
+{"qid": "eddc59bb0cafa0d6aa47c9cd79ab118d", "query": "盆腔炎症有哪些症状", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料均详细描述了盆腔炎的急性与慢性症状，涵盖疼痛、发热、月经改变、不孕等各方面，合起来能完整回答问题。"}
+{"qid": "3bd1ac16d0084adba577d99724b96818", "query": "如何把品牌授权给别人", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2][3]详细说明了品牌授权的核心流程：签订商标使用许可合同、向商标局备案、约定使用费、质量监督义务及标明被许可人信息等，足以完整回答问题。"}
+{"qid": "73f538181b5c24b25f422cb56ed7d959", "query": "水土流失是什么意思", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]均完整给出了水土流失的定义、成因、影响及现状，足以完整回答问题。"}
+{"qid": "60e6463b72d7db2e2126efa63d89f8c1", "query": "上海电玩世界怎么样", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "仅资料[1]简短提到上海电玩售后差不推荐，其余资料与问题无关，信息太少不足以完整评价"}
+{"qid": "548b8e12cb4ffbfec04189049ce8d809", "query": "三壬行化妆学校好吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料给出了对该校的负面评价和具体揭露，合起来足以回答'好不好'这一问题（结论为不好）。"}
+{"qid": "c694ef97534e2654a299feeafc1295a2", "query": "沈玉琳眼睛怎么了", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]说明沈玉琳自称天生大小眼并戴墨镜掩盖，[2]补充其颧骨长瘤致左眼无法完全睁开的后遗原因，合起来可完整回答该问题。"}
+{"qid": "c325e1b0fbc80a77d854da2430238902", "query": "做点小生意做什么好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了多种具体小生意项目（餐饮小吃、干洗、精品店、花店、泡菜、地摊季节商品等）并附有选址定位和选择建议，合起来足以回答做什么小生意的问题。"}
+{"qid": "b87f8364ce3244fbe6eea355bd22ac8b", "query": "广东省普通话水平测试报名时间", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料说明了广东普通话测试全省不统一、需关注各地市教育局通知并给出报名系统入口，但缺少当前具体报名时间，只能部分作答。"}
+{"qid": "9e0a0a2c9d8507dd018a4c8c3203d601", "query": "晾衣架材质", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]详细列出了晾衣架的各类材质及其优缺点和选购建议，合起来足以回答材质问题"}
+{"qid": "bef58330a3ba5e5a7f5a26171bb43a0c", "query": "gmat多久换一次题库", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四份资料一致说明GMAT大约每月换一次题库，具体日期不定但规律集中在月初月末，且换库时间不可预测，已足以完整回答问题。"}
+{"qid": "26ab96fd88b46a0bb90a35c24701eabd", "query": "暖气只有一片热", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]直接针对暖气只有一片热的现象，给出了积气、堵塞、水压不足等原因及放气、清洗等解决方法，合起来足以完整回答问题。"}
+{"qid": "1094ace504535e204d096d16ce222708", "query": "为什么跑步小腿肚沉", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料从乳酸堆积、肌肉疲劳、跑姿不当（后蹬过力/小腿发力过多）、缺乏运动、跑后未拉伸放松等方面解释了原因，并给出了改善建议，能较完整回答问题。"}
+{"qid": "180e48d9f230a98333ea35b6459c9453", "query": "lol最后一只恐龙纳尔皮肤多少钱", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多份资料一致给出最后一只恐龙纳尔皮肤售价69Q币/6900点券（约65.55元），足以完整回答价格问题。"}
+{"qid": "c0e933d55cb7d51538981e1d3507d559", "query": "增肌粉使用时间", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料明确给出了增肌粉的服用时机（锻炼前半小时、锻炼后30分钟至1-2小时内吸收最佳）及是否长期服用的判断，合起来足以完整回答使用时间问题。"}
+{"qid": "a5dc466387c67f29458fcf84a54ebc4a", "query": "斗仙2哪个职业好玩", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料详细介绍了斗仙2五大职业的定位、技能特点和玩法风格（近"}
+{"qid": "78ca015355fccb9614975bbf65a20262", "query": "阴茎上长了一个小水泡", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "cd12c7558b1d64a5f1ec8402307e6ff4", "query": "柔韧性好是天生的吗", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料提供了一些关于先天遗传与后天锻炼的观点和个人例子，但缺乏科学依据，且观点互相矛盾，只能部分回答问题。"}
+{"qid": "c8ae36c07f6cfef600eb6e84cc1e235f", "query": "减肥如何不减胸", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料从饮食（补充脂肪、蛋白质、豆浆等）、运动（胸肌锻炼、避免长时间有氧）、按摩及生理周期利用等多个维度全面覆盖了减肥不减胸的方法，合起来足以完整回答问题。"}
+{"qid": "b9c3eee4937e7652ce90ee788c0bf374", "query": "怎样改否定句", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来涵盖了中文和英文否定句的改法规则（be动词、情态动词、助动词加not，反义词替换，双重否定等），配有例句，足以完整回答问题。"}
+{"qid": "45fad06ff9ca3d80feff59e64e0ce269", "query": "百艺舒是什么药", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "所有资料均未提及百艺舒，无法回答该药是什么。"}
+{"qid": "47cdcbe2002c408e92fb108df87a16b3", "query": "被激光笔照到了眼睛", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason"}
+{"qid": "a26025b467178a238f9dbbc477650308", "query": "游泳腿抽筋时", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料包含了游泳腿抽筋时的应对方法（保持镇定、对侧手拉脚趾勾脚、推压膝盖伸直、上岸休息保暖）及预防措施，足以完整回答问题。"}
+{"qid": "ed173fa1a90a60afbd9f77d4e84a60bf", "query": "金色神灯在哪", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1]提到金色神灯需经翡翠林传送门后飞往，能指出大致区域和到达方式，但缺少精确坐标等关键定位信息；其余资料与问题无关。"}
+{"qid": "26758c98eeba61d33406ffb95e1278e5", "query": "传奇手游沃玛教主在哪", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料明确给出沃玛教主位于沃玛森林中的沃玛寺庙三层沃玛教主大厅，并附完整走法，足以回答位置问题。"}
+{"qid": "e9cf4c74e51c04b264cddcca3defb214", "query": "去美国能带几瓶酒", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "3495cb8495a25b8ff2a2486b593047a3", "query": "央企技术工种一般会查学历么", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料涉及央企学历要求及HR核查情况，但未针对'技术工种'给出明确是否会查的结论，只能部分作答"}
+{"qid": "4620a15b71ca72b5aeb6789af266fcbb", "query": "他汀 副作用", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了他汀常见副作用、肌肉相关严重副作用、罕见争议性副作用及预防应对措施和药物选择，足以完整回答该宽泛问题。"}
+{"qid": "7a6f7e5ff945dbcbe6b127d9d31c3f2b", "query": "发烧打针多少钱", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1]和["}
+{"qid": "9452b000a410b048e78a9df3705825f9", "query": "手机进不了刷机模式怎么办", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料提供了进入recovery/刷机模式的按键组合和驱动安装等部分方法，但缺少针对'进不去刷机模式'的系统性故障排查，只能部分回答"}
+{"qid": "d9eec75ad24ac0041a58e6de86d76d2a", "query": "什么是三线明星", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料从不同角度一致定义了三线明星：受关注度低、参演作品多但反响平平、辨识度高却不知名，合起来足以完整回答问题。"}
+{"qid": "369b7fe0c12257c1c0b1e3890e2789c5", "query": "太刀剑宗用什么异界套", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1]提到MS根源9可作为太刀剑宗的异界流选择，资料[2]"}
+{"qid": "2c40d11f8ca0164e0cf77b021174b301", "query": "菱角怎样种植的", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来覆盖了品种选择、种植时间、直播与育苗移栽方法、水深密度、施肥管理及采摘等种植全过程，足以完整回答菱角怎样种植。"}
+{"qid": "d9535dc660dba7291b92aadcf66783ee", "query": "台湾哪里买运动鞋", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了台北（新光三越、SOGO、101、西门町、五分埔、後火车站、夜市）及台中台南高雄垦丁街等多地的购买地点，类型涵盖百货、专卖店、折扣店等，足以回答问题"}
+{"qid": "aa4c6e0fd164ef97c4eabb59aed6b0fb", "query": "中国有多少个省市县", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来给出了省级行政区34个（23省、5自治区、4直辖市、2特别行政区）及地级市、县级市/县的具体数量，足以回答省市县的总数问题。"}
+{"qid": "998587686e7457ce7e77e1ea676c0e61", "query": "有关于等待的诗句", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "cbb55090c56604d031d06ffbe67254ae", "query": "怎样的牙齿算 龅牙", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料给出了龅牙的定义性特征（牙齿前突外翻、上下牙无法咬合、嘴唇合不拢露牙龈等）及多种自测判断方法，并补充了牙性与骨性的区分，足以完整回答怎样的牙齿算龅牙。"}
+{"qid": "1a8e07bf30567932a26c7f21dc80b4f8", "query": "玩梦幻西游老是网络错误", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了网络错误的多种原因（客户端损坏、维护期间、防火墙、网络不稳定、ISP线路、缓存/磁盘问题、手机网络设置等）及对应的解决方案，合起来足以较完整地回答该问题。"}
+{"qid": "f02a1fabecce9cfc6662d1a4a14ebc4e", "query": "看门狗怎么买车", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]完整覆盖了看门狗2中买车的步骤：找到汽车店、按E对话购买、购买后通过APP召唤车辆，足以回答问题。"}
+{"qid": "1843542cded7f50a715acfbc77eaa275", "query": "一般车子开几年", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从经济使用寿命（8-10年）、技术使用寿命（可开15年或60万公里）、影响因素（保养、油品、制造工艺）等多角度完整回答了一般车子开几年的问题"}
+{"qid": "8b6ab9dfb331479f236edfaf1ada81b5", "query": "刚怀孕34天 hcg才5800 正常吗", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "f0d3b8ca065bdf5aa6f09d28984eadda", "query": "问君能有几多愁下一句", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[3]和[4]均明确给出了原句下一句‘恰似一江春水向东流’，足以完整回答问题。"}
+{"qid": "9b0b148b0dfb3d3e062850e1903685bd", "query": "传奇世界禁地魔王怎么走", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2]给出了从禁地老兵传送到魔穴的详细路线，[4]补充了到达禁地的方法，[1]也描述了路线，合起来足以回答问题。"}
+{"qid": "b84746212c04e76a41d156d267125ad5", "query": "摇头会头疼", "hit": false, "level": 1, "sufficient": true, "cell": "FP", "reason": "资料主要涉及偏头痛/血管神经性头痛的一般诊疗建议，但均未针对摇头这一特定动作诱发头痛的病因进行解释，缺乏关键针对性信息。"}
+{"qid": "2431d7b1ad4109263825d86bedacfdd4", "query": "昆明做妇检哪家医院好", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料给出了昆华、云大等部分昆明医院的推荐，但夹杂广告与无关信息，答案不够完整可靠"}
+{"qid": "26bb5fd8df0a2136e6dc0312d72e1949", "query": "诛仙3.3耀天戒怎么得", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来完整说明了通过做采药任务获得家传戒指、收集白鱼到道无情处升级为耀天戒及其后续各级升级的全部流程。"}
+{"qid": "9ef3f5f8ce2bfe44c077a1e52809dc9e", "query": "穷则独善其身,达则兼善天下是什么意思", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "所有资料均明确给出了该句的出处和含义，合起来足以完整回答问题。"}
+{"qid": "17299d2c76a3aa2e27828e26415a7367", "query": "razer game booster是不是免费的", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]均明确指出Razer Game Booster是免费的，足以完整回答问题。"}
+{"qid": "ef7047c4e37f17b7e3e78dacf2b8da9a", "query": "怎么把奶油抹平", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2][3][4]详细给出了抹平奶油的工具选择、抹刀角度、转台用法、刮平顺序和常见问题处理，足以完整回答。"}
+{"qid": "f290efdcdf059239264ca792f06f637e", "query": "香港kovix怎么样", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "所有资料均未提及kovix品牌，内容与问题完全无关，无法作答"}
+{"qid": "3b9790320f674ea08bd7c32f830bb8c4", "query": "iphone微信语音做铃声", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "e547c74a7ab3f79038815670dc450e44", "query": "宁波有魅族专卖店吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多份资料明确列出宁波多家魅族专卖店及具体地址和电话，可完整回答是否有专卖店及在哪里"}
+{"qid": "fc4573f33a3a20de805b1d89be87d9a5", "query": "如何在线看阅兵", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "73025c5b7712890937804cbe410d6197", "query": "神武盗宝小妖怎么杀", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料合起来涵盖了盗宝小妖的血量、速度要求、用人物还是BB打、集火策略、分身机制等击杀要点，足以完整回答问题。"}
+{"qid": "679248b79b5a37cf8765e89ead7dcb3d", "query": "附睾肿胀", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来覆盖了附睾肿胀的常见病因（附睾炎、囊肿、外伤、阴囊水囊肿）、症状、病理变化及治疗方案，足以较完整地回答问题。"}
+{"qid": "a1223d17a4d9831438b4a186c5b75646", "query": "立秋能喝姜水吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四则资料共同覆盖了立秋/秋季能否喝姜水的正反观点、食用量、时间禁忌及特殊情况（如治寒症）等要点，足以完整回答问题。"}
+{"qid": "4d04f6cc23911cfe8846eebbe316bce5", "query": "国企属于什么单位", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[2]明确指出国企属于企业单位而非机关事业单位，资料[1][4]进一步说明国企是国家所有的自负"}
+{"qid": "e443f4a80d4d4f85e091f901fca263c1", "query": "北京市公务员一年考几次", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \"资料[1]详细给出一年三次的安排，但[3][4]称北京一年"}
+{"qid": "c9d08aaa6bc56d25dae5cb902299e32a", "query": "小孩眼睛大小不一样", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了小孩眼睛大小不一的常见原因（生理性不对称、头部不对称、先天性上睑下垂）、警示症状及就医建议，足以完整回答问题"}
+{"qid": "db84e131ab4dd64cb1b3baa8757eedcc", "query": "w10完整版系统好用吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料从性能、兼容性、游戏体验、与W7对比等多个角度提供了正反两面的用户评价，合起来足以回答W10是否好用的问题。"}
+{"qid": "477514a273d4d40bbe9fc19522ddaa92", "query": "威海土地证在哪里办理", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "所有资料均未提及威海土地证的办理地点或相关流程，与问题无关。"}
+{"qid": "06e462478c3f7780d2beb65ecd19314b", "query": "如何从第三页开始设置页眉", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料均完整给出从第三页开始设置页眉的步骤（插入分节符、取消链接到前一条页眉、输入页眉内容），足以完整回答问题。"}
+{"qid": "577589dbaf176bbc21c0c34f0ea3302c", "query": "中药会影响月经吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料共同说明部分中药（如活血、收敛固涩类）会影响月经而并非全部中药都会，且月经受多因素影响，难以完全归因，足以完整回答问题。"}
+{"qid": "a6921c13a716ded1d92d6784fedc87e4", "query": "怎样练内力", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料合起来涵盖了内力的概念及具体练法，包括站桩、呼吸吐纳、意守丹田、开合劲静功等具体步骤和注意事项，足以完整回答怎样练内力。"}
+{"qid": "97f9b9eb79a3b75e8522b8107d0d46ca", "query": "上海哪里买手串", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合计给出了城隍庙、东台路古玩市场、花鸟市场、浦东板泉路及多个古玩城等具体购买地点，并附有比价和防骗提示，足以完整回答"}
+{"qid": "9e403f899adfcfbf2d6b3e702f937616", "query": "精油怎么做的", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]完整覆盖了精油的原料来源与蒸馏、压榨、溶剂萃取、脂吸等多种制作方法，足以完整回答问题"}
+{"qid": "a9d00bab314babccd4393bcca6c10ec8", "query": "办公室怎么灭鼠", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]合起来覆盖了灭鼠方法（鼠药、粘鼠板、鼠夹、柴油法）、预防措施（堵缝、清理食物、断水源）及安全警示，足以完整回答办公室灭鼠问题。"}
+{"qid": "1724b594fd602c7202c577cdb335a1e7", "query": "借书的好处", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "三篇资料均明确列举了借书的多项好处（省钱、不占地方、扩大阅读量、'书非借不能读也'等），合起来足以完整回答问题。"}
+{"qid": "982a5208d66752a9267b1464a361afb1", "query": "混社会的歌曲", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[3]提到了《古惑仔》系列的《战无不胜》和《乱世巨星》等与混社会相关的歌曲，但仅涉及少量例子，无法全面回答混社会歌曲这一问题。"}
+{"qid": "33e7ba504fd18ea6e4c1467eafed4fa2", "query": "感人的用英语怎么说", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2]详细给出了感人的多种英文表达（affecting、impressive、heart-warming、emotive等）并区分了impressed/impressing的用法，资料[1]补充了impressiveness，合起来足以完整回答问题。"}
+{"qid": "bb62991ff4fa6aeae94bf504dece0ab2", "query": "与人方便与己方便的意思", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]分别从帮助他人、谦让美德和为人处世角度阐释了“与人方便与己方便”的含义，合起来足以完整回答该问题。"}
+{"qid": "954f57b98c694f55bea444cf4ab76b73", "query": "丝袜有什么用处", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[2]系统列举了修饰双腿、防晒、防静脉曲张、防水肿、保暖防粘等十余种用处，资料[1]又补充了代替浴网去角质、当抹布等妙用，合起来足以完整回答丝袜的用处。"}
+{"qid": "a513818e1b4640ccde6fc5f58273d5b8", "query": "核桃几瓣的好", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1][2][3]分别从收藏价值、把玩体验和新手建议角度说明了瓣数多寡的优劣及5-"}
+{"qid": "81e38d0e106a6f74334f79b4f799d367", "query": "汽车电商有哪些", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料给出了汽车电商的分类类型并列举了新浪秒车、一猫汽车网等少数例子，但未提供完整的汽车电商平台清单，只能部分回答。"}
+{"qid": "825a908221278a020e776fc47163cfd5", "query": "我的世界手机版0.12.1末地传送门怎么做", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \"资料"}
+{"qid": "b712e9f97cb39a8dadc3018742b9e63e", "query": "怎样钓雄鱼", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来覆盖了钓雄鱼的饵料选择、雾化要求、找水层技巧、天气水温条件及浮钓/底钓方法等关键信息，足以回答问题。"}
+{"qid": "326531cf3b52bdff59849055dfd8a9bf", "query": "北京机动车过户地点", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多份资料给出了北京机动车过户的多个具体办理地点，包括各车管分所、花乡旧机动车交易市场、亚运村北辰市场、南法信车辆检测场等，足以回答问题。"}
+{"qid": "419200409cfb660db6289c6351da6d11", "query": "鲁智深的人物分析", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖鲁智深的生平经历、多角度性格分析（嫉恶如仇、粗中有细、率性不拘）、侠义精神与佛性解读，以及金圣叹、李卓吾等名人评论，足以完整回答人物分析问题。"}
+{"qid": "47b26977a352b3c35a9dee0ee747addb", "query": "怎么查别人有没有结婚", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来覆盖了查询途径（户口所在地民政局）、隐私限制、需要检察机关证明等关键信息，能完整回答问题"}
+{"qid": "94e1f7a19ac3eb6622cba7488a8b9545", "query": "hrvp和hrd区别", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料明确指出HRVP为人力资源副总裁、直接向总裁汇报，HRD为人力资源总监，两者工作内容相似但级别不同，HRVP是HRD的职业发展通路，足以回答区别问题。"}
+{"qid": "15550b51edf0bb09e0efb5439c104b4e", "query": "acer门户是什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]完整详细地说明了Acer门户的定义、功能和包含的应用，足以回答问题"}
+{"qid": "0eb8dab77b0f789bc81e575a35a34fd3", "query": "求好看的豪门小说", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料合起来提供了大量豪门小说的书名、作者及简介，足以完整回答推荐问题。"}
+{"qid": "e0e1457c1c4b4aec3b90cc5f2a1528cf", "query": "快穿之打脸狂魔完结了吗", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level"}
+{"qid": "ff345f273c461d318302ec5648b143ce", "query": "苹果手机的home键规定只能按多少次吗", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1]提到Home键约可按30000次，提供了一个参考数字，但缺少苹果官方是否明确规定的权威说明，其余资料仅介绍Home键功能，无法完整回答问题。"}
+{"qid": "7a2c037ffd93cdc676db4af8afe51d7c", "query": "小苏打可以洗头吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从可否使用、利弊争议、具体配比方法及注意事项多角度作答，合起来足以完整回答该问题"}
+{"qid": "4e34c3fb12b8f204158d6a2f24fc1725", "query": "霜是怎么形成的", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]完整解释了霜的形成机理（水汽在0℃以下物体表面凝华）及形成条件，足以回答问题。"}
+{"qid": "a7ebebee4737a59c5ffbbd848d60a393", "query": "有哪些坦克", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料提供了部分具体坦克型号（仅4款）和坦克分类类型，但具体型号列举不完整，缺少M1艾布拉姆斯、豹2、T-90、梅卡瓦等知名坦克的详细信息。"}
+{"qid": "27e07c55a07c275cdd946c8c75e1ae64", "query": "北极熊为什么濒临灭绝", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料共同覆盖了全球变暖致海冰融化、栖息地缩小、猎物减少、长距离游泳溺毙及因纽特人捕猎等主要致危因素，足以完整回答问题。"}
+{"qid": "cc0b5de3ace665dd4b9b7da939d2e81d", "query": "挪用公款量刑标准2015", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "4defb19ccb2dbfecc16ef4544eee92d9", "query": "翼虎与奇骏哪个好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料从驾驶感受、动力、空间、舒适性、越野能力、性价比等多个维度进行了对比，并给出了明确的购买建议，足以完整回答两车哪个好的问题。"}
+{"qid": "95e3f1c4131e8d69a917a2e91fcc0695", "query": "经期吃薯片", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料一致且明确回答了经期可以适量吃薯片、不宜过量的理由，足以完整回答问题"}
+{"qid": "4df6a21c4749dc980c15b321d8ae7e86", "query": "中国有几个省会城市", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "6651013a8d107de691e94067a6f02449", "query": "奶瓶什么的好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来涵盖了奶瓶材质（玻璃、硅胶、PPSU、塑料等）优缺点和品牌推荐（贝亲、NUK、新安怡等），足以回答奶瓶什么材质和什么牌子好的问题"}
+{"qid": "1cd2db0b18e135094d12b2367da6fbd1", "query": "形容丰收", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料提供了大量形容丰收的成语和词语及其释义，合起来能完整回答问题。"}
+{"qid": "fca83b9fdea8db711f78fa06338430e1", "query": "水产生意好做吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从多个角度回答了问题：生意好不好做取决于经营方式和销售渠道，不同地区市场情况不同，竞争加剧后利润下降，历史上有黄金时期等，合起来能较完整回答。"}
+{"qid": "8bbcbae77eb9268e2aeed5e3777502ac", "query": "左脚脚后跟疼痛的原因", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了足跟痛的主要病因（骨刺、跖腱膜炎、跟腱炎、滑囊炎、脂肪垫炎、关节炎、风湿、穿鞋不当等）及中西医解释，合起来足以完整回答左脚脚后跟疼痛的原因。"}
+{"qid": "476f11f844bd4978344746a0e8e914cf", "query": "完美世界出过什么游戏", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]详细列出了完美世界旗下众多游戏，包括《完美世界》《诛仙》《赤壁》《神魔大陆》《笑傲江湖OL》等，足以完整回答问题。"}
+{"qid": "6ca92755ac9297319d907bccb701bd60", "query": "天刀真武督脉怎么点", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]列出必点的基础穴位，资料[3]给出PVE和PVP的完整督脉武曲/七杀/破军搭配建议，资料[2]补充整体点脉原则，合起来足以回答真武督脉怎么点的问题。"}
+{"qid": "a63d18b7905cfe70706b2792b6c6a032", "query": "地砖一平米多少钱", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了地砖材料费（按品牌、种类、规格分档）和铺贴人工费（约30-50元/平米）以及综合铺贴均价（约55元/平米），合起来能较完整地回答地砖一平米多少钱的问题。"}
+{"qid": "0e235e0b361bda087c21b0634a7de999", "query": "嗓子呼吸困难", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": ""}
+{"qid": "6c5ddc8679aa994018faa065a2bbdaba", "query": "诚意 成语", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料提供了大量与诚意相关的成语及其释义，如一秉虔诚、三顾茅庐、诚心正意、竭诚相待、推心置腹、精诚所至金石为开等，足以完整回答问题。"}
+{"qid": "ac21a5c2756d4829870be73cb7e5aaea", "query": "s6攻速暴击符文怎么配", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1]给出了完整的攻速暴击符文页配置方案（精华攻速、红色攻暴混合、黄色护甲/生命、蓝色魔抗），[4]补充了暴"}
+{"qid": "58ff4e77650db44d29906464d3235858", "query": "百草最后跟谁在一起", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多个资料一致指出百草最后和若白在一起，并详细描述了结局细节（结婚、女儿芽芽等），足以完整回答问题。"}
+{"qid": "25e830827dc388ff2b3f4816c1002d14", "query": "如何测量放线", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了放线的三个阶段、所需仪器（全站仪、经纬仪、水准仪、钢尺等）、龙门板尺量法与仪器测量法、内外控法投测及允许误差等，足以完整回答如何测量放线。"}
+{"qid": "09bcb358a2aaf6cb61c824b297bad08e", "query": "少数民族欠发达地区的政府治理结构应当有什么特点", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \"资料主要覆盖民族自治机关组成、自治权、财政体制等一般"}
+{"qid": "51064a13d9de2691a69d124ae365813d", "query": "匿名举报受理吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了纪检监察、检察机关、工商查处部门等不同主体对匿名举报的受理态度与处理规则，合起来能较完整回答该问题。"}
+{"qid": "903868196fadb922e519dd8fd62e9015", "query": "台湾有哪些大尺度综艺", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料仅列出《康熙来了》《天天大连宪》等少数例子，无法完整回答台湾大尺度综艺的清单"}
+{"qid": "3930c3bb44183c8961429a12aa82a3ae", "query": "新英朗怎么样值得买吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四篇资料综合覆盖了新英朗的外观、动力、油耗、内饰、底盘、噪音、保养费用、降价幅度、车主真实体验及整体性价比评价，足以完整回答是否值得买。"}
+{"qid": "57dfdc9b4eed13e0fcfa498adc0b9e02", "query": "御龙在天刷金子是真的吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料一致指出所谓刷金子多为骗钱骗局，也有观点称工作室确有刷金但涉及者已被封号，合起来能完整回答该问题。"}
+{"qid": "b942677bbeea6f8dc8ad0ba7a66678e0", "query": "北京隆盛泰是不是真的", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1]证实北京隆盛泰商贸有限责任公司确为1997年成立的真实企业，但其余资料[2][3][4]针对的是商品真伪且内容杂乱，若问题指其经营产品是否正品则信息不足"}
+{"qid": "919100df9fc70a047b46936cc85ca083", "query": "如何正确使用护肤品", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "四份资料从护肤品使用顺序、各步骤具体操作方法、不同肤质的选择建议等方面较为完整地覆盖了如何正确使用护肤品这一问题。"}
+{"qid": "a97264841ca02ac94c26e8aa15ff8e6c", "query": "下腹坠胀 尿频 尿多", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料主要围绕尿路感染解释尿频，但未涉及下腹坠胀和尿多的鉴别与完整评估，只能部分作答。"}
+{"qid": "cae621f4608b1edcba9214d20c0be769", "query": "三星2015有什么功能", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了三星W2015的主要功能，包括双屏翻盖设计、4G网络、S健康、双卡双待、VIP模式、隐私模式和紧急模式等，足以较完整地回答问题。"}
+{"qid": "e615e279eb5afbb5cdc6ae232814cc5a", "query": "天然无添加的护肤品存在吗", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "9d14f74e53a376af09ca6dff5aef97dd", "query": "太阳能上水管老化快", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]完整解释了太阳能上水管老化快的原因（日晒风化、冷热水交替、劣质管材、缺乏防晒保温）及应对措施，足以回答问题。"}
+{"qid": "47f85336a9cef75f482fbd496594d133", "query": "饥荒游戏目录在哪", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]详细说明了饥荒游戏安装目录的查找方法，结合快捷方式属性等信息，足以完整回答游戏目录在哪的问题"}
+{"qid": "0559f960c22ec575a64f869bd1fdc026", "query": "宫腔镜检查对身体有影响吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来明确说明宫腔镜一般安全无害、属微创检查，同时给出了进入宫腔操作可能感染及两周内禁性生活盆浴等注意事项，足以完整回答是否有影响。"}
+{"qid": "8c80d5ace433084fd346a32e30e13dc9", "query": "伪装者明城是坏的吗", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "所有资料均未提及明诚这一角色的身份、立场或行为，无法判断他是好是坏"}
+{"qid": "287a189a291178f8f35408c3505c742e", "query": "打胎会导致不孕吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料从机制、多次人流风险、药流影响及个体差异等角度综合回答了打胎与不孕的关系，信息足够完整。"}
+{"qid": "bb0ee68f09504c8c784bf7997fb4cf8e", "query": "停车场怎么倒车入库", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了垂直车位倒车入库的完整步骤（侧距、打方向时机、后视镜观察、回正调整），并补充侧方停车、车头朝外等停车场实操技巧，合起来足以完整回答。"}
+{"qid": "42ed27179cf446e5a0fb0892ce2cd846", "query": "笔记本屏幕上下抖动", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料合起来覆盖了刷新率、显卡驱动、电磁干扰、散热电源及屏幕硬件等笔记本屏幕抖动的主要原因和对应解决办法，可完整回答问题"}
+{"qid": "2a3ef30812aa4b2d549cb38f01c8b8f0", "query": "怎么开通信用卡快捷支付", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了网页版和手机支付宝开通信用卡快捷支付的完整步骤及注意事项，合起来足以完整回答问题。"}
+{"qid": "8609c847a20a88de60f55b853f7efc28", "query": "治疗尖锐湿疣药膏", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1]详细列出了鬼臼毒素酊、咪喹莫特霜、三氯醋酸等多种外用药膏的适应症、疗效和副作用，资料[3]补充了其他局"}
+{"qid": "f7834e164a5da62fd6431d1175070b77", "query": "血糖高可以吃姜醋", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \""}
+{"qid": "bcc3cb08c01d79330685f92ecd814e5b", "query": "lol技能监测是什么", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "所有资料虽与LOL相关，但没有任何一篇解释'技能监测'是什么概念，无法回答该问题。"}
+{"qid": "3b3f92312db9b5349e58430e8f46c52d", "query": "染发剂如何使用", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来覆盖了染发前过敏试验与洗发准备、调配比例、分区涂抹步骤、等待时间、冲洗及染后护发等完整使用流程，足以完整回答问题。"}
+{"qid": "c3846166185ce7705a1f1eb2fc4943ee", "query": "送自己什么生日礼物", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]从不同角度给出了送自己生日礼物的多种具体建议（经历、写真、定制公仔、旅游、蛋糕、手表、健康等），合起来足以完整回答问题。"}
+{"qid": "1907f1ceca0dbe3737f6e0a584f1e9ba", "query": "童装店起什么名字好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料提供了大量童装店名字示例及起名思路，足以完整回答该问题。"}
+{"qid": "39eb1062625fe0197bd3536951497916", "query": "wow霜火长枪任务怎么做", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "资料只涉及霜火长袍及其他无关任务，完全没有霜火长枪任务的信息"}
+{"qid": "4b0c3745e6333339261b804c75e26851", "query": "什么是桥", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料（百科、名词审定、儿歌绘本等）从定义、功能、起源、类型等方面完整解释了什么是桥，足以完整回答问题。"}
+{"qid": "06ea4b584d285914aef3ffe5cb56c8a4", "query": "六个月婴儿奶量", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料明确给出五至六个月及六至九个月的每顿奶量（200—250毫升）、喂养次数（每天5次/每4小时一次）及每日总量上限（不超过1000毫升），足以完整回答六个月婴儿奶量问题。"}
+{"qid": "51d99dbcc5ff294d45751318aa2e3f57", "query": "qq炫舞结婚用什么歌", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "所有资料均为现实婚礼或娱乐新闻内容，未涉及游戏QQ炫舞的结婚系统歌曲推荐，无法回答问题"}
+{"qid": "751caefed975bd8c2271fcdcc530636c", "query": "代办日本签证费用", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "bf5cea2ab1feb66cc96741b3059dfc85", "query": "造梦西游3二郎神掉什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]均明确指出造梦西游3二郎神掉落物品为山河社稷图，足以完整回答问题"}
+{"qid": "374e7585c15cd16faa15e2df29d42da6", "query": "刮骨疗毒近义词", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "07430081cb761a84518da9de7c488f40", "query": "肠结核的症状", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖腹痛、腹泻与便秘、腹部肿块、全身中毒症状等肠结核主要临床表现，可完整回答问题"}
+{"qid": "3755aecdc92b80ff8e1e64d35e23e713", "query": "双离合安全吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从优缺点、拥堵工况问题、干式湿式差异、厂家调校水平、技术改进及替代方案等多角度充分回答了双离合是否靠谱的问题"}
+{"qid": "f2b8892e28e10483929f5c03262de49f", "query": "合肥新生儿医保交110吗", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料显示110元/年是上海标准，合肥的新生儿/居民医保缴费为30元（学生）或120元（其他居民），可据此回答“不"}
+{"qid": "5c88b5213b21789f02d50b1bffbc933f", "query": "年费会员可以建几个群", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \"只有资料[4]（陌陌）给出明确的『可创建3个会员群』，QQ相关资料[1][3]的建群数量表格内容缺失，仅提到10"}
+{"qid": "2cf471757fde2c8a9df107a69827a1b0", "query": "无法初始化图形设备", "hit": false, "level": 1, "sufficient": true, "cell": "FP", "reason": "资料[1]仅提供了一个可能相关的CAD启动设置变通方法，其余资料与该错误无关，无法完整说明该问题的原因和通用解决办法"}
+{"qid": "0fec63a24eb055c44daf023709015079", "query": "怪物猎人ol圆蚂蚱在哪抓", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料互补，完整说明了农场每日捕捉、低级地图（5-20级）黄色蝴蝶/闪黄光采集点用网捕捉等获取方式，足以回答问题。"}
+{"qid": "58125667063116449aedff9c4d128bb0", "query": "补牙期间能喝酒吗", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料[1]提供了个人经历（补牙前后喝酒的刺激感），但缺少权威医学建议，且其他资料与补牙期间饮酒关系不大，无法完整回答问题。"}
+{"qid": "fb8b9034b3e3502beb006d9f95e93f12", "query": "小孩乙肝", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料覆盖了儿童乙肝的症状表现、检查诊断方法、抗病毒治疗指征及药物方案等主要方面，合起来能够较完整地回答这个宽泛的问题。"}
+{"qid": "1f7af1d4ea831d17e41563e572125334", "query": "侠客风云传内功等级高有什么用", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1][2]直接回答了内功等级高低的作用（满级前效果按百分比递增、每级提升功体效果与气血内力等），"}
+{"qid": "e892032de784e2c2d5cbcb8961dd502f", "query": "保定优抚医院怎么样", "hit": false, "level": 1, "sufficient": true, "cell": "FP", "reason": "资料中仅[2]和[4]泛泛提到某医院口碑尚可，但未明确针对保定优抚医院的特色、科室、患者评价等关键信息，且[1][3]明显跑题，无法完整回答问题。"}
+{"qid": "2a96c6ce1491cad6386cbfbccadf6d51", "query": "看梅毒挂什么科", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料一致明确指出看梅毒应挂皮肤性病科、性病科或皮肤科，并补充了到三甲正规医院就诊等建议，信息完整充分"}
+{"qid": "17829df6cb6005396aff45681184a7b4", "query": "加盟洗车人家怎么样", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了加盟费用、总部支持、优缺点等关键维度，合起来能较完整地回答加盟洗车人家怎么样的问题。"}
+{"qid": "febfabc21d5ef93a01f3357256d27061", "query": "2岁宝宝屁眼痒", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1][3]详细涵盖了2岁宝宝肛门痒最常见的蛲虫感染原因、"}
+{"qid": "53c6b5d3b0abfb86a21e4d1f6c712677", "query": "刘翔为什么假摔", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \"资料给出了"}
+{"qid": "a1726d07b3ff47bedb2fec7a270b4ef8", "query": "宝宝退热贴多久换一次", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料一致说明退热贴一般4-8小时更换一次，最长不超过10小时，且提供了皮肤过敏和体温相关注意事项，足以完整回答问题。"}
+{"qid": "7a3a8e46056cb863af26c67ebdf13848", "query": "为什么中国必须守住18亿亩耕地红线", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料共同覆盖了人多地少的国情、人均耕地低于世界平均水平与警戒线、保障粮食安全与生态安全的需要、耕地后备资源有限、以及城镇化工业化占用耕地的压力等关键原因，足以完整回答为什么必须守住18亿亩耕地红线。"}
+{"qid": "9146e60726806ae2a5c15859f472b290", "query": "鼻舒适片效果", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]从成分、功能主治、疗效快慢及具体作用（祛风通窍、清热解毒）等方面较完整地回答了鼻舒适片的效果问题"}
+{"qid": "268a3e165e9dad17a7275a76f4e76ce0", "query": "洛克王国声音记忆石怎么得", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料明确说明声音记忆石是诙谐先驱者2的任务道具，在太阳神庙打野怪有概率获得，且概率较低，并提供了换服务器、换宠物等技巧，足以完整回答问题。"}
+{"qid": "7b47861f4e0dcb8ce381f33d9d24d257", "query": "什么是燥热体质", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料涉及湿热体质、寒性体质及干燥综合征，仅[2]部分描述了热性特征，但没有任何一篇直接定义或系统解释'燥热体质'这一特定体质类型，只能回答一部分相关内容"}
+{"qid": "a83605cbdd18407094bd159dc73c4dc7", "query": "4s忘记id怎么激活", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料涵盖了通过苹果官网找回Apple ID账号密码、携带发票到苹果官方店申请解除激活锁、以及刷机或购买激活卡等第"}
+{"qid": "a96a6f98b1e00967ad0fa35b07c41338", "query": "迅雷怎么断点续传", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 1, \"reason\": \"资料[1]给出了"}
+{"qid": "1ba983fe65e90156bfd7954f032e5867", "query": "说明文运用比喻时应注意", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": ""}
+{"qid": "841bc953f1b56fc06ab9b57c2a0b437a", "query": "cdma1x是什么意思", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从技术标准（cdma2000第一阶段、由IS-95演进）、全称码分多址及其性能特点，以及作为电信2G网络的应用等角度，完整解释了cdma1x的含义。"}
+{"qid": "fa371201e1624a555d490f3e2a72a16d", "query": "ipad air2地图无法定位", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来涵盖了WiFi版Air2定位失败的主要原因（无GPS模块依赖WiFi定位）及解决方案（开启定位服务、检查WiFi、还原网络设置、给地图应用授权），基本能完整回答问题"}
+{"qid": "dc75e3615e2c83d881fa1113b12dba64", "query": "红桃杰克有特效吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]明确说明红桃杰克无特效、仅为换色，资料[2]提供皮肤背景信息，合起来足以回答问题。"}
+{"qid": "4f71f25da10f2ba3473587b86f4acae5", "query": "chk文件怎么修复", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2][3]详细介绍了CHK文件的修复方法，包括手动更改后缀名和使用CHK文件恢复专家等工具的具体步骤，合起来足以完整回答问题。"}
+{"qid": "4baffaa5e3ef42442f88f78c3e209404", "query": "upnp框架是什么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料一致且充分地解释了UPnP的定义、架构特点（分布式开放网络架构、基于TCP/IP）、应用场景及工作机制，足以完整回答问题。"}
+{"qid": "1d48af519b749c75853b569a91410107", "query": "foxmail新建账号密码错误", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]直接针对新建账号提示密码错误的问题给出了完整解决方案（开启POP3/SMTP服务并使用客户端授权密码），足以回答该问题。"}
+{"qid": "ee94ef8850e9e0b53dc279f16b4d24e2", "query": "孙悟空钻进铁扇公主肚子里歇后语", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "资料[1]仅提出该歇后语题目而未给出答案，其余资料为歇后语定义、西游记故事背景和无关段子，均未包含该歇后语的下半截（如“心腹之患/随心所欲”），合起来仍缺关键信息。"}
+{"qid": "92c4b3f6977ae56b2ae57e1115d4750a", "query": "bdyyservice.exe是什么", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "所有资料均未提及bdyyservice.exe，只涉及dllhost.exe、注册表驱动加载、QQProtectUpd.exe等无关内容，无法回答问题。"}
+{"qid": "a208cdcbf9613e6cfc394adcc9335ca3", "query": "胃功能", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料从中医（受纳、腐熟、通降、喜润恶燥）和现代医学（接受、储存、分泌、消化、排空）两个角度全面覆盖了胃的功能，足以完整回答该问题。"}
+{"qid": "49c6f313f888739790821e5122f53604", "query": "学生保温杯什么牌子好", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了多个保温杯品牌推荐（虎牌、膳魔师、乐扣乐扣、比得兔、大嘴猴、迪士尼、希乐等）及选购建议（304不锈钢等），整体足以回答学生保温杯什么牌子好的问题"}
+{"qid": "ba1d07c3b613eca9fbdb1afc655ccc3d", "query": "猎枪一般装几发子弹", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "judge 输出解析失败: {\"level\": 2, \"reason\": \"资料[1][2][3]合起来覆盖"}
+{"qid": "4b4f10b4cc01a6ec472921848cdf4612", "query": "杭州能用上海交通卡吗", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]直接引用上海交通卡官方互通城市公示，明确上海交通卡在杭州仅部分出租汽车可用，公交地铁不可用，足以完整回答问题"}
+{"qid": "d529a980a00a5104c32f07e3ed077741", "query": "眼睛肌肉麻痹", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料仅提供笼统的就医建议和一般性治疗原则，缺少眼睛肌肉麻痹的病因、分类、症状等关键信息，只能部分作答"}
+{"qid": "e926696c6b305b668137ca0a9c05cd1f", "query": "连体马桶盖怎么拆下来", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]和[2]详细说明了马桶盖的多种拆卸方式（如后方压紧螺帽、连接处螺丝等），且[2]直接涉及一体马桶盖的更换拆卸方法，合起来足以完整回答连体马桶盖的拆卸步骤。"}
+{"qid": "f68576c3f706f44f68ffa86b56108182", "query": "9月份买的车能否享受10月1日购置税减半", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1][2]明确说明购置税减半以机动车销售统一发票开具日期为准，9月已开票购车的不能享受10月1日起的减半政策，能完整回答问题。"}
+{"qid": "7c7db0875b9e0b314f57bd293b0dcd89", "query": "荣耀4x用什么内存卡", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]明确指出荣耀畅玩4X支持最大32GB Micro SD卡扩展，足以回答问题。"}
+{"qid": "201a265ca90fa6246b90d4ded1cc2887", "query": "饥饿游戏总共几部", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "各资料合起来明确说明：原著小说共3部，电影共4部（第三部拆分为上下两集），可完整回答问题。"}
+{"qid": "3606beb9ab6156115322e4b8dda5b9d2", "query": "电脑让手机开机", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "问题是如何用电脑让手机开机，资料涉及手机热点设置、手机控制电脑、刷机、手机不开机排查等，均未提及从电脑远程开启手机的方法，完全无法回答。"}
+{"qid": "dabc7b98ceab872231ef556366ef0c02", "query": "汽车烤漆需要多久", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料涵盖了烤漆加热时间（10-30分钟）、原厂与修补漆烘烤时长（半小时到1小时）、以及整体补漆流程所需时间（半天到2-3天），足以完整回答问题。"}
+{"qid": "90644eb89a32ac73ac6af99d1b43e471", "query": "仙剑3重楼怎么打", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "多篇资料详细提供了打重楼的完整攻略，包括道具选择（烟月神镜、软骨浆、灵珠等）、变身前后策略、仙术与补血建议，足以完整回答问题。"}
+{"qid": "c264c6377df7a39e9cfdcfed1ceec246", "query": "2016 pmp考试报名时间", "hit": true, "level": 1, "sufficient": true, "cell": "TP", "reason": "资料给出了考试时间及报名截止的一般规律（考前两个半月截止），但未提供2016年各次考试的具体报名起止日期，仅能部分回答问题。"}
+{"qid": "80e216e0646a1eeec819a79298e8c49c", "query": "microsoft .net framework 4.5.1是什么?", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料[1]直接说明.NET Framework 4.5.1是针对4和4.5的就地更新及其增强特性，结合[2][3]对.NET Framework整体的解释，足以完整回答问题。"}
+{"qid": "7e2b8cf1fdd18bd47a0ea5ec5de67f51", "query": "陈赫yy直播间多少", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "资料中没有给出陈赫YY直播间的具体号码，主要涉及的是其抖音带货直播数据和通用的YY短位ID申请说明"}
+{"qid": "978092d84e69f75065b1780853661139", "query": "杭州劳动仲裁电话", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料提供了浙江省及杭州市劳动人事争议仲裁委员会的联系电话、地址和管辖范围，足以回答杭州劳动仲裁电话这一问题。"}
+{"qid": "f650ac6577f9bd90154bf2ca74bba4fc", "query": "没越狱的iphone怎么清理垃圾", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料合起来提供了多种未越狱iPhone清理垃圾的方法，包括手动清理各App缓存、使用电脑端工具（PP助手、360安全卫士）、重启设备、重装App等，足以完整回答问题。"}
+{"qid": "8268833bb92cd94c8811c4cadaac0d0e", "query": "衣橱打一生肖", "hit": true, "level": 0, "sufficient": false, "cell": "FN", "reason": "所有资料均未涉及'衣橱打一生肖'这一谜语的答案，资料[1]仅提到衣橱不够用与生肖的关联但并非解谜，其余资料与问题无关"}
+{"qid": "1160b7ff03cf7cfff2a9548679483fd7", "query": "两个方下面一个土念什么", "hit": false, "level": 0, "sufficient": false, "cell": "TN", "reason": "检索资料均未涉及“两个方+土”的汉字（堃，读kūn），无一条能提供该字读音信息。"}
+{"qid": "eb26eb308b10dff8de314bdd1005fbf8", "query": "哈尔滨首付6万能买房子么", "hit": true, "level": 2, "sufficient": true, "cell": "TP", "reason": "资料给出了哈尔滨首付比例政策，并列举了多个首付5万或最低10%的具体楼盘，足以回答6万首付能否在哈尔滨买房。"}

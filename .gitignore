@@ -3,9 +3,15 @@ __pycache__/
 *.pyc
 .env
 
-# 索引与 trace 是产物，可重建，不进 git
+# 索引是产物，可重建，不进 git
 data/index/
-data/traces/
+
+# trace 默认进 git：README/计划书里每个数字的唯一出处，且花了真钱不可重跑
+# （全量 675K / 26 文件）。仅忽略日志、断点临时文件与冒烟等无长期价值的产物
+data/traces/*.log
+data/traces/*.done
+data/traces/ab_progress_smoke.jsonl
+data/traces/corrective_ab_20261013_152535.json
 
 # 评测集原始文件（corpus.jsonl 约 30MB，可随时从 HF 重新下载，不进 git；
 # meta.json 保留以记录数据来源与统计）

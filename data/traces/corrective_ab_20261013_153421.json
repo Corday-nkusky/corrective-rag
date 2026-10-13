@@ -1,0 +1,27 @@
+{
+  "n_queries": 72,
+  "k": 4,
+  "judge": "llm(mimo-v2.6-flash)",
+  "workers": 6,
+  "router": "forced-retrieve",
+  "naive": {
+    "recall@4": 0.6028,
+    "hit@4": 0.875
+  },
+  "closed_loop": {
+    "recall@4(answered only)": 0.7337,
+    "hit@4(answered only)": 0.9577,
+    "abstain_rate": 0.0139,
+    "avg_iterations": 0.07
+  },
+  "cost": {
+    "calls": 153,
+    "prompt_tokens": 187394,
+    "completion_tokens": 31170,
+    "cost_cny": 0.2497,
+    "cny_per_query": 0.00347
+  },
+  "run_elapsed_sec": 455.1,
+  "progress_file": "D:\\code\\corrective-rag\\data\\traces\\ab_progress_final.jsonl",
+  "timestamp": "2026-10-13T07:34:21.699665+00:00"
+}

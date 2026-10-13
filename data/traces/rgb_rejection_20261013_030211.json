@@ -1,0 +1,40 @@
+{
+  "scenario": "rejection",
+  "subset": "zh",
+  "n": 3,
+  "judge": "llm",
+  "avg_iterations": 0.0,
+  "cost": {
+    "calls": 6,
+    "prompt_tokens": 3821,
+    "completion_tokens": 721,
+    "cost_cny": 0.0053,
+    "cny_per_query": 0.00175
+  },
+  "elapsed_sec": 74.0,
+  "timestamp": "2026-10-12T19:02:11.309304+00:00",
+  "abstain_rate": 0.0,
+  "answered_correctly": 0.3333,
+  "hallucination_rate": 0.3333,
+  "samples": [
+    {
+      "id": "zh-0",
+      "answer_head": "根据现有资料，印控克什米尔地区查谟附近一座寺庙发生的踩踏事故已造成12人死亡、20人受伤[1]。事故发生在凌晨2时45分",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh-1",
+      "answer_head": "根据现有资料无法完整回答RCEP具体包括哪些国家。资料中仅提到RCEP有15个成员国[3]，并提及给予老挝、缅甸、柬埔寨",
+      "status": "answered",
+      "iterations": 0,
+      "hallucinated": true
+    },
+    {
+      "id": "zh-2",
+      "answer_head": "根据现有资料，只能确认：12时许，所有议员宣誓完毕[3]；宣誓仪式开始前半个多小时，不少议员已陆续抵达会议厅[1]。资料",
+      "status": "answered",
+      "iterations": 0
+    }
+  ]
+}

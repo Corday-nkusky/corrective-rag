@@ -38,7 +38,9 @@
         recall@4 **59.1% → 71.9%**（+12.8pp）、hit@4 **88.7% → 98.6%**（+9.8pp）；
         abstain 率 **8.0%**、平均迭代 0.45、重写生效 0.38/query——judge 真实参与决策；
         709 次调用共 **¥1.10**，每 query ¥0.00368。闭环 recall 为 answered-only 口径
-        （分母剔除 24 条拒答）；全量口径 hit@4 ≈ 90.7%
+        （分母剔除 24 条拒答）；全量口径 hit@4 ≈ 90.7%。**注：此 300 条数字已被
+        Phase 7 的 1,000 条终测取代**（其间 judge prompt 调过、样本也更大；终测口径
+        recall@4 59.92→69.71、hit@4 92.80→98.35，以终测为准）
       - judge 与 DuReader 人工标注一致率（300 条，trace: judge_agreement_20261013_025826.json）：
         **agreement 82.7%、precision 98.3%**（judge 放行的 240 条中仅 4 条无资料——
         幻觉几乎漏不出去）；FN 48 条（16.9% 误杀，多数被重写兜底救回，A/B 的
@@ -63,9 +65,10 @@
         （rejection 2 / noise 4 / integration 4 / counterfactual 0），按未覆盖计错；
         rejection 另有 11 条软拒答（答案话术拒答但 pipeline 状态 answered），
         有效拒答 = 硬拒答 29.0% + 软拒答 3.7%
-      - MiMo 累计花费：A/B ¥1.10 + judge 一致率 ¥0.42 + RGB ¥2.21（均 trace 出处）；
-        demo 联调另花约 ¥0.05（CLI 脚本 5 轮 ¥0.024 + 网页联调 ¥0.02）；
-        03:05 余额读数约 ¥8/¥10，此前试跑约 ¥2 为余额倒推（非 trace）
+      - MiMo 累计花费（trace 出处）：A/B(300) ¥1.10 + judge 一致率 ¥0.42 + RGB ¥2.21
+        + router ¥0.024 + **A/B 终测(1,000) ¥3.44** + demo 联调约 ¥0.05 ≈ **¥7.3/¥10**
+        （口径：每次运行的成本是进程累计，跨块/跨场景**不可直接相加**，须按 trace
+        差值或分块加总；详见坑 #20）
 - [x] Phase 5 多轮对话（`memory.py` + condense 入口节点 + `scripts/demo_chat.py`）：
       - `ConversationMemory`：滑动窗口 3 轮原文 + 超窗部分 LLM 摘要（增量摘要、
         失败降级截断并标注）；condense 节点只在 history 非空时触发（单轮不花钱）
@@ -102,8 +105,25 @@
         **33.9s / ¥0.0037 / 3.2 次调用**——快 2.4 倍、便宜 6 倍
       - 直答路线换 parametric system prompt：RAG prompt"禁止用自己的知识"
         会把"中国首都是哪"也逼成拒答（坑清单 #18）
-- [ ] Phase 7 定稿：test split（4,000 条）终测只跑一次 + 简历 bullet 定稿
-      （数字已齐）。见 `docs/01-项目计划书.md`
+- [x] Phase 7 终测（A/B 扩到 DuReader dev **前 1,000 条**）：
+      ⚠️ 前提更正——`C-MTEB/DuRetrieval` **只有 `queries`(2,000) + `corpus` 两个
+      split，无公开 test split**（qrels repo 只有 `dev`），论文所说的 test 4,000
+      未随 MTEB 包发布；2,000 条 dev 即全部带标注数据。故取**确定性前缀 1,000 条**
+      做最终 A/B（按文件序，非按难度挑选），协议仍是"这 1,000 条只跑一次"。
+      - 结果（trace: `corrective_ab_20261013_{153421,163214,164647}.json`，分三块跑；
+        进度文件 `ab_progress_final.jsonl` 全量重算）：naive **Recall@4 59.92% /
+        hit@4 92.80%** → 闭环 **Recall@4 69.71% / hit@4 98.35%**（answered-only，
+        **+9.79pp / +5.55pp**）；abstain **3.1%**、平均迭代 0.142、重写率 6.4%、
+        **救回 33 条 / 弄坏 3 条**（净 +30，对比 naive 漏检）；judge 首判 level 分布
+        2:786 / 1:150 / 0:64
+      - 成本 **¥3.44 / 1000 条 = ¥0.00344/条**（2,246 次调用）——与历史 300 条的
+        ¥0.00368 一致；分块跑时 trace 的 `cost` 是**本进程累计**，`cny_per_query`
+        曾误除以全量 n 得假值 ¥0.0006（坑 #20）
+      - 口径：A/B **强制走检索路径**（`_ForceRetrieveRouter` 旁路 router，坑 #19）；
+        DuReader 是检索基准，量的是检索轴增益，router 自身收益由 eval_router.py 单独度量
+      - 效率：12 线程并发把串行 21s/条压到 ~4.5s/条，1000 条约 1.5 小时（GPU 前向
+        在 embedding/rerank 内加锁串行化，网络端 LLM 调用并发）
+- [ ] 简历 bullet 定稿（数字已齐）。见 `docs/01-项目计划书.md`
 
 ## 快速开始
 

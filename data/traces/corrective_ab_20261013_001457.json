@@ -1,0 +1,19 @@
+{
+  "n_queries": 300,
+  "k": 4,
+  "judge": "rule-based(threshold=0.983)",
+  "naive": {
+    "recall@4": 0.5908,
+    "hit@4": 0.8867
+  },
+  "closed_loop": {
+    "recall@4(answered only)": 0.6925,
+    "hit@4(answered only)": 0.9467,
+    "abstain_rate": 0.0,
+    "avg_iterations": 0.0,
+    "rewrite_applied_per_query": 0.0
+  },
+  "elapsed_sec": 106.0,
+  "sec_per_query": 0.35,
+  "timestamp": "2026-10-12T16:14:57.489426+00:00"
+}

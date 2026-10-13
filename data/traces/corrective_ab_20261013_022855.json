@@ -1,0 +1,26 @@
+{
+  "n_queries": 300,
+  "k": 4,
+  "judge": "llm(mimo-v2.6-flash)",
+  "naive": {
+    "recall@4": 0.5908,
+    "hit@4": 0.8867
+  },
+  "closed_loop": {
+    "recall@4(answered only)": 0.7192,
+    "hit@4(answered only)": 0.9855,
+    "abstain_rate": 0.08,
+    "avg_iterations": 0.45,
+    "rewrite_applied_per_query": 0.38
+  },
+  "cost": {
+    "calls": 709,
+    "prompt_tokens": 801001,
+    "completion_tokens": 151092,
+    "cost_cny": 1.1032,
+    "cny_per_query": 0.00368
+  },
+  "elapsed_sec": 6381.4,
+  "sec_per_query": 21.27,
+  "timestamp": "2026-10-12T18:28:55.204903+00:00"
+}

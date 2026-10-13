@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "run_at": "2026-10-13T11:06:45",
+    "classifier": "LLMRouter",
+    "model": "mimo-v2.6-flash",
+    "part_a_n": 60,
+    "part_b_n": 100,
+    "total_cost_cny": 0.0241
+  },
+  "part_a": {
+    "confusion": {
+      "tp": 28,
+      "fn": 2,
+      "tn": 30,
+      "fp": 0
+    },
+    "accuracy": 0.9667,
+    "direct_recall": 1.0,
+    "retrieve_recall": 0.9333,
+    "by_route": {
+      "direct": {
+        "n": 32,
+        "avg_elapsed": 14.39,
+        "avg_cost": 0.00062,
+        "avg_calls": 2.0,
+        "answered": 32,
+        "abstained": 0
+      },
+      "retrieve": {
+        "n": 28,
+        "avg_elapsed": 33.9,
+        "avg_cost": 0.00373,
+        "avg_calls": 3.18,
+        "answered": 27,
+        "abstained": 1
+      }
+    },
+    "misclassified": [
+      {
+        "query": "英语四级听力怎么提高",
+        "label": "retrieve",
+        "route": "direct",
+        "reason": "通用学习建议，模型可靠"
+      },
+      {
+        "query": "简历上的项目经历怎么写",
+        "label": "retrieve",
+        "route": "direct",
+        "reason": "通用写作指导，模型知识足够"
+      }
+    ]
+  },
+  "part_b": {
+    "n": 100,
+    "false_direct": 23,
+    "false_direct_rate": 0.23,
+    "false_direct_items": [
+      {
+        "query": "国家法定节假日共多少天",
+        "reason": "稳定常识，无需检索"
+      },
+      {
+        "query": "功和功率的区别",
+        "reason": "基础物理概念定义，模型可靠"
+      },
+      {
+        "query": "为什么要平衡摩擦力",
+        "reason": "物理稳定常识，模型可答"
+      },
+      {
+        "query": "我国古代第一个有伟大成就的爱国诗人是( )",
+        "reason": "稳定文学常识"
+      },
+      {
+        "query": "cad设计签名怎么弄上去的",
+        "reason": "软件操作常识，模型可靠"
+      },
+      {
+        "query": "ps如何去掉衣服褶皱",
+        "reason": "PS操作教程属稳定通用知识"
+      },
+      {
+        "query": "私立大学和公立大学的区别",
+        "reason": "稳定通用常识，模型可直接回答"
+      },
+      {
+        "query": "怎么改键盘按键",
+        "reason": "通用操作指导，模型可直接回答"
+      },
+      {
+        "query": "excel表格右边没有边框",
+        "reason": "软件操作技巧模型可答"
+      },
+      {
+        "query": "长尾词怎么做",
+        "reason": "通用营销方法论，模型知识可靠"
+      },
+      {
+        "query": "对人仁慈而怜爱叫什么",
+        "reason": "词汇定义，稳定常识"
+      },
+      {
+        "query": "c盘是硬盘吗",
+        "reason": "计算机基础常识"
+      },
+      {
+        "query": "温泉蛋怎么做",
+        "reason": "稳定烹饪常识"
+      },
+      {
+        "query": "曝光补偿是什么意思",
+        "reason": "摄影术语定义属稳定常识"
+      },
+      {
+        "query": "彩票都是骗人的吗",
+        "reason": "观点讨论，模型可直接回答"
+      },
+      {
+        "query": "图片另存到桌面看不到",
+        "reason": "通用电脑操作常识，模型可答"
+      },
+      {
+        "query": "淘宝优缺点",
+        "reason": "通用常识性评价，模型可答"
+      },
+      {
+        "query": "关羽故乡",
+        "reason": "稳定历史常识"
+      },
+      {
+        "query": "1975年属什么生肖",
+        "reason": "生肖年份为稳定循环常识"
+      },
+      {
+        "query": "什么是热塑性塑料",
+        "reason": "稳定定义性知识，模型可靠"
+      },
+      {
+        "query": "4什么加9什么等于1什么",
+        "reason": "简单计算谜题，模型自身可解"
+      },
+      {
+        "query": "天猫怎么搜索本地店铺",
+        "reason": "平台操作方法属稳定通用知识"
+      },
+      {
+        "query": "season英文怎么读",
+        "reason": "英语发音属稳定常识"
+      }
+    ],
+    "avg_cost": 0.00036
+  }
+}

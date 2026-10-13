@@ -1,0 +1,22 @@
+{
+  "recall@1": 0.2281,
+  "recall@5": 0.6649,
+  "recall@10": 0.8051,
+  "recall@20": 0.8728,
+  "recall@50": 0.9195,
+  "hit@1": 0.826,
+  "hit@5": 0.9405,
+  "hit@10": 0.9565,
+  "hit@20": 0.967,
+  "hit@50": 0.977,
+  "mrr@10": 0.8776,
+  "n_queries": 2000,
+  "elapsed_sec": 26.9,
+  "qps": 74.4,
+  "timestamp": "2026-10-12T15:49:37.636825+00:00",
+  "config": {
+    "embedding_model": "BAAI/bge-small-zh-v1.5",
+    "split": "dev",
+    "limit": null
+  }
+}

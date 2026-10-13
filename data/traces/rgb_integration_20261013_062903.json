@@ -1,0 +1,620 @@
+{
+  "scenario": "integration",
+  "subset": "zh_int",
+  "n": 100,
+  "judge": "llm",
+  "avg_iterations": 0.28,
+  "cost": {
+    "calls": 1726,
+    "prompt_tokens": 1526284,
+    "completion_tokens": 224303,
+    "cost_cny": 1.9749,
+    "cny_per_query": 0.01975
+  },
+  "elapsed_sec": 1223.3,
+  "timestamp": "2026-10-12T22:29:03.668917+00:00",
+  "accuracy_both_parts": 0.73,
+  "partial_rate": 0.92,
+  "samples": [
+    {
+      "id": "zh_int-0",
+      "answer_head": "The request was rejected because it was considered high risk",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_int-1",
+      "answer_head": "2021年，澳门全年经济实质增长18%（2020年GDP下降54%后，在博彩业部分复苏支持下实现）[2]；香港2021年",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-2",
+      "answer_head": "**2022年春节档首日票房冠军：《长津湖之水门桥》**，据猫眼专业版统计，截至2月1日21时33分，其以8.31亿元（",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-3",
+      "answer_head": "2022年春运自1月17日开始，2月25日结束，历时40天[1][2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-4",
+      "answer_head": "2022年春运首日火车票于2022年1月3日开售，2023年春运首日火车票于2022年12月24日开售[1][2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-5",
+      "answer_head": "**特斯拉2022年交付量：**\n- 全年交付131万辆（另一表述为131.39万辆），同比增长40%，产量约136.9",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-6",
+      "answer_head": "《李茂扮太子》是一部古装喜剧电影，主打传统单一类型的喜剧 [1]。\n\n该片由高可执导并编剧 [1]，另有杨晓明担任联合导",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-7",
+      "answer_head": "2021年我国人口出生率为7.52‰[2]，死亡率为7.18‰（死亡人口1014万人）[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-8",
+      "answer_head": "塔里木油田2021年油气产量当量为3182万吨[1]，2022年油气产量当量达3310万吨，创历史新高，同比净增128万",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-9",
+      "answer_head": "2021年宝马集团全球销量为252万辆（宝马、MINI和劳斯莱斯），同比增长8.4%[2]；奔驰乘用车及轻型商务车全球交",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-10",
+      "answer_head": "**美国**：2021年全年GDP增长率为5.7%，GDP总额达22.99万亿美元；第四季度折合年率环比增长6.9[1]",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-11",
+      "answer_head": "**英特尔**：2022年全年营收631亿美元，同比下降20%（按非GAAP计算同比下降16%）[1]。\n\n**英伟达*",
+      "status": "answered",
+      "iterations": 3
+    },
+    {
+      "id": "zh_int-12",
+      "answer_head": "**主演**：由花样滑冰世界冠军张丹（饰陆溪云）、张昊（饰杜远洲）领衔主演[1]；此外还汇聚了荣获六届冰舞全国冠军的高崇",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-13",
+      "answer_head": "中国在2022年北京冬奥会共获得9金4银2铜、合计15枚奖牌，位列金牌榜第3位[3]。\n\n美国在北京冬奥会的金牌总数，根",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-14",
+      "answer_head": "2022年澳网男单冠军是纳达尔，他在决赛中先丢两盘后以3-2逆转梅德韦杰夫，夺得个人第21座大满贯冠军[1]。\n\n女单冠",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-15",
+      "answer_head": "根据现有资料，只能回答新西兰的情况：\n\n- 新西兰：共有15名运动员（9名男选手和6名女选手）入选代表团名单，参加5个大",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_int-16",
+      "answer_head": "北京冬奥会于2022年2月4日开幕[1]，北京冬残奥会于2022年3月4日开幕[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-17",
+      "answer_head": "**第一棒火炬手**：罗致焕。2022年2月2日北京冬奥会火炬接力启动仪式在奥林匹克森林公园举行，国务院副总理韩正在火种",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_int-18",
+      "answer_head": "2022年春节档票房冠军是《长津湖之水门桥》，该影片票房在2022年春节档中处于领先地位[2]。\n\n2023年春节档票房",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-19",
+      "answer_head": "- 速度滑冰男子1500米：荷兰选手凯尔·内斯获得金牌，并打破奥运纪录[1]。\n- 短道速滑男子1500米：韩国选手黄大",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_int-20",
+      "answer_head": "**男子500米速度滑冰金牌**：中国选手高亭宇，以34秒32打破奥运纪录夺得金牌，实现中国男子速度滑冰冬奥金牌零的突破",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-21",
+      "answer_head": "《人世间》的导演是李路[3]，他同时担任总制片人[1]；编剧是王海鸰（与王大鸥共同获得最佳编剧（改编）奖项）[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-22",
+      "answer_head": "**女子单人滑金牌得主**：俄罗斯奥委会代表安娜·谢尔巴科娃，她在2022年2月17日的自由滑后与特鲁索娃包揽金银牌，取",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-23",
+      "answer_head": "iPhone SE 3搭载的是A15仿生芯片（5纳米工艺，与iPhone 13同款），配备6核中央处理器（2个性能核心和",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-24",
+      "answer_head": "邓伦在2019年至2020年期间，通过虚构业务转换收入性质进行虚假申报，偷逃个人所得税4765.82万元，其他少缴个人所",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-25",
+      "answer_head": "**时间**：2022年3月21日下午，飞机于14:20左右开始快速下降，14:21:40雷达最后一次记录到航班信息，1",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-26",
+      "answer_head": "2022年全国高考报名人数为1193万人[1]，2022年全国硕士研究生报考人数为457万人[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-27",
+      "answer_head": "《心居》的导演是滕华涛，他曾执导《王贵与安娜》《裸婚时代》等多部现实题材剧，是阔别荧屏近10年后重新执导该剧[1]。\n\n",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-28",
+      "answer_head": "卡塔尔世界杯中，德国队与西班牙队、哥斯达黎加队、日本队同分在E组，即\"死亡之组\"；法国队与丹麦队、澳大利亚队、突尼斯队共",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-29",
+      "answer_head": "上海2021年地区生产总值（GDP）为43214.85亿元，比上年增长8.1%[1]；北京2021年地区生产总值为402",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-30",
+      "answer_head": "**中国**：2022年一季度GDP为270178亿元，同比增长4.8%，环比增长1.3%[2]。\n\n**美国**：20",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-31",
+      "answer_head": "2021-2022赛季欧冠冠军是皇家马德里，决赛中以1-0战胜利物浦，队史第14次夺得欧冠冠军[2]。\n\n2021-20",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-32",
+      "answer_head": "The request was rejected because it was considered high risk",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-33",
+      "answer_head": "根据现有资料，NBA 2021–2022赛季总冠军为**金州勇士队**，他们在总决赛中击败了波士顿凯尔特人队[1]。\n\n",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-34",
+      "answer_head": "美团2022年第一季度营收为462.7亿元，同比增长25%[3]；第二季度营收为509.4亿元（约509亿元），同比增长",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-35",
+      "answer_head": "2022年（第56届）超级碗冠军是洛杉矶公羊队，以23-20击败辛辛那提猛虎[1]。\n\n2023年（第57届）超级碗冠军",
+      "status": "answered",
+      "iterations": 1
+    },
+    {
+      "id": "zh_int-36",
+      "answer_head": "EMNLP 2022于2022年12月7日至12月11日在阿联酋阿布扎比（Abu Dhabi）举办[1]；EMNLP 2",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-37",
+      "answer_head": "2022年全国高考报名人数为1193万人，比2021年的1078万人净增长约115万人[2]；2023年全国高考报名人数",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-38",
+      "answer_head": "安倍晋三的国葬于2022年9月27日下午在东京举行[3]，会场为日本武道馆[2][3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-39",
+      "answer_head": "2022年第36届大众电影百花奖最佳影片奖由电影《长津湖》获得[2]，最佳导演奖由文牧野凭借影片《奇迹·笨小孩》获得[1",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-40",
+      "answer_head": "根据资料，2022年上半年经济增速位居西部前三的是宁夏、新疆、西藏，其中新疆增长4.9%，西藏增长4.8%，分别高出全国",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-41",
+      "answer_head": "《艾尔登法环》的发售日期是2022年2月25日[1]；标准版（普通版）国区价格为298元[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-42",
+      "answer_head": "《天才基本法》的主演为雷佳音（饰林兆生）、张子枫（饰林朝夕）、张新成（饰裴之）[1]，导演是沈严[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-43",
+      "answer_head": "深圳大学2022年录取本科新生7436名[2]；2023年录取本科新生7286名[3]。\n\n（另注：2022年深圳大学还",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-44",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_int-45",
+      "answer_head": "**时间**：2022年9月19日（周一）上午11时举行国葬[1][2]，葬礼持续约一小时，仪式于11时55分结束时英国",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-46",
+      "answer_head": "电影《搜救》的导演是罗志良[2]，主演是甄子丹[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-47",
+      "answer_head": "2022年WTT世界杯决赛男单冠军是中国选手王楚钦，他在决赛中以4比2击败日本选手张本智和夺冠[1]。\n\n女单冠军根据现",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_int-48",
+      "answer_head": "2022年（第31届）金鹰奖最佳电视剧为《觉醒年代》[3]，最佳电视动画片为《冰球旋风》[1][2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-49",
+      "answer_head": "2022年金鹰奖最佳男主角是雷佳音，作品为《人世间》[1]；最佳女主角是殷桃，她在《人世间》中的表现使其战胜热依扎、闫妮",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-50",
+      "answer_head": "2022年二十国集团（G20）峰会于2022年11月15日至16日举行[1]，地点在印度尼西亚巴厘省努沙杜瓦[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-51",
+      "answer_head": "The request was rejected because it was considered high risk",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_int-52",
+      "answer_head": "**发布时间**\n- 小米13系列（小米13、小米13 Pro）于北京时间2022年12月11日19时30分许在中国北京",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-53",
+      "answer_head": "《阿凡达：水之道》在中国大陆的上映日期为2022年12月16日，与北美同步[1][3]。\n\n香港的公映时间为2022年1",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-54",
+      "answer_head": "2021年全国棉花产量573.1万吨，比2020年减少18.0万吨，下降3.0%[2]；2022年全国棉花总产量597.",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-55",
+      "answer_head": "**2023年男子赛事**：法国尼斯（2023年9月10日）[1]；尼斯将\"首先承办2023年男子赛事，然后在2024年",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_int-56",
+      "answer_head": "2022年12月，中国CPI同比上涨1.8%，环比持平[1]；美国CPI同比上涨6.5%，环比下降0.1%[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-57",
+      "answer_head": "- 男单冠军：丹麦选手安赛龙，决赛以21-6、21-15（另有记为21-6/21-15，耗时39分钟）战胜日本选手奈良冈",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-58",
+      "answer_head": "The request was rejected because it was considered high risk",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_int-59",
+      "answer_head": "2022年中美经济增速如下：\n\n**美国：**\n- 2022年全年GDP增长2.1%，低于2021年的5.9%[1]\n-",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-60",
+      "answer_head": "《流浪地球2》的导演是郭帆[1]；领衔主演为吴京、李雪健、沙溢、王智、宁理，刘德华为特别演出[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-61",
+      "answer_head": "2022年，四川省地区生产总值56749.8亿元，按可比价格计算比上年增长2.9%[1]；重庆市实现地区生产总值2912",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-62",
+      "answer_head": "2023年澳大利亚网球公开赛男子单打冠军是塞尔维亚选手诺瓦克·德约科维奇，他在决赛中以6-3、7-6（4）、7-6（5）",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-63",
+      "answer_head": "高启强由演员张颂文饰演[1]，该剧导演是徐纪周[3]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-64",
+      "answer_head": "- 谷歌推出的类ChatGPT产品是 **Bard**，一款基于轻量版 LaMDA 模型运行的实验性对话人工智能服务，能",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-65",
+      "answer_head": "根据现有资料，网易2022年全年总营收为965亿元，同比增长约10%[1]。\n\n关于腾讯2022年全年营收，根据现有资料",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-66",
+      "answer_head": "**日本**：2022年12月3日首映[1][4]（首日票房7.16亿日元，约3742万元人民币）[4]\n\n**中国大陆",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-67",
+      "answer_head": "2023年（第95届）奥斯卡：\n\n- **最佳女主角**：杨紫琼，凭借《瞬息全宇宙》获奖，成为首位获得奥斯卡最佳女主角的",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-68",
+      "answer_head": "- 女子双人10米跳台冠军：全红婵与陈芋汐组合，以总分362.04分夺冠[1]。\n- 男子双人10米跳台冠军：练俊杰与杨",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-69",
+      "answer_head": "男单冠军是中国的李诗沣，他在决赛中2比0（26:24、21:5）战胜队友石宇奇夺冠[1]。\n\n女单冠军是韩国的安洗莹，她",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-70",
+      "answer_head": "ChatGPT 于 2022 年 11 月 30 日由 OpenAI 发布[2]，GPT-4 于 2023 年 3 月 ",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-71",
+      "answer_head": "2023年前两季度中国GDP增长率如下：\n\n- **一季度**：国内生产总值284997亿元，按不变价格计算同比增长4.",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-72",
+      "answer_head": "- 成都大运会开幕式：2023年7月28日20:00，在东安湖体育公园主体育场举行[2]。\n- 杭州第19届亚运会：赛事",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-73",
+      "answer_head": "**张之臻：**\n- 在2023年马德里大师赛第四轮以2-1（3-6，7-6（5），7-6（8））逆转世界排名第10位的",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-74",
+      "answer_head": "2023年“五一”假期全国国内旅游出游合计2.74亿人次，同比增长70.83%，按可比口径恢复至2019年同期的119.",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-75",
+      "answer_head": "《速度与激情10》中国内地上映时间为2023年5月17日，比北美早两天[1][2]；北美上映时间为2023年5月19日[",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-76",
+      "answer_head": "**俄罗斯：** 定档2023年4月12日上映（当天为俄罗斯宇航日），影片分级16+，并制作了俄语配音版本[1]。\n\n*",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-77",
+      "answer_head": "C919商业首飞于2023年5月28日上午10时32分起飞，由中国东方航空执飞，航班号为MU9191，航线为上海虹桥机场",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-78",
+      "answer_head": "**女单冠军：孙颖莎**——在德班世乒赛女单决赛中，孙颖莎以4比2战胜队友陈梦夺冠[1]；中国队也由此包揽了本届世乒赛全",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_int-79",
+      "answer_head": "**上映时间**：《少年时代》定档2023年8月17日正式上映，是博纳影业在上影节2023新片发布会上宣布进军暑期档的影",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-80",
+      "answer_head": "北京冬奥会有91个国家和地区的代表团参加[2]；杭州亚运会有亚洲45个国家和地区奥委会全部报名参赛[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-81",
+      "answer_head": "2023年北京高考成绩公布时间为6月25日，高考评卷工作为6月8日至24日[2]；上海高考成绩于6月23日开通查询[1]",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-82",
+      "answer_head": "**布林肯访华时间**：2023年6月18日至19日，经双方商定[2]，为期约2天[1]。\n\n**耶伦访华时间**：20",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-83",
+      "answer_head": "2023年温布尔登网球锦标赛女单冠军是捷克选手玛尔凯塔·万卓索娃，她在决赛中以2比0（两个6-4）击败六号种子、突尼斯选",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-84",
+      "answer_head": "北京冬残奥会开幕式中国体育代表团旗手为两人：残奥冰球男运动员汪之栋[1]，以及河北张家口运动员郭雨洁[1][2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-85",
+      "answer_head": "《心居》由海清和童瑶领衔主演，其中海清饰演冯晓琴，童瑶饰演顾清俞[1]。此外，该剧的主演阵容还包括张颂文、冯绍峰[2]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-86",
+      "answer_head": "《好好说话》的领衔主演为陈晓（饰演杨光）、王晓晨（饰演廖望）、王耀庆（饰演李恒基）[1]。\n\n此外，该剧还有张光北、曾黎",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-87",
+      "answer_head": "《七人乐队》由七位香港导演联合执导，分别是洪金宝（《练功》）、许鞍华（《校长》）、谭家明（《别夜》）、袁和平（《回归》）",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-88",
+      "answer_head": "根据资料，《天才基本法》的主演包括：\n\n- **雷佳音**饰演林兆生（父亲），与张子枫领衔主演[2][3]\n- **张子",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-89",
+      "answer_head": "《炽道》的主演包括：\n\n- **王安宇**（男主）：剧中表现不错，既有体育生的猛劲儿，又有\"小奶狗\"的柔情暖心，与角色非",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-90",
+      "answer_head": "根据现有资料，《摇滚狂花》的主演包括：\n\n- **姚晨**：饰演女子摇滚乐队“狂花”主唱彭莱，是剧中的灵魂人物[2][3",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-91",
+      "answer_head": "《不期而至》的主演是蔡文静和彭冠英，其中蔡文静饰演阮真真[1]，彭冠英饰演谭深[2]。此外，王劲松、萨日娜等人也在剧中出",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-92",
+      "answer_head": "根据现有资料无法可靠回答这个问题。（已重试 3 次，最后判定：）",
+      "status": "abstained",
+      "iterations": 3
+    },
+    {
+      "id": "zh_int-93",
+      "answer_head": "《护卫者》由张丰毅、王媛可领衔主演[1]，资料中亦记载该剧为张丰毅、王栎鑫主演的30集大剧[3]。其中张丰毅在剧中饰演能",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-94",
+      "answer_head": "《流浪地球2》由郭帆执导、刘慈欣担任监制，吴京及李雪健领衔主演，刘德华特别出演[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-95",
+      "answer_head": "《瞬息全宇宙》在第95届奥斯卡金像奖上共获得7项大奖[1][2][4]，具体包括：\n\n- 最佳影片[2][4]\n- 最佳",
+      "status": "answered",
+      "iterations": 2
+    },
+    {
+      "id": "zh_int-96",
+      "answer_head": "马英九2023年访问大陆主要去了以下城市：\n\n1. **上海**：3月27日下午搭乘国航CA-196航班抵达上海，随即搭",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-97",
+      "answer_head": "《漫长的季节》的主演包括范伟（饰王响）[1]和秦昊（饰龚彪）[1]。",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-98",
+      "answer_head": "2023年男篮世界杯中国男篮被分在B组，同组对手为：第2档的塞尔维亚队[2][3]、第4档的波多黎各队[3]、第8档的南",
+      "status": "answered",
+      "iterations": 0
+    },
+    {
+      "id": "zh_int-99",
+      "answer_head": "根据现有资料，被明确判处终身禁赛的中国斯诺克选手只有**李行**——他被判处终身不得参加斯诺克比赛，并支付43,000英",
+      "status": "answered",
+      "iterations": 0
+    }
+  ]
+}

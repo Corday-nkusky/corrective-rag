@@ -15,6 +15,7 @@
 from __future__ import annotations
 
 import sys
+import threading
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -23,6 +24,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 from corrective_rag import config  # noqa: E402
 
 _RERANKER: Optional["Reranker"] = None
+
+# CrossEncoder.predict 同样不保证线程安全；评测并发时前向串行化（见 embedding.py
+# 同款说明：锁的粒度是 GPU 前向，网络端 LLM 调用仍并发）。
+_RERANK_LOCK = threading.Lock()
 
 
 class Reranker:
@@ -41,7 +46,8 @@ class Reranker:
         if not texts:
             return []
         pairs = [[query, t] for t in texts]
-        logits = self.model.predict(pairs, show_progress_bar=False)
+        with _RERANK_LOCK:
+            logits = self.model.predict(pairs, show_progress_bar=False)
         return [float(x) for x in logits]
 
     def rerank(
