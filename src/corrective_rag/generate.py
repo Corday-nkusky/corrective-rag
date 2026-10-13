@@ -25,8 +25,19 @@ SYSTEM_PROMPT = """你是一个严格基于给定资料回答问题的助手。�
 4. 回答用简体中文，直接给出结论，不要复述问题。"""
 
 
-def build_messages(question: str, contexts: List[Dict]) -> List[Dict[str, str]]:
-    """把检索到的 chunk 拼成编号资料块，组装成 chat messages。"""
+def build_messages(
+    question: str,
+    contexts: List[Dict],
+    resolved_query: str = "",
+) -> List[Dict[str, str]]:
+    """把检索到的 chunk 拼成编号资料块，组装成 chat messages。
+
+    resolved_query：condense 消解指代后的查询（多轮场景）。传入时
+    prompt 里显式说明"用户问的 X 理解为 Y"——否则生成器看到"它多久
+    能好"会装不知道"它"是什么，而系统自己刚消解过（Phase 5 demo
+    实测闹过这个笑话：condense 出"风热感冒"，答案说"未指明它指哪种
+    疾病"）。单轮时为空，行为不变。
+    """
     if contexts:
         blocks = []
         for i, c in enumerate(contexts, start=1):
@@ -35,6 +46,11 @@ def build_messages(question: str, contexts: List[Dict]) -> List[Dict[str, str]]:
         user_content = f"资料：\n{chr(10).join(blocks)}\n\n问题：{question}"
     else:
         user_content = f"问题：{question}\n（未检索到任何资料）"
+    if resolved_query and resolved_query != question:
+        user_content += (
+            f"\n\n（注：用户的问题已结合对话历史消解指代，"
+            f"按\"{resolved_query}\"理解作答）"
+        )
     return [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": user_content},
@@ -45,9 +61,10 @@ def generate(
     question: str,
     contexts: List[Dict],
     stub: Optional[bool] = None,
+    resolved_query: str = "",
 ) -> str:
     """生成答案。stub=True 时不调 API，返回将要发送的内容（供冒烟/调试）。"""
-    messages = build_messages(question, contexts)
+    messages = build_messages(question, contexts, resolved_query=resolved_query)
 
     if stub is None:
         stub = not config.LLM_API_KEY

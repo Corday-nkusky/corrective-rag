@@ -37,7 +37,7 @@ JUDGE_PROMPT = """你是检索结果质量评估员。给你一个问题和若�
 {contexts}
 
 只输出 JSON，不要输出任何其他内容：
-{{"level": 0或1或2, "reason": "一句话理由"}}
+{{"level": 0或1或2, "reason": "一句话理由，30字以内"}}
 level 含义：0=不够（缺关键信息），1=边缘（能答一部分），2=够（能完整回答）"""
 
 
@@ -95,7 +95,7 @@ class LLMJudge:
             model=config.LLM_MODEL,
             messages=[{"role": "user", "content": prompt}],
             temperature=0,
-            max_tokens=200,
+            max_tokens=300,  # reason 限 30 字 + JSON 骨架；实测 200 曾被长 reason 截断（坑清单 #15）
             response_format={"type": "json_object"},
         )
         record(resp.usage, config.LLM_MODEL)

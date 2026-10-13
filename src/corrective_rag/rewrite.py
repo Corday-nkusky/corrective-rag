@@ -44,7 +44,15 @@ def _jaccard(a: str, b: str) -> float:
 
 
 class LLMRewriter:
-    """LLM 重写：指代消解 + 更适合检索的表述。"""
+    """LLM 重写：指代消解 + 更适合检索的表述。
+
+    两种用法（同一 prompt 模板，history 有无决定行为）：
+    - 无 history：纠错循环里的查询重写（judge 失败后），口语化→关键词化
+    - 有 history：多轮入口的 condense question——把"那它的成本呢"
+      结合历史改写成独立可检索的问题。指代消错是这条路径的头号
+      失败模式，所以 _checked 的 Jaccard 自检同样生效（漂移过度
+      就放弃改写用原 query，宁可搜不准，不可带偏）
+    """
 
     PROMPT = """把下面的用户问题改写成更适合搜索引擎检索的形式。要求：
 1. 补全指代（如"它""那"要结合上下文猜出实体，没有上下文就保留原样）
@@ -52,20 +60,34 @@ class LLMRewriter:
 3. 不改变问题的实质意图
 4. 只输出改写后的问题本身，不要任何解释
 
-原问题：{question}"""
+{history_block}原问题：{question}"""
 
-    def rewrite(self, question: str, retrieved: List[Dict] | None = None) -> Dict:
+    def rewrite(
+        self,
+        question: str,
+        retrieved: List[Dict] | None = None,
+        history: str = "",
+    ) -> Dict:
         from openai import OpenAI
 
+        history_block = f"对话历史：\n{history}\n\n" if history else ""
         client = OpenAI(api_key=config.LLM_API_KEY, base_url=config.LLM_BASE_URL)
         resp = client.chat.completions.create(
             model=config.LLM_MODEL,
             messages=[
-                {"role": "user", "content": self.PROMPT.format(question=question)}
+                {
+                    "role": "user",
+                    "content": self.PROMPT.format(
+                        question=question, history_block=history_block
+                    ),
+                }
             ],
             temperature=0.3,
             max_tokens=100,
         )
+        from corrective_rag.cost import record
+
+        record(resp.usage, config.LLM_MODEL)
         new_q = (resp.choices[0].message.content or "").strip()
         return self._checked(question, new_q, strategy="llm")
 
@@ -116,7 +138,13 @@ class PRFRewriter:
                     freq[w] += 1
         return [w for w, _ in freq.most_common(self.n_terms)]
 
-    def rewrite(self, question: str, retrieved: List[Dict] | None = None) -> Dict:
+    def rewrite(
+        self,
+        question: str,
+        retrieved: List[Dict] | None = None,
+        history: str = "",
+    ) -> Dict:
+        """history 参数仅为接口兼容（PRF 基于文档反馈，不基于对话历史）。"""
         if not retrieved:
             return {
                 "rewritten": question,

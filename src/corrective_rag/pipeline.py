@@ -1,11 +1,17 @@
 """纠错循环状态机（Phase 3 核心，整个项目的灵魂）。
 
-图结构：
+图结构（Phase 5 起含多轮入口）：
 
-    retrieve → rerank → judge ──sufficient──→ generate → END
-                          │
-                          └─insufficient─→ iteration<MAX? ─yes→ rewrite → (回 retrieve)
-                                                        └no──→ abstain → END
+    [history 非空] → condense → retrieve → rerank → judge ──sufficient──→ generate → END
+    [history 为空]              ↑                                    │
+                          （单轮直进）                              └─insufficient─→ iteration<MAX? ─yes→ rewrite → (回 retrieve)
+                                                                                └no──→ abstain → END
+
+condense 节点（Phase 5 新增，多轮对话的关键）：
+- 只在 history 非空时触发，单轮问题直接透传——不为用不到的功能花钱；
+- 把口语化+指代（"那它的成本呢"）改写成独立可检索的问题；
+- 与 rewrite 节点的区别：condense 在入口、面向对话历史；rewrite 在
+  重试时、面向检索失败。两者共用 LLMRewriter 和漂移自检。
 
 为什么用状态机而不是 while 循环：
 - 每个分支、每步 trace、终止条件都在图里显式可见，面试一张图讲完；
@@ -36,6 +42,7 @@ from corrective_rag import config  # noqa: E402
 class RAGState(TypedDict, total=False):
     question: str
     query: str
+    history: str  # 渲染好的对话历史（Phase 5：多轮上下文）
     retrieved: List[Dict]
     ranked: List[Dict]
     judge: Dict
@@ -78,6 +85,30 @@ class CorrectiveRAG:
         self.generate = generator or gen_fn
 
         # ---- 节点定义 ----
+        def node_condense(state: RAGState) -> RAGState:
+            """多轮入口：history 非空时把本轮问题 condense 成独立问题。
+
+            单轮（history 空）直接透传——不花这个调用的钱。
+            改写失败/漂移过度时保留原问题（_checked 已保证）。
+            """
+            history = state.get("history", "")
+            if not history:
+                return {"trace": state["trace"]}
+            t0 = time.time()
+            result = self.rewriter.rewrite(
+                state["question"], retrieved=None, history=history
+            )
+            _log(
+                state,
+                "condense",
+                applied=result.get("applied"),
+                strategy=result.get("strategy"),
+                reason=result.get("reason"),
+                new_query=result.get("rewritten"),
+                latency=round(time.time() - t0, 3),
+            )
+            return {"query": result["rewritten"], "trace": state["trace"]}
+
         def node_retrieve(state: RAGState) -> RAGState:
             query = state["query"]
             t0 = time.time()
@@ -125,7 +156,9 @@ class CorrectiveRAG:
         def node_rewrite(state: RAGState) -> RAGState:
             it = state.get("iteration", 0) + 1
             result = self.rewriter.rewrite(
-                state["question"], state.get("ranked") or state.get("retrieved")
+                state["question"],
+                state.get("ranked") or state.get("retrieved"),
+                history=state.get("history", ""),
             )
             _log(
                 state,
@@ -146,7 +179,16 @@ class CorrectiveRAG:
             from corrective_rag.cost import tracker
 
             t0 = time.time()
-            answer = self.generate(state["question"], state["ranked"])
+            # resolved_query = condense/rewrite 消解指代后的查询。
+            # 传给生成器，避免\"系统刚消解了'它'，答案又装不知道\"的笑话
+            # （Phase 5 demo 实测教训：condense 消解出实体后，生成器仍收
+            # 原始问题，会闹出系统刚消解又装不知道的笑话。judge 仍用原始
+            # question 判断：用户的原问题能否被资料回答，才是门控该问的）
+            answer = self.generate(
+                state["question"],
+                state["ranked"],
+                resolved_query=state.get("query", ""),
+            )
             _log(
                 state,
                 "generate",
@@ -174,6 +216,7 @@ class CorrectiveRAG:
             return "rewrite"
 
         graph = StateGraph(RAGState)
+        graph.add_node("condense", node_condense)
         graph.add_node("retrieve", node_retrieve)
         graph.add_node("rerank", node_rerank)
         graph.add_node("judge", node_judge)
@@ -181,7 +224,8 @@ class CorrectiveRAG:
         graph.add_node("generate", node_generate)
         graph.add_node("abstain", node_abstain)
 
-        graph.add_edge(START, "retrieve")
+        graph.add_edge(START, "condense")
+        graph.add_edge("condense", "retrieve")
         graph.add_edge("retrieve", "rerank")
         graph.add_edge("rerank", "judge")
         graph.add_conditional_edges(
@@ -195,10 +239,13 @@ class CorrectiveRAG:
 
         self.graph = graph.compile()
 
-    def run(self, question: str) -> RAGState:
+    def run(self, question: str, history: str = "") -> RAGState:
+        """history：渲染好的对话历史文本（由 ConversationMemory.get_history()
+        产出）。空字符串 = 单轮，condense 节点直接透传不花钱。"""
         init: RAGState = {
             "question": question,
             "query": question,
+            "history": history,
             "retrieved": [],
             "ranked": [],
             "judge": {},
