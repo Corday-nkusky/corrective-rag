@@ -64,6 +64,7 @@
         rejection 另有 11 条软拒答（答案话术拒答但 pipeline 状态 answered），
         有效拒答 = 硬拒答 29.0% + 软拒答 3.7%
       - MiMo 累计花费：A/B ¥1.10 + judge 一致率 ¥0.42 + RGB ¥2.21（均 trace 出处）；
+        demo 联调另花约 ¥0.05（CLI 脚本 5 轮 ¥0.024 + 网页联调 ¥0.02）；
         03:05 余额读数约 ¥8/¥10，此前试跑约 ¥2 为余额倒推（非 trace）
 - [x] Phase 5 多轮对话（`memory.py` + condense 入口节点 + `scripts/demo_chat.py`）：
       - `ConversationMemory`：滑动窗口 3 轮原文 + 超窗部分 LLM 摘要（增量摘要、
@@ -77,6 +78,12 @@
         限 30 字）；生成器曾对已消解的指代装糊涂（condense 出"风热感冒"后答案
         说"未指明它指哪种疾病"）——generate 现接收 resolved_query 注明消解结果
       - 5 轮 demo 成本 ¥0.024
+      - 网页版 demo（`scripts/demo_web.py`，gradio 6.30）：右侧过程面板实时展示
+        状态机路径 / condense 消解前后 / judge 理由 / rewrite 重试 / Top4 检索
+        片段（rerank 分）/ 本轮与累计成本；会话记忆按浏览器会话隔离
+        （gradio State），只绑 127.0.0.1 不开 share（服务端持有 MiMo key）；
+        HTTP 端到端联调两轮 ¥0.0065，清空会话后问纯指代问题复现完整纠错回环
+        （judge 两次判不足 → rewrite → 第 3 次放行，迭代 2 次 ¥0.0037）
 - [ ] Phase 6：简历 bullet 定稿（数字已齐，见计划书第 10 节）。见 `docs/01-项目计划书.md`
 
 ## 快速开始
@@ -98,6 +105,20 @@ python scripts/smoke_pipeline.py    # 检索+生成全链路（临时语料，�
 
 注意：`ragas` 不在依赖里（import 即炸，原因见计划书坑清单 #13），四个评测指标为自写
 judge 脚本实现，定义对齐 ragas 公开文档。
+
+## Demo
+
+```bash
+python scripts/demo_web.py               # 网页版：预热模型后开 7860 并自动打开浏览器
+python scripts/demo_web.py --lazy        # 懒加载：启动快，首次提问等 ~35s
+python scripts/demo_web.py --port 7861   # 换端口
+python scripts/demo_chat.py              # CLI 版（交互）
+python scripts/demo_chat.py --scripted   # CLI 脚本演示（5 轮指代追问，无交互）
+```
+
+网页版建议试的两条线：① "感冒了怎么办？" → "那吃什么药好？"（看 condense
+把指代消解成独立问题）；② 清空会话后直接问 "它多久能好？"（无历史时 judge
+连续判不足 → rewrite 重试 → 第 3 次放行，完整纠错回环在右侧面板可见）。
 
 完整实施计划（分阶段、验收标准、评测集设计、指标定义、坑清单）：
 **`docs/01-项目计划书.md`**。
