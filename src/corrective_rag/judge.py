@@ -94,9 +94,12 @@ class LLMJudge:
         resp = client.chat.completions.create(
             model=config.LLM_MODEL,
             messages=[{"role": "user", "content": prompt}],
+            # temperature=0 只在关掉深度思考后才真的生效：开启思考时 MiMo
+            # 强制 temperature=1.0（官方文档），judge 的确定性会失效
             temperature=0,
             max_tokens=300,  # reason 限 30 字 + JSON 骨架；实测 200 曾被长 reason 截断（坑清单 #15）
             response_format={"type": "json_object"},
+            extra_body=config.llm_extra_body(),
         )
         record(resp.usage, config.LLM_MODEL)
         raw = resp.choices[0].message.content or "{}"

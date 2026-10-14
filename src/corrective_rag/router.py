@@ -110,9 +110,12 @@ class LLMRouter:
                     "content": ROUTER_PROMPT.format(question=question),
                 }
             ],
+            # temperature=0 只在关掉深度思考后才真的生效：开启思考时 MiMo
+            # 强制 temperature=1.0（官方文档），router 的分类会变得不稳
             temperature=0,
             max_tokens=120,  # route + 20 字理由 + JSON 骨架
             response_format={"type": "json_object"},
+            extra_body=config.llm_extra_body(),
         )
         record(resp.usage, config.LLM_MODEL)
         raw = resp.choices[0].message.content or "{}"

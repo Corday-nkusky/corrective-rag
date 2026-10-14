@@ -14,7 +14,7 @@ from typing import Dict, List, Optional
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
 from corrective_rag import config  # noqa: E402
-from corrective_rag.embedding import Embedder  # noqa: E402
+from corrective_rag.embedding import Embedder, get_embedder  # noqa: E402
 from corrective_rag.store import VectorStore  # noqa: E402
 
 
@@ -28,7 +28,8 @@ class Retriever:
     ) -> None:
         index_dir = Path(index_dir or config.INDEX_DIR)
         self.store, self.chunks = VectorStore.load(index_dir)
-        self.embedder = embedder or Embedder()
+        # 走进程内单例，与 get_reranker() 一致：pipeline 构造时只加载一次权重
+        self.embedder = embedder or get_embedder()
 
     def retrieve(self, query: str, top_k: Optional[int] = None) -> List[Dict]:
         """返回 [{id, score, source, text}, ...]，按相关度降序。"""
